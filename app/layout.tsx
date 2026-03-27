@@ -15,14 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" style={{ backgroundColor: "#05120e" }}>
+    <html lang="en" style={{ backgroundColor: "#f5f0eb" }}>
       <body
         style={{
           margin: 0,
           padding: 0,
-          backgroundColor: "#05120e",
-          color: "#f0ebe0",
-          fontFamily: "Georgia, 'Times New Roman', serif",
+          backgroundColor: "#f5f0eb",
+          color: "#1c3828",
+          fontFamily: "'Archivo', 'Helvetica Neue', Arial, sans-serif",
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",

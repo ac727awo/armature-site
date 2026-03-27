@@ -1,11 +1,14 @@
 import Link from "next/link";
 
+const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
+const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
+
 export default function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "#030e09",
-        borderTop: "1px solid rgba(201, 168, 76, 0.12)",
+        backgroundColor: "#1c3828",
+        borderTop: "1px solid rgba(201, 168, 76, 0.15)",
         padding: "64px 32px 40px",
       }}
     >
@@ -24,10 +27,10 @@ export default function Footer() {
             <div style={{ marginBottom: "20px" }}>
               <span
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: HEADING,
                   fontSize: "16px",
-                  fontWeight: "600",
-                  color: "#f0ebe0",
+                  fontWeight: "500",
+                  color: "#f5f0eb",
                   letterSpacing: "0.05em",
                   textTransform: "uppercase",
                 }}
@@ -36,11 +39,12 @@ export default function Footer() {
               </span>
               <span
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "10px",
-                  color: "#9aab9f",
+                  color: "#8aab96",
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",
+                  fontWeight: "500",
                   display: "block",
                   marginTop: "4px",
                 }}
@@ -50,9 +54,9 @@ export default function Footer() {
             </div>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "13px",
-                color: "#6b7f74",
+                color: "#7a9a82",
                 lineHeight: "1.7",
                 maxWidth: "320px",
               }}
@@ -66,11 +70,12 @@ export default function Footer() {
           <div>
             <h4
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "11px",
-                color: "#c9a84c",
+                color: "#b8913a",
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
+                fontWeight: "600",
                 marginBottom: "20px",
               }}
             >
@@ -88,9 +93,9 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     style={{
-                      fontFamily: "Georgia, 'Times New Roman', serif",
+                      fontFamily: BODY,
                       fontSize: "13px",
-                      color: "#9aab9f",
+                      color: "#8aab96",
                       textDecoration: "none",
                       letterSpacing: "0.02em",
                     }}
@@ -106,11 +111,12 @@ export default function Footer() {
           <div>
             <h4
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "11px",
-                color: "#c9a84c",
+                color: "#b8913a",
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
+                fontWeight: "600",
                 marginBottom: "20px",
               }}
             >
@@ -118,9 +124,9 @@ export default function Footer() {
             </h4>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "13px",
-                color: "#9aab9f",
+                color: "#8aab96",
                 marginBottom: "20px",
                 lineHeight: "1.6",
               }}
@@ -130,14 +136,15 @@ export default function Footer() {
             <Link
               href="/contact"
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "12px",
-                color: "#c9a84c",
-                border: "1px solid rgba(201, 168, 76, 0.4)",
+                color: "#f5f0eb",
+                border: "1px solid rgba(245, 240, 235, 0.3)",
                 padding: "10px 20px",
                 textDecoration: "none",
                 letterSpacing: "0.06em",
                 textTransform: "uppercase",
+                fontWeight: "500",
                 display: "inline-block",
               }}
             >
@@ -149,7 +156,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           style={{
-            borderTop: "1px solid rgba(255,255,255,0.06)",
+            borderTop: "1px solid rgba(245, 240, 235, 0.1)",
             paddingTop: "28px",
             display: "flex",
             flexDirection: "column",
@@ -167,9 +174,9 @@ export default function Footer() {
           >
             <span
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "12px",
-                color: "#4a5e52",
+                color: "#5a7a62",
               }}
             >
               © 2026 Armature Wealth Partners. All rights reserved.
@@ -178,9 +185,9 @@ export default function Footer() {
               <Link
                 href="/privacy"
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "12px",
-                  color: "#4a5e52",
+                  color: "#5a7a62",
                   textDecoration: "none",
                 }}
               >
@@ -189,9 +196,9 @@ export default function Footer() {
               <Link
                 href="/disclosures"
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "12px",
-                  color: "#4a5e52",
+                  color: "#5a7a62",
                   textDecoration: "none",
                 }}
               >
@@ -201,9 +208,9 @@ export default function Footer() {
           </div>
           <p
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: BODY,
               fontSize: "11px",
-              color: "#3a4e42",
+              color: "#4a6a52",
               lineHeight: "1.6",
               maxWidth: "800px",
             }}

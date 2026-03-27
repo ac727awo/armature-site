@@ -5,9 +5,9 @@ export const metadata = {
 };
 
 const p: React.CSSProperties = {
-  fontFamily: "Georgia, 'Times New Roman', serif",
+  fontFamily: "'Archivo', 'Helvetica Neue', Arial, sans-serif",
   fontSize: "17px",
-  color: "#b8c8be",
+  color: "#4a6155",
   lineHeight: "1.8",
   margin: "0 0 24px 0",
 };
@@ -45,7 +45,7 @@ export default function Article() {
         about roles. Clear about values. Clear about what each generation is
         inheriting — not just in assets, but in operating principles.
       </p>
-      <p style={{ ...p, color: "#9aab9f", fontStyle: "italic" }}>
+      <p style={{ ...p, color: "#6a8070", fontStyle: "italic" }}>
         Legacy built with intention looks like continuity. Legacy left to
         improvisation looks like conflict. The difference is not love or
         generosity — it is design.

@@ -1,6 +1,9 @@
 import Link from "next/link";
 import CTASection from "./components/CTASection";
 
+const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
+const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
+
 export const metadata = {
   title: "Armature Wealth Partners | A Better Way to Manage Wealth",
   description:
@@ -10,11 +13,11 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      {/* HERO */}
+      {/* HERO — stays dark green with vignette */}
       <section
         style={{
           minHeight: "100vh",
-          backgroundColor: "#05120e",
+          backgroundColor: "#1c3828",
           position: "relative",
           overflow: "hidden",
           display: "flex",
@@ -29,7 +32,7 @@ export default function Home() {
             backgroundImage: "url(/images/hero-bg.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center 30%",
-            opacity: 0.35,
+            opacity: 0.3,
           }}
         />
         <div
@@ -37,7 +40,7 @@ export default function Home() {
             position: "absolute",
             inset: 0,
             backgroundImage:
-              "radial-gradient(ellipse at 62% 50%, transparent 12%, rgba(5,18,14,0.6) 50%, rgba(3,12,9,0.95) 100%)",
+              "radial-gradient(ellipse at 62% 50%, transparent 12%, rgba(15,34,24,0.65) 50%, rgba(10,26,16,0.95) 100%)",
             pointerEvents: "none",
             zIndex: 1,
           }}
@@ -48,8 +51,8 @@ export default function Home() {
             bottom: 0,
             left: 0,
             right: 0,
-            height: "300px",
-            background: "linear-gradient(to bottom, transparent, #05120e)",
+            height: "200px",
+            background: "linear-gradient(to bottom, transparent, #f5f0eb)",
             pointerEvents: "none",
             zIndex: 1,
           }}
@@ -67,11 +70,12 @@ export default function Home() {
           <div style={{ maxWidth: "680px" }}>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "11px",
-                color: "#c9a84c",
+                color: "#b8913a",
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
+                fontWeight: "600",
                 marginBottom: "28px",
                 margin: "0 0 28px 0",
               }}
@@ -80,10 +84,10 @@ export default function Home() {
             </p>
             <h1
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: HEADING,
                 fontSize: "clamp(36px, 5.5vw, 68px)",
-                fontWeight: "400",
-                color: "#f0ebe0",
+                fontWeight: "500",
+                color: "#f5f0eb",
                 letterSpacing: "-0.02em",
                 lineHeight: "1.1",
                 margin: "0 0 28px 0",
@@ -93,12 +97,13 @@ export default function Home() {
             </h1>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "19px",
-                color: "#b8c8be",
+                color: "#c8d8cc",
                 lineHeight: "1.65",
                 margin: "0 0 16px 0",
                 maxWidth: "560px",
+                fontWeight: "300",
               }}
             >
               For accomplished professionals whose success outpaced the systems
@@ -106,9 +111,9 @@ export default function Home() {
             </p>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "15px",
-                color: "#7a9083",
+                color: "#8aab96",
                 lineHeight: "1.65",
                 margin: "0 0 52px 0",
                 maxWidth: "500px",
@@ -121,31 +126,32 @@ export default function Home() {
               <Link
                 href="/process"
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "13px",
-                  color: "#f0ebe0",
-                  backgroundColor: "rgba(201, 168, 76, 0.12)",
-                  border: "1px solid rgba(201, 168, 76, 0.5)",
+                  color: "#1c3828",
+                  backgroundColor: "#d4a84c",
                   padding: "14px 32px",
                   textDecoration: "none",
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
+                  fontWeight: "600",
                   display: "inline-block",
                 }}
               >
-                See How the System Works
+                See How the System Works →
               </Link>
               <Link
                 href="/contact"
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "13px",
-                  color: "#9aab9f",
-                  border: "1px solid rgba(154, 171, 159, 0.3)",
+                  color: "#f5f0eb",
+                  border: "1px solid rgba(245, 240, 235, 0.4)",
                   padding: "14px 32px",
                   textDecoration: "none",
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
+                  fontWeight: "500",
                   display: "inline-block",
                 }}
               >
@@ -156,15 +162,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHAT'S MISSING */}
-      <section style={{ backgroundColor: "#05120e", padding: "120px 32px" }}>
+      {/* WHAT'S MISSING — cream bg */}
+      <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <h2
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: HEADING,
               fontSize: "clamp(26px, 3.5vw, 42px)",
-              fontWeight: "400",
-              color: "#f0ebe0",
+              fontWeight: "500",
+              color: "#1c3828",
               letterSpacing: "-0.02em",
               lineHeight: "1.2",
               margin: "0 0 32px 0",
@@ -174,11 +180,12 @@ export default function Home() {
           </h2>
           <p
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: BODY,
               fontSize: "18px",
-              color: "#b8c8be",
+              color: "#2e4e3a",
               lineHeight: "1.75",
               margin: "0 0 24px 0",
+              fontWeight: "300",
             }}
           >
             It&apos;s a wealth operating system that brings everything into one
@@ -187,9 +194,9 @@ export default function Home() {
           </p>
           <p
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: BODY,
               fontSize: "16px",
-              color: "#7a9083",
+              color: "#4a6155",
               lineHeight: "1.75",
               margin: "0 0 24px 0",
             }}
@@ -200,9 +207,9 @@ export default function Home() {
           </p>
           <p
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: BODY,
               fontSize: "16px",
-              color: "#7a9083",
+              color: "#4a6155",
               lineHeight: "1.75",
               margin: 0,
             }}
@@ -214,12 +221,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY CLIENTS CHOOSE ARMATURE */}
+      {/* WHY CLIENTS CHOOSE ARMATURE — alt cream */}
       <section
         style={{
-          backgroundColor: "#040f0b",
+          backgroundColor: "#ede8e0",
           padding: "120px 32px",
-          borderTop: "1px solid rgba(201, 168, 76, 0.08)",
+          borderTop: "1px solid rgba(28, 56, 40, 0.08)",
         }}
       >
         <div
@@ -235,7 +242,7 @@ export default function Home() {
           <div
             style={{
               aspectRatio: "4/5",
-              backgroundColor: "#0a1e15",
+              backgroundColor: "#c8d0c4",
               backgroundImage: "url(/images/team-discussion.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -247,18 +254,19 @@ export default function Home() {
                 position: "absolute",
                 inset: 0,
                 backgroundImage:
-                  "linear-gradient(135deg, transparent 60%, rgba(5,18,14,0.7) 100%)",
+                  "linear-gradient(135deg, transparent 60%, rgba(28,56,40,0.4) 100%)",
               }}
             />
           </div>
           <div>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "11px",
-                color: "#c9a84c",
+                color: "#b8913a",
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
+                fontWeight: "600",
                 margin: "0 0 24px 0",
               }}
             >
@@ -266,9 +274,9 @@ export default function Home() {
             </p>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "16px",
-                color: "#9aab9f",
+                color: "#4a6155",
                 lineHeight: "1.75",
                 margin: "0 0 48px 0",
               }}
@@ -300,15 +308,15 @@ export default function Home() {
                 style={{
                   margin: "0 0 32px 0",
                   paddingLeft: "20px",
-                  borderLeft: "1px solid rgba(201, 168, 76, 0.3)",
+                  borderLeft: "2px solid #b8913a",
                 }}
               >
                 <h3
                   style={{
-                    fontFamily: "Georgia, 'Times New Roman', serif",
+                    fontFamily: HEADING,
                     fontSize: "16px",
-                    fontWeight: "600",
-                    color: "#f0ebe0",
+                    fontWeight: "500",
+                    color: "#1c3828",
                     margin: "0 0 8px 0",
                     letterSpacing: "-0.01em",
                   }}
@@ -317,9 +325,9 @@ export default function Home() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: "Georgia, 'Times New Roman', serif",
+                    fontFamily: BODY,
                     fontSize: "14px",
-                    color: "#7a9083",
+                    color: "#4a6155",
                     lineHeight: "1.65",
                     margin: 0,
                   }}
@@ -330,9 +338,9 @@ export default function Home() {
             ))}
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "14px",
-                color: "#6b7f74",
+                color: "#6a8070",
                 lineHeight: "1.65",
                 fontStyle: "italic",
                 margin: "8px 0 0 0",
@@ -345,8 +353,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section style={{ backgroundColor: "#05120e", padding: "120px 32px" }}>
+      {/* SERVICES — cream bg */}
+      <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div
             style={{
@@ -359,11 +367,12 @@ export default function Home() {
             <div>
               <p
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "11px",
-                  color: "#c9a84c",
+                  color: "#b8913a",
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
+                  fontWeight: "600",
                   margin: "0 0 24px 0",
                 }}
               >
@@ -371,10 +380,10 @@ export default function Home() {
               </p>
               <h2
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: HEADING,
                   fontSize: "clamp(26px, 3.5vw, 42px)",
-                  fontWeight: "400",
-                  color: "#f0ebe0",
+                  fontWeight: "500",
+                  color: "#1c3828",
                   letterSpacing: "-0.02em",
                   lineHeight: "1.2",
                   margin: "0 0 28px 0",
@@ -384,9 +393,9 @@ export default function Home() {
               </h2>
               <p
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "16px",
-                  color: "#9aab9f",
+                  color: "#4a6155",
                   lineHeight: "1.75",
                   margin: "0 0 24px 0",
                 }}
@@ -397,9 +406,9 @@ export default function Home() {
               </p>
               <p
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "15px",
-                  color: "#6b7f74",
+                  color: "#6a8070",
                   lineHeight: "1.75",
                   margin: "0 0 32px 0",
                 }}
@@ -426,11 +435,12 @@ export default function Home() {
                 >
                   <span
                     style={{
-                      fontFamily: "Georgia, 'Times New Roman', serif",
+                      fontFamily: BODY,
                       fontSize: "11px",
-                      color: "#c9a84c",
+                      color: "#b8913a",
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
+                      fontWeight: "600",
                       minWidth: "64px",
                     }}
                   >
@@ -438,9 +448,9 @@ export default function Home() {
                   </span>
                   <span
                     style={{
-                      fontFamily: "Georgia, 'Times New Roman', serif",
+                      fontFamily: BODY,
                       fontSize: "15px",
-                      color: "#b8c8be",
+                      color: "#2e4e3a",
                     }}
                   >
                     {item.object}
@@ -449,9 +459,9 @@ export default function Home() {
               ))}
               <p
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "14px",
-                  color: "#6b7f74",
+                  color: "#6a8070",
                   lineHeight: "1.65",
                   fontStyle: "italic",
                   margin: "32px 0 40px 0",
@@ -462,14 +472,15 @@ export default function Home() {
               <Link
                 href="/services"
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "12px",
-                  color: "#c9a84c",
-                  border: "1px solid rgba(201, 168, 76, 0.4)",
+                  color: "#1c3828",
+                  border: "1.5px solid #1c3828",
                   padding: "12px 28px",
                   textDecoration: "none",
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
+                  fontWeight: "600",
                   display: "inline-block",
                 }}
               >
@@ -479,7 +490,7 @@ export default function Home() {
             <div
               style={{
                 aspectRatio: "3/4",
-                backgroundColor: "#0a1e15",
+                backgroundColor: "#c8d0c4",
                 backgroundImage: "url(/images/real-estate.jpg)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -492,14 +503,14 @@ export default function Home() {
                   width: "100%",
                   padding: "32px",
                   background:
-                    "linear-gradient(to top, rgba(5,18,14,0.85) 0%, transparent 60%)",
+                    "linear-gradient(to top, rgba(28,56,40,0.75) 0%, transparent 60%)",
                 }}
               >
                 <p
                   style={{
-                    fontFamily: "Georgia, 'Times New Roman', serif",
+                    fontFamily: BODY,
                     fontSize: "13px",
-                    color: "#9aab9f",
+                    color: "#c8d8cc",
                     fontStyle: "italic",
                     margin: 0,
                   }}
@@ -512,22 +523,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROCESS */}
+      {/* PROCESS — alt cream */}
       <section
         style={{
-          backgroundColor: "#040f0b",
+          backgroundColor: "#ede8e0",
           padding: "120px 32px",
-          borderTop: "1px solid rgba(201, 168, 76, 0.08)",
+          borderTop: "1px solid rgba(28, 56, 40, 0.08)",
         }}
       >
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <p
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: BODY,
               fontSize: "11px",
-              color: "#c9a84c",
+              color: "#b8913a",
               letterSpacing: "0.18em",
               textTransform: "uppercase",
+              fontWeight: "600",
               margin: "0 0 24px 0",
             }}
           >
@@ -535,10 +547,10 @@ export default function Home() {
           </p>
           <h2
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: HEADING,
               fontSize: "clamp(26px, 3.5vw, 42px)",
-              fontWeight: "400",
-              color: "#f0ebe0",
+              fontWeight: "500",
+              color: "#1c3828",
               letterSpacing: "-0.02em",
               lineHeight: "1.2",
               margin: "0 0 28px 0",
@@ -548,9 +560,9 @@ export default function Home() {
           </h2>
           <p
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: BODY,
               fontSize: "16px",
-              color: "#9aab9f",
+              color: "#4a6155",
               lineHeight: "1.75",
               margin: "0 0 48px 0",
             }}
@@ -577,10 +589,11 @@ export default function Home() {
             >
               <span
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "11px",
-                  color: "#c9a84c",
+                  color: "#b8913a",
                   letterSpacing: "0.1em",
+                  fontWeight: "600",
                   minWidth: "28px",
                   paddingTop: "3px",
                   flexShrink: 0,
@@ -590,9 +603,9 @@ export default function Home() {
               </span>
               <span
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "16px",
-                  color: "#b8c8be",
+                  color: "#2e4e3a",
                   lineHeight: "1.5",
                 }}
               >
@@ -604,14 +617,15 @@ export default function Home() {
             style={{
               marginTop: "40px",
               paddingTop: "32px",
-              borderTop: "1px solid rgba(201, 168, 76, 0.12)",
+              borderTop: "1px solid rgba(28, 56, 40, 0.15)",
             }}
           >
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
-                fontSize: "18px",
-                color: "#f0ebe0",
+                fontFamily: HEADING,
+                fontSize: "20px",
+                fontWeight: "500",
+                color: "#1c3828",
                 lineHeight: "1.6",
                 margin: "0 0 8px 0",
               }}
@@ -620,9 +634,9 @@ export default function Home() {
             </p>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "16px",
-                color: "#9aab9f",
+                color: "#4a6155",
                 lineHeight: "1.6",
                 fontStyle: "italic",
                 margin: "0 0 40px 0",
@@ -633,14 +647,15 @@ export default function Home() {
             <Link
               href="/process"
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "12px",
-                color: "#c9a84c",
-                border: "1px solid rgba(201, 168, 76, 0.4)",
+                color: "#1c3828",
+                border: "1.5px solid #1c3828",
                 padding: "12px 28px",
                 textDecoration: "none",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
+                fontWeight: "600",
                 display: "inline-block",
               }}
             >
@@ -650,8 +665,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section style={{ backgroundColor: "#05120e", padding: "120px 32px" }}>
+      {/* ABOUT — cream bg */}
+      <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
         <div
           style={{
             maxWidth: "1200px",
@@ -665,11 +680,12 @@ export default function Home() {
           <div>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "11px",
-                color: "#c9a84c",
+                color: "#b8913a",
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
+                fontWeight: "600",
                 margin: "0 0 24px 0",
               }}
             >
@@ -677,10 +693,10 @@ export default function Home() {
             </p>
             <h2
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: HEADING,
                 fontSize: "clamp(26px, 3.5vw, 42px)",
-                fontWeight: "400",
-                color: "#f0ebe0",
+                fontWeight: "500",
+                color: "#1c3828",
                 letterSpacing: "-0.02em",
                 lineHeight: "1.2",
                 margin: "0 0 28px 0",
@@ -690,9 +706,9 @@ export default function Home() {
             </h2>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "16px",
-                color: "#9aab9f",
+                color: "#4a6155",
                 lineHeight: "1.75",
                 margin: "0 0 24px 0",
               }}
@@ -704,9 +720,9 @@ export default function Home() {
             </p>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "16px",
-                color: "#9aab9f",
+                color: "#4a6155",
                 lineHeight: "1.75",
                 margin: "0 0 24px 0",
               }}
@@ -717,9 +733,9 @@ export default function Home() {
             </p>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "15px",
-                color: "#c9a84c",
+                color: "#b8913a",
                 lineHeight: "1.65",
                 fontStyle: "italic",
                 margin: "0 0 40px 0",
@@ -730,14 +746,15 @@ export default function Home() {
             <Link
               href="/about"
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "12px",
-                color: "#c9a84c",
-                border: "1px solid rgba(201, 168, 76, 0.4)",
+                color: "#1c3828",
+                border: "1.5px solid #1c3828",
                 padding: "12px 28px",
                 textDecoration: "none",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
+                fontWeight: "600",
                 display: "inline-block",
               }}
             >
@@ -747,7 +764,7 @@ export default function Home() {
           <div
             style={{
               aspectRatio: "4/5",
-              backgroundColor: "#0a1e15",
+              backgroundColor: "#c8d0c4",
               backgroundImage: "url(/images/professional.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center top",
@@ -759,19 +776,20 @@ export default function Home() {
                 position: "absolute",
                 bottom: "32px",
                 left: "32px",
-                backgroundColor: "rgba(5, 18, 14, 0.9)",
-                border: "1px solid rgba(201, 168, 76, 0.3)",
+                backgroundColor: "rgba(245, 240, 235, 0.92)",
+                border: "1px solid rgba(28, 56, 40, 0.2)",
                 padding: "20px 24px",
                 maxWidth: "220px",
               }}
             >
               <p
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "10px",
-                  color: "#c9a84c",
+                  color: "#b8913a",
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
+                  fontWeight: "600",
                   margin: "0 0 6px 0",
                 }}
               >
@@ -779,9 +797,9 @@ export default function Home() {
               </p>
               <p
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "12px",
-                  color: "#9aab9f",
+                  color: "#4a6155",
                   letterSpacing: "0.05em",
                   margin: 0,
                 }}
@@ -793,23 +811,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INSIGHTS PREVIEW */}
+      {/* INSIGHTS PREVIEW — alt cream */}
       <section
         style={{
-          backgroundColor: "#040f0b",
+          backgroundColor: "#ede8e0",
           padding: "120px 32px",
-          borderTop: "1px solid rgba(201, 168, 76, 0.08)",
+          borderTop: "1px solid rgba(28, 56, 40, 0.08)",
         }}
       >
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ maxWidth: "680px", marginBottom: "72px" }}>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "11px",
-                color: "#c9a84c",
+                color: "#b8913a",
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
+                fontWeight: "600",
                 margin: "0 0 24px 0",
               }}
             >
@@ -817,10 +836,10 @@ export default function Home() {
             </p>
             <h2
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: HEADING,
                 fontSize: "clamp(26px, 3.5vw, 42px)",
-                fontWeight: "400",
-                color: "#f0ebe0",
+                fontWeight: "500",
+                color: "#1c3828",
                 letterSpacing: "-0.02em",
                 lineHeight: "1.2",
                 margin: "0 0 28px 0",
@@ -830,9 +849,9 @@ export default function Home() {
             </h2>
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "16px",
-                color: "#9aab9f",
+                color: "#4a6155",
                 lineHeight: "1.75",
                 margin: "0 0 24px 0",
               }}
@@ -849,12 +868,12 @@ export default function Home() {
               <p
                 key={item}
                 style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontFamily: BODY,
                   fontSize: "14px",
-                  color: "#6b7f74",
+                  color: "#4a6155",
                   lineHeight: "1.65",
                   paddingLeft: "16px",
-                  borderLeft: "1px solid rgba(201, 168, 76, 0.2)",
+                  borderLeft: "2px solid #b8913a",
                   margin: "0 0 10px 0",
                 }}
               >
@@ -863,9 +882,9 @@ export default function Home() {
             ))}
             <p
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "14px",
-                color: "#4a5e52",
+                color: "#6a8070",
                 fontStyle: "italic",
                 margin: "20px 0 0 0",
               }}
@@ -911,8 +930,8 @@ export default function Home() {
               <article
                 key={article.href}
                 style={{
-                  backgroundColor: "#05120e",
-                  border: "1px solid rgba(255,255,255,0.06)",
+                  backgroundColor: "#f5f0eb",
+                  border: "1px solid rgba(28, 56, 40, 0.12)",
                   padding: "36px 32px",
                   display: "flex",
                   flexDirection: "column",
@@ -928,20 +947,21 @@ export default function Home() {
                 >
                   <span
                     style={{
-                      fontFamily: "Georgia, 'Times New Roman', serif",
+                      fontFamily: BODY,
                       fontSize: "10px",
-                      color: "#c9a84c",
+                      color: "#b8913a",
                       letterSpacing: "0.12em",
                       textTransform: "uppercase",
+                      fontWeight: "600",
                     }}
                   >
                     {article.category}
                   </span>
                   <span
                     style={{
-                      fontFamily: "Georgia, 'Times New Roman', serif",
+                      fontFamily: BODY,
                       fontSize: "11px",
-                      color: "#4a5e52",
+                      color: "#6a8070",
                     }}
                   >
                     {article.date}
@@ -949,10 +969,10 @@ export default function Home() {
                 </div>
                 <h3
                   style={{
-                    fontFamily: "Georgia, 'Times New Roman', serif",
+                    fontFamily: HEADING,
                     fontSize: "18px",
-                    fontWeight: "400",
-                    color: "#f0ebe0",
+                    fontWeight: "500",
+                    color: "#1c3828",
                     lineHeight: "1.3",
                     margin: "0 0 16px 0",
                     letterSpacing: "-0.01em",
@@ -968,9 +988,9 @@ export default function Home() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: "Georgia, 'Times New Roman', serif",
+                    fontFamily: BODY,
                     fontSize: "14px",
-                    color: "#7a9083",
+                    color: "#4a6155",
                     lineHeight: "1.65",
                     margin: "0 0 28px 0",
                   }}
@@ -980,13 +1000,14 @@ export default function Home() {
                 <Link
                   href={article.href}
                   style={{
-                    fontFamily: "Georgia, 'Times New Roman', serif",
+                    fontFamily: BODY,
                     fontSize: "12px",
-                    color: "#c9a84c",
+                    color: "#1c3828",
                     textDecoration: "none",
                     letterSpacing: "0.08em",
                     textTransform: "uppercase",
-                    borderBottom: "1px solid rgba(201, 168, 76, 0.3)",
+                    fontWeight: "600",
+                    borderBottom: "1.5px solid #1c3828",
                     paddingBottom: "2px",
                     display: "inline-block",
                   }}
@@ -1001,14 +1022,15 @@ export default function Home() {
             <Link
               href="/insights"
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "12px",
-                color: "#c9a84c",
-                border: "1px solid rgba(201, 168, 76, 0.4)",
+                color: "#1c3828",
+                border: "1.5px solid #1c3828",
                 padding: "12px 32px",
                 textDecoration: "none",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
+                fontWeight: "600",
                 display: "inline-block",
               }}
             >

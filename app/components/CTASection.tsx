@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
+const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
+
 export default function CTASection() {
   return (
     <section
@@ -40,9 +43,9 @@ export default function CTASection() {
       >
         <h2
           style={{
-            fontFamily: "Georgia, 'Times New Roman', serif",
+            fontFamily: HEADING,
             fontSize: "clamp(28px, 4vw, 44px)",
-            fontWeight: "400",
+            fontWeight: "500",
             color: "#0f1e1b",
             letterSpacing: "-0.02em",
             lineHeight: "1.2",
@@ -53,7 +56,7 @@ export default function CTASection() {
         </h2>
         <p
           style={{
-            fontFamily: "Georgia, 'Times New Roman', serif",
+            fontFamily: BODY,
             fontSize: "17px",
             color: "#2a3d38",
             lineHeight: "1.7",
@@ -65,7 +68,7 @@ export default function CTASection() {
         </p>
         <p
           style={{
-            fontFamily: "Georgia, 'Times New Roman', serif",
+            fontFamily: BODY,
             fontSize: "16px",
             color: "#3a5048",
             lineHeight: "1.7",
@@ -79,7 +82,7 @@ export default function CTASection() {
         <Link
           href="/contact"
           style={{
-            fontFamily: "Georgia, 'Times New Roman', serif",
+            fontFamily: BODY,
             fontSize: "13px",
             color: "#0f1e1b",
             border: "1.5px solid rgba(15, 30, 27, 0.5)",
@@ -87,8 +90,8 @@ export default function CTASection() {
             textDecoration: "none",
             letterSpacing: "0.1em",
             textTransform: "uppercase",
+            fontWeight: "600",
             display: "inline-block",
-            transition: "all 0.2s",
           }}
         >
           Begin with a Conversation

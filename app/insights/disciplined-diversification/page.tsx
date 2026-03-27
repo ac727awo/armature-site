@@ -5,9 +5,9 @@ export const metadata = {
 };
 
 const p: React.CSSProperties = {
-  fontFamily: "Georgia, 'Times New Roman', serif",
+  fontFamily: "'Archivo', 'Helvetica Neue', Arial, sans-serif",
   fontSize: "17px",
-  color: "#b8c8be",
+  color: "#4a6155",
   lineHeight: "1.8",
   margin: "0 0 24px 0",
 };
@@ -46,7 +46,7 @@ export default function Article() {
         a governing view of what the portfolio is for, who it is serving, and
         what continuity looks like across the conditions it will actually face.
       </p>
-      <p style={{ ...p, color: "#9aab9f", fontStyle: "italic" }}>
+      <p style={{ ...p, color: "#6a8070", fontStyle: "italic" }}>
         Diversification without discipline is exposure management. Disciplined
         diversification is architecture. The distinction shows most clearly when
         it matters most.

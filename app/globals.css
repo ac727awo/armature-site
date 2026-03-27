@@ -1,16 +1,30 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+@font-face {
+  font-family: 'Operetta 12';
+  src: url('/fonts/Operetta12-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme inline {
-  --color-forest: #05120e;
-  --color-forest-mid: #0f2218;
-  --color-forest-light: #1a3328;
-  --color-gold: #c9a84c;
-  --color-gold-light: #edd97a;
-  --color-cream: #f5f0e8;
-  --color-cream-light: #faf7f2;
-  --color-text-primary: #f0ebe0;
-  --color-text-muted: #9aab9f;
-  --color-text-dark: #1a2e26;
+  /* Brand greens */
+  --color-forest: #1c3828;
+  --color-forest-dark: #0f2218;
+  --color-forest-deep: #0a1a10;
+  /* Brand golds */
+  --color-gold: #b8913a;
+  --color-gold-light: #d4a84c;
+  /* Cream backgrounds */
+  --color-cream: #f5f0eb;
+  --color-cream-alt: #ede8e0;
+  --color-cream-dark: #e4ddd4;
+  /* Text */
+  --color-text-primary: #1c3828;
+  --color-text-muted: #4a6155;
+  --color-text-light: #7a9080;
 }
 
 @layer base {
@@ -23,8 +37,8 @@
   }
 
   body {
-    background-color: #05120e;
-    color: #f0ebe0;
+    background-color: #f5f0eb;
+    color: #1c3828;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

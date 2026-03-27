@@ -2,6 +2,9 @@
 import Link from "next/link";
 import { useState } from "react";
 
+const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
+const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
+
 const links = [
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
@@ -21,9 +24,9 @@ export default function Nav() {
         left: 0,
         right: 0,
         zIndex: 50,
-        backgroundColor: "rgba(5, 18, 14, 0.92)",
+        backgroundColor: "rgba(245, 240, 235, 0.96)",
         backdropFilter: "blur(12px)",
-        borderBottom: "1px solid rgba(201, 168, 76, 0.15)",
+        borderBottom: "1px solid rgba(28, 56, 40, 0.12)",
       }}
     >
       <nav
@@ -49,11 +52,11 @@ export default function Nav() {
         >
           <span
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: HEADING,
               fontSize: "17px",
-              fontWeight: "600",
-              color: "#f0ebe0",
-              letterSpacing: "0.05em",
+              fontWeight: "500",
+              color: "#1c3828",
+              letterSpacing: "0.04em",
               textTransform: "uppercase",
             }}
           >
@@ -63,16 +66,17 @@ export default function Nav() {
             style={{
               width: "1px",
               height: "16px",
-              backgroundColor: "rgba(201, 168, 76, 0.4)",
+              backgroundColor: "rgba(28, 56, 40, 0.25)",
             }}
           />
           <span
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "11px",
-              color: "#9aab9f",
-              letterSpacing: "0.12em",
+              fontFamily: BODY,
+              fontSize: "10px",
+              color: "#4a6155",
+              letterSpacing: "0.14em",
               textTransform: "uppercase",
+              fontWeight: "500",
             }}
           >
             Wealth Partners
@@ -93,19 +97,20 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "13px",
-                color: "#9aab9f",
+                color: "#4a6155",
                 textDecoration: "none",
                 letterSpacing: "0.06em",
                 textTransform: "uppercase",
+                fontWeight: "500",
                 transition: "color 0.2s",
               }}
               onMouseEnter={(e) =>
-                ((e.target as HTMLElement).style.color = "#f0ebe0")
+                ((e.target as HTMLElement).style.color = "#1c3828")
               }
               onMouseLeave={(e) =>
-                ((e.target as HTMLElement).style.color = "#9aab9f")
+                ((e.target as HTMLElement).style.color = "#4a6155")
               }
             >
               {link.label}
@@ -114,25 +119,24 @@ export default function Nav() {
           <Link
             href="/contact"
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: BODY,
               fontSize: "12px",
-              color: "#c9a84c",
-              border: "1px solid rgba(201, 168, 76, 0.5)",
-              padding: "8px 20px",
+              color: "#f5f0eb",
+              backgroundColor: "#1c3828",
+              padding: "9px 20px",
               textDecoration: "none",
               letterSpacing: "0.08em",
               textTransform: "uppercase",
+              fontWeight: "500",
               transition: "all 0.2s",
             }}
             onMouseEnter={(e) => {
               const el = e.target as HTMLElement;
-              el.style.backgroundColor = "rgba(201, 168, 76, 0.1)";
-              el.style.borderColor = "#c9a84c";
+              el.style.backgroundColor = "#0f2218";
             }}
             onMouseLeave={(e) => {
               const el = e.target as HTMLElement;
-              el.style.backgroundColor = "transparent";
-              el.style.borderColor = "rgba(201, 168, 76, 0.5)";
+              el.style.backgroundColor = "#1c3828";
             }}
           >
             Get Your Freedom Index
@@ -147,7 +151,7 @@ export default function Nav() {
             border: "none",
             cursor: "pointer",
             padding: "4px",
-            color: "#f0ebe0",
+            color: "#1c3828",
           }}
           className="md:hidden"
           aria-label="Toggle menu"
@@ -173,8 +177,8 @@ export default function Nav() {
       {open && (
         <div
           style={{
-            backgroundColor: "#05120e",
-            borderTop: "1px solid rgba(201, 168, 76, 0.1)",
+            backgroundColor: "#f5f0eb",
+            borderTop: "1px solid rgba(28, 56, 40, 0.1)",
             padding: "24px 32px 32px",
           }}
           className="md:hidden"
@@ -186,13 +190,14 @@ export default function Nav() {
               onClick={() => setOpen(false)}
               style={{
                 display: "block",
-                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontFamily: BODY,
                 fontSize: "16px",
-                color: "#9aab9f",
+                color: "#4a6155",
                 textDecoration: "none",
                 letterSpacing: "0.04em",
+                fontWeight: "500",
                 padding: "12px 0",
-                borderBottom: "1px solid rgba(255,255,255,0.05)",
+                borderBottom: "1px solid rgba(28, 56, 40, 0.08)",
               }}
             >
               {link.label}
@@ -204,14 +209,15 @@ export default function Nav() {
             style={{
               display: "inline-block",
               marginTop: "24px",
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: BODY,
               fontSize: "13px",
-              color: "#c9a84c",
-              border: "1px solid rgba(201, 168, 76, 0.5)",
+              color: "#f5f0eb",
+              backgroundColor: "#1c3828",
               padding: "10px 24px",
               textDecoration: "none",
               letterSpacing: "0.08em",
               textTransform: "uppercase",
+              fontWeight: "500",
             }}
           >
             Get Your Freedom Index

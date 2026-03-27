@@ -5,9 +5,9 @@ export const metadata = {
 };
 
 const p: React.CSSProperties = {
-  fontFamily: "Georgia, 'Times New Roman', serif",
+  fontFamily: "'Archivo', 'Helvetica Neue', Arial, sans-serif",
   fontSize: "17px",
-  color: "#b8c8be",
+  color: "#4a6155",
   lineHeight: "1.8",
   margin: "0 0 24px 0",
 };
@@ -48,7 +48,7 @@ export default function Article() {
         structural inefficiency — the kind that compounds across decades and
         cannot be resolved with any single tactic.
       </p>
-      <p style={{ ...p, color: "#9aab9f", fontStyle: "italic" }}>
+      <p style={{ ...p, color: "#6a8070", fontStyle: "italic" }}>
         The resolution is not more tax advice. It is a governing layer that
         holds context across all decisions — so that the interaction effects
         are visible before they compound, not after.

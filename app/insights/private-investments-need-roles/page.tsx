@@ -5,9 +5,9 @@ export const metadata = {
 };
 
 const p: React.CSSProperties = {
-  fontFamily: "Georgia, 'Times New Roman', serif",
+  fontFamily: "'Archivo', 'Helvetica Neue', Arial, sans-serif",
   fontSize: "17px",
-  color: "#b8c8be",
+  color: "#4a6155",
   lineHeight: "1.8",
   margin: "0 0 24px 0",
 };
@@ -46,7 +46,7 @@ export default function Article() {
         and a clear liquidity plan tend to hold better — because the decision
         was already made.
       </p>
-      <p style={{ ...p, color: "#9aab9f", fontStyle: "italic" }}>
+      <p style={{ ...p, color: "#6a8070", fontStyle: "italic" }}>
         Not every opportunity deserves capital. The ones that do earn their
         place by serving a defined purpose — not by offering the highest
         projected return.

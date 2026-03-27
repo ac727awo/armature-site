@@ -5,9 +5,9 @@ export const metadata = {
 };
 
 const p: React.CSSProperties = {
-  fontFamily: "Georgia, 'Times New Roman', serif",
+  fontFamily: "'Archivo', 'Helvetica Neue', Arial, sans-serif",
   fontSize: "17px",
-  color: "#b8c8be",
+  color: "#4a6155",
   lineHeight: "1.8",
   margin: "0 0 24px 0",
 };
@@ -53,7 +53,7 @@ export default function Article() {
         Each decision, reviewed in isolation, appears reasonable. Together, they
         represent significant leakage that compounds quietly across decades.
       </p>
-      <p style={{ ...p, color: "#9aab9f", fontStyle: "italic" }}>
+      <p style={{ ...p, color: "#6a8070", fontStyle: "italic" }}>
         Capital efficiency is not an optimization project. It is a design
         principle. And like most design principles, it works best when
         applied before the complexity arrives — not after it has settled in.

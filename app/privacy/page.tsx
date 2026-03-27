@@ -3,18 +3,18 @@ export const metadata = {
 };
 
 const p: React.CSSProperties = {
-  fontFamily: "Georgia, 'Times New Roman', serif",
+  fontFamily: "'Archivo', 'Helvetica Neue', Arial, sans-serif",
   fontSize: "16px",
-  color: "#9aab9f",
+  color: "#4a6155",
   lineHeight: "1.8",
   margin: "0 0 20px 0",
 };
 
 const h2: React.CSSProperties = {
-  fontFamily: "Georgia, 'Times New Roman', serif",
+  fontFamily: "'Operetta 12', Georgia, 'Times New Roman', serif",
   fontSize: "20px",
-  fontWeight: "400",
-  color: "#f0ebe0",
+  fontWeight: "500",
+  color: "#1c3828",
   margin: "0 0 16px 0",
   letterSpacing: "-0.01em",
 };
@@ -23,7 +23,7 @@ export default function Privacy() {
   return (
     <section
       style={{
-        backgroundColor: "#05120e",
+        backgroundColor: "#f5f0eb",
         paddingTop: "160px",
         paddingBottom: "120px",
         paddingLeft: "32px",
@@ -33,9 +33,9 @@ export default function Privacy() {
       <div style={{ maxWidth: "720px", margin: "0 auto" }}>
         <p
           style={{
-            fontFamily: "Georgia, 'Times New Roman', serif",
+            fontFamily: "'Archivo', 'Helvetica Neue', Arial, sans-serif",
             fontSize: "11px",
-            color: "#c9a84c",
+            color: "#b8913a",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
             margin: "0 0 24px 0",
@@ -45,10 +45,10 @@ export default function Privacy() {
         </p>
         <h1
           style={{
-            fontFamily: "Georgia, 'Times New Roman', serif",
+            fontFamily: "'Operetta 12', Georgia, 'Times New Roman', serif",
             fontSize: "clamp(28px, 4vw, 44px)",
-            fontWeight: "400",
-            color: "#f0ebe0",
+            fontWeight: "500",
+            color: "#1c3828",
             letterSpacing: "-0.02em",
             lineHeight: "1.15",
             margin: "0 0 48px 0",
@@ -85,7 +85,7 @@ export default function Privacy() {
           style={{
             ...p,
             fontSize: "13px",
-            color: "#4a5e52",
+            color: "#6a8070",
           }}
         >
           Last updated: March 2026
