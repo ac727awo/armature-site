@@ -29,7 +29,7 @@ export default function Home() {
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: "url(/images/hero-bg.jpg)",
+            backgroundImage: "url(/images/team-discussion.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center 30%",
             opacity: 0.3,
