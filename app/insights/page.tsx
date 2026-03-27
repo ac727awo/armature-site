@@ -126,47 +126,64 @@ export default function Insights() {
                 style={{
                   backgroundColor: "#f5f0eb",
                   border: "1px solid rgba(28, 56, 40, 0.12)",
-                  padding: "36px 32px",
                   display: "flex",
                   flexDirection: "column",
+                  overflow: "hidden",
                 }}
               >
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
-                  <span style={{ fontFamily: BODY, fontSize: "10px", color: "#b8913a", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: "600" }}>
-                    {article.category}
-                  </span>
-                  <span style={{ fontFamily: BODY, fontSize: "11px", color: "#6a8070" }}>
-                    {article.readTime}
-                  </span>
-                </div>
-                <h2 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#1c3828", lineHeight: "1.3", margin: "0 0 16px 0", letterSpacing: "-0.01em", flex: 1 }}>
-                  <Link href={article.href} style={{ color: "inherit", textDecoration: "none" }}>
-                    {article.title}
-                  </Link>
-                </h2>
-                <p style={{ fontFamily: BODY, fontSize: "14px", color: "#4a6155", lineHeight: "1.65", margin: "0 0 12px 0" }}>
-                  {article.excerpt}
-                </p>
-                <p style={{ fontFamily: BODY, fontSize: "11px", color: "#6a8070", margin: "0 0 20px 0" }}>
-                  {article.date}
-                </p>
-                <Link
-                  href={article.href}
-                  style={{
-                    fontFamily: BODY,
-                    fontSize: "12px",
-                    color: "#1c3828",
-                    textDecoration: "none",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    fontWeight: "600",
-                    borderBottom: "1.5px solid #1c3828",
-                    paddingBottom: "2px",
-                    display: "inline-block",
-                  }}
-                >
-                  Read More
+                {/* Editorial image — flush to top, no padding */}
+                <Link href={article.href} style={{ display: "block", textDecoration: "none" }}>
+                  <div
+                    style={{
+                      width: "100%",
+                      aspectRatio: "3/2",
+                      backgroundImage: "url(/images/insights-editorial.jpg)",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundColor: "#c8d0c4",
+                    }}
+                  />
                 </Link>
+
+                {/* Card content */}
+                <div style={{ padding: "28px 28px 32px", display: "flex", flexDirection: "column", flex: 1 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "14px" }}>
+                    <span style={{ fontFamily: BODY, fontSize: "10px", color: "#b8913a", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: "600" }}>
+                      {article.category}
+                    </span>
+                    <span style={{ fontFamily: BODY, fontSize: "11px", color: "#6a8070" }}>
+                      {article.readTime}
+                    </span>
+                  </div>
+                  <h2 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#1c3828", lineHeight: "1.3", margin: "0 0 14px 0", letterSpacing: "-0.01em", flex: 1 }}>
+                    <Link href={article.href} style={{ color: "inherit", textDecoration: "none" }}>
+                      {article.title}
+                    </Link>
+                  </h2>
+                  <p style={{ fontFamily: BODY, fontSize: "14px", color: "#4a6155", lineHeight: "1.65", margin: "0 0 12px 0" }}>
+                    {article.excerpt}
+                  </p>
+                  <p style={{ fontFamily: BODY, fontSize: "11px", color: "#6a8070", margin: "0 0 20px 0" }}>
+                    {article.date}
+                  </p>
+                  <Link
+                    href={article.href}
+                    style={{
+                      fontFamily: BODY,
+                      fontSize: "12px",
+                      color: "#1c3828",
+                      textDecoration: "none",
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      fontWeight: "600",
+                      borderBottom: "1.5px solid #1c3828",
+                      paddingBottom: "2px",
+                      display: "inline-block",
+                    }}
+                  >
+                    Read More
+                  </Link>
+                </div>
               </article>
             ))}
           </div>

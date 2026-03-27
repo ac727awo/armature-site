@@ -243,7 +243,7 @@ export default function Home() {
             style={{
               aspectRatio: "4/5",
               backgroundColor: "#c8d0c4",
-              backgroundImage: "url(/images/team-discussion.jpg)",
+              backgroundImage: "url(/images/governance-desk.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
               position: "relative",
@@ -491,7 +491,7 @@ export default function Home() {
               style={{
                 aspectRatio: "3/4",
                 backgroundColor: "#c8d0c4",
-                backgroundImage: "url(/images/real-estate.jpg)",
+                backgroundImage: "url(/images/integration-diagram.jpg)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 display: "flex",
