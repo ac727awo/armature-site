@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "Armature Wealth Office | A Better Way to Manage Wealth",
   description:
     "A wealth operating system for accomplished professionals. Governance, integration, and clarity for those with $8M–$15M+ net worth.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
