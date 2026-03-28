@@ -4,7 +4,7 @@ const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
 const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
 
 export const metadata = {
-  title: "Services | Armature Wealth Partners",
+  title: "Services | Armature Wealth Office",
   description:
     "Designed as a system. Operated as one. A wealth operating system for accomplished professionals.",
 };

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Disclosures | Armature Wealth Partners",
+  title: "Disclosures | Armature Wealth Office",
 };
 
 const p: React.CSSProperties = {
@@ -48,7 +48,7 @@ export default function Disclosures() {
           Disclosures
         </h1>
         <p style={p}>
-          Armature Wealth Partners provides investment advisory services to
+          Armature Wealth Office provides investment advisory services to
           qualified clients. All investing involves risk, including the possible
           loss of principal. Past performance does not guarantee future results.
         </p>
@@ -65,7 +65,7 @@ export default function Disclosures() {
           from their financial advisors.
         </p>
         <p style={p}>
-          Armature Wealth Partners is not a licensed securities broker-dealer,
+          Armature Wealth Office is not a licensed securities broker-dealer,
           and does not hold itself out as such. Nothing herein should be
           construed as legal, tax, or accounting advice.
         </p>
@@ -76,7 +76,7 @@ export default function Disclosures() {
             color: "#6a8070",
           }}
         >
-          © 2026 Armature Wealth Partners. All rights reserved.
+          © 2026 Armature Wealth Office. All rights reserved.
         </p>
       </div>
     </section>

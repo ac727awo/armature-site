@@ -179,7 +179,7 @@ export default function Footer() {
                 color: "#5a7a62",
               }}
             >
-              © 2026 Armature Wealth Partners. All rights reserved.
+              © 2026 Armature Wealth Office. All rights reserved.
             </span>
             <div style={{ display: "flex", gap: "24px" }}>
               <Link
@@ -215,7 +215,7 @@ export default function Footer() {
               maxWidth: "800px",
             }}
           >
-            Armature Wealth Partners provides investment advisory services to
+            Armature Wealth Office provides investment advisory services to
             qualified clients. All investing involves risk, including the
             possible loss of principal. Past performance does not guarantee
             future results. This website is for informational purposes only and

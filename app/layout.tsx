@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Armature Wealth Partners | A Better Way to Manage Wealth",
+  title: "Armature Wealth Office | A Better Way to Manage Wealth",
   description:
     "A wealth operating system for accomplished professionals. Governance, integration, and clarity for those with $10M–$25M+ net worth.",
 };

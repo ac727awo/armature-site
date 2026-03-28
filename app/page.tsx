@@ -5,7 +5,7 @@ const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
 const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
 
 export const metadata = {
-  title: "Armature Wealth Partners | A Better Way to Manage Wealth",
+  title: "Armature Wealth Office | A Better Way to Manage Wealth",
   description:
     "A wealth operating system for accomplished professionals with $10M–$25M+ net worth. Governance, integration, and clarity.",
 };
@@ -48,10 +48,10 @@ export default function Home() {
         <div
           style={{
             position: "absolute",
-            bottom: 0,
+            bottom: "-32px",
             left: 0,
             right: 0,
-            height: "200px",
+            height: "160px",
             background: "linear-gradient(to bottom, transparent, #f5f0eb)",
             pointerEvents: "none",
             zIndex: 1,
@@ -80,7 +80,7 @@ export default function Home() {
                 margin: "0 0 28px 0",
               }}
             >
-              Armature Wealth Partners
+              Armature Wealth Office
             </p>
             <h1
               style={{

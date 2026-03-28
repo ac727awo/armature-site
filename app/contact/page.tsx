@@ -165,7 +165,7 @@ export default function Contact() {
             Important Disclosures
           </h3>
           <p style={{ fontFamily: BODY, fontSize: "12px", color: "#6a8070", lineHeight: "1.7", margin: 0 }}>
-            Armature Wealth Partners provides investment advisory services to qualified clients. All investing involves risk, including the possible loss of principal. Past performance does not guarantee future results. This website is for informational purposes only and does not constitute investment advice.
+            Armature Wealth Office provides investment advisory services to qualified clients. All investing involves risk, including the possible loss of principal. Past performance does not guarantee future results. This website is for informational purposes only and does not constitute investment advice.
           </p>
         </div>
       </section>

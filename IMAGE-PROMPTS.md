@@ -1,4 +1,4 @@
-# Armature Wealth Partners — Image Generation Prompts
+# Armature Wealth Office — Image Generation Prompts
 
 Three images. Each has a specific placement, function, and required visual language.
 Use these prompts verbatim in Midjourney (v6.1+), Adobe Firefly (Generative Fill off), or DALL-E 3.

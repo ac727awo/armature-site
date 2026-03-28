@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Privacy Policy | Armature Wealth Partners",
+  title: "Privacy Policy | Armature Wealth Office",
 };
 
 const p: React.CSSProperties = {
@@ -71,7 +71,7 @@ export default function Privacy() {
         </p>
         <h2 style={h2}>Confidentiality</h2>
         <p style={p}>
-          All information shared with Armature Wealth Partners is treated as
+          All information shared with Armature Wealth Office is treated as
           strictly confidential. We work exclusively with principals and
           maintain the highest standards of discretion in all client
           relationships.
