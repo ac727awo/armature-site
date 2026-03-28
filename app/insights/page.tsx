@@ -14,6 +14,7 @@ const articles = [
     title: "Capital Efficiency Is a Condition, Not a Goal",
     excerpt: "Most discussions about capital efficiency start in the wrong place. Efficiency is not something you achieve — it is a condition you either maintain or let erode.",
     href: "/insights/capital-efficiency-is-a-condition",
+    image: "/images/insights-capital-efficiency.jpg",
   },
   {
     category: "Tax Strategy",
@@ -22,6 +23,7 @@ const articles = [
     title: "Tax Drag Is a Structural Issue, Not a Tactical One",
     excerpt: "Most tax inefficiency does not come from bad advice. It comes from decisions made in isolation. Tax drag compounds quietly across years.",
     href: "/insights/tax-drag-is-a-structural-issue",
+    image: "/images/insights-tax-drag.jpg",
   },
   {
     category: "Private Investments",
@@ -30,6 +32,7 @@ const articles = [
     title: "Private Investments Need Roles, Not Just Returns",
     excerpt: "Private investments fail more often from confusion than conviction. The issue is rarely access. It's clarity of purpose.",
     href: "/insights/private-investments-need-roles",
+    image: "/images/insights-private-investments.jpg",
   },
   {
     category: "Capital Efficiency",
@@ -38,6 +41,7 @@ const articles = [
     title: "Designed Income Reduces Oversight",
     excerpt: "Income becomes problematic when pursued reactively. Designed well, it does the opposite. The real issue is whether income was structured to serve a role.",
     href: "/insights/designed-income-reduces-oversight",
+    image: "/images/insights-designed-income.jpg",
   },
   {
     category: "Long-Term Planning",
@@ -46,6 +50,7 @@ const articles = [
     title: "Legacy Is a Decision System, Not an Event",
     excerpt: "Legacy is usually discussed too late, and too narrowly. In practice, legacy is built quietly, long before any formal transfer takes place.",
     href: "/insights/legacy-is-a-decision-system",
+    image: "/images/insights-legacy.jpg",
   },
   {
     category: "Long-Term Planning",
@@ -54,6 +59,7 @@ const articles = [
     title: "The Case for Disciplined Diversification",
     excerpt: "Most portfolios are diversified. Very few are disciplined. The difference isn't the number of assets — it's whether diversification was designed to withstand different kinds of stress.",
     href: "/insights/disciplined-diversification",
+    image: "/images/insights-diversification.jpg",
   },
 ];
 
@@ -131,13 +137,13 @@ export default function Insights() {
                   overflow: "hidden",
                 }}
               >
-                {/* Editorial image — flush to top, no padding */}
+                {/* Editorial image — flush to top, unique per article */}
                 <Link href={article.href} style={{ display: "block", textDecoration: "none" }}>
                   <div
                     style={{
                       width: "100%",
                       aspectRatio: "3/2",
-                      backgroundImage: "url(/images/insights-editorial.jpg)",
+                      backgroundImage: `url(${article.image})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                       backgroundColor: "#c8d0c4",
