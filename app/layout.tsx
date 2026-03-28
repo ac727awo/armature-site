@@ -8,9 +8,14 @@ export const metadata: Metadata = {
   description:
     "A wealth operating system for accomplished professionals. Governance, integration, and clarity for those with $8M–$15M+ net worth.",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
