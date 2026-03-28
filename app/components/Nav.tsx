@@ -79,7 +79,7 @@ export default function Nav() {
               fontWeight: "500",
             }}
           >
-            Wealth Partners
+            Wealth Office
           </span>
         </Link>
 

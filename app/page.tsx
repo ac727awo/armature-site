@@ -51,8 +51,8 @@ export default function Home() {
             bottom: "-32px",
             left: 0,
             right: 0,
-            height: "160px",
-            background: "linear-gradient(to bottom, transparent, #f5f0eb)",
+            height: "220px",
+            background: "linear-gradient(to bottom, transparent 0%, rgba(245,240,235,0.3) 35%, rgba(245,240,235,0.75) 65%, #f5f0eb 100%)",
             pointerEvents: "none",
             zIndex: 1,
           }}

@@ -49,7 +49,7 @@ export default function Footer() {
                   marginTop: "4px",
                 }}
               >
-                Wealth Partners
+                Wealth Office
               </span>
             </div>
             <p
