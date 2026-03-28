@@ -125,7 +125,7 @@ export default function Insights() {
       {/* ARTICLES */}
       <section style={{ backgroundColor: "#ede8e0", padding: "72px 32px 100px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "32px", marginBottom: "48px" }}>
+          <div className="grid-3col" style={{ marginBottom: "48px" }}>
             {filtered.map((article) => (
               <article
                 key={article.href}

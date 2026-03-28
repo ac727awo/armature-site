@@ -38,7 +38,7 @@ export default function Contact() {
       {/* CONTENT */}
       <section style={{ backgroundColor: "#f5f0eb", padding: "100px 32px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "80px", alignItems: "start" }}>
+          <div className="grid-contact" style={{ alignItems: "start" }}>
             {/* Left — context */}
             <div>
               <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
@@ -69,6 +69,7 @@ export default function Contact() {
 
             {/* Right — form */}
             <div
+              className="contact-card"
               style={{
                 backgroundColor: "#ede8e0",
                 border: "1px solid rgba(28, 56, 40, 0.12)",
@@ -91,7 +92,7 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginBottom: "20px" }}>
+                  <div className="grid-name" style={{ marginBottom: "20px" }}>
                     <div>
                       <label style={labelStyle}>First Name</label>
                       <input type="text" placeholder="John" required style={inputStyle} />

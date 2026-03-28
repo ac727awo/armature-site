@@ -229,16 +229,7 @@ export default function Home() {
           borderTop: "1px solid rgba(28, 56, 40, 0.08)",
         }}
       >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "80px",
-            alignItems: "center",
-          }}
-        >
+        <div className="grid-2col" style={{ maxWidth: "1200px", margin: "0 auto", alignItems: "center" }}>
           <div
             style={{
               aspectRatio: "4/5",
@@ -356,14 +347,7 @@ export default function Home() {
       {/* SERVICES — cream bg */}
       <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "80px",
-              alignItems: "start",
-            }}
-          >
+          <div className="grid-2col" style={{ alignItems: "start" }}>
             <div>
               <p
                 style={{
@@ -667,16 +651,7 @@ export default function Home() {
 
       {/* ABOUT — cream bg */}
       <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "80px",
-            alignItems: "center",
-          }}
-        >
+        <div className="grid-2col" style={{ maxWidth: "1200px", margin: "0 auto", alignItems: "center" }}>
           <div>
             <p
               style={{
@@ -893,14 +868,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "32px",
-              marginBottom: "48px",
-            }}
-          >
+          <div className="grid-3col" style={{ marginBottom: "48px" }}>
             {[
               {
                 category: "Capital Efficiency",

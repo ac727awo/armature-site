@@ -56,14 +56,7 @@ export default function About() {
       {/* MAIN CONTENT */}
       <section style={{ backgroundColor: "#f5f0eb", padding: "100px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "80px",
-              alignItems: "start",
-            }}
-          >
+          <div className="grid-2col" style={{ alignItems: "start" }}>
             <div>
               <h2
                 style={{
@@ -107,9 +100,9 @@ export default function About() {
       </section>
 
       {/* LION SECTION */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "80px 32px", borderTop: "1px solid rgba(28,56,40,0.08)" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
-          <div>
+      <section style={{ backgroundColor: "#f5f0eb", borderTop: "1px solid rgba(28,56,40,0.08)" }}>
+        <div className="lion-section">
+          <div style={{ padding: "80px 60px 80px 32px", maxWidth: "600px", marginLeft: "auto" }}>
             <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 24px 0" }}>Armature Wealth Office</p>
             <h2 style={{ fontFamily: HEADING, fontSize: "clamp(22px, 3vw, 36px)", fontWeight: "500", color: "#1c3828", letterSpacing: "-0.02em", lineHeight: "1.2", margin: "0 0 28px 0" }}>
               What&apos;s missing is not intelligence or effort.
@@ -124,9 +117,7 @@ export default function About() {
               If your financial life still feels simple, it may not be time yet. If it feels harder to see clearly, that&apos;s not a problem, it&apos;s a signal.
             </p>
           </div>
-          <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", overflow: "hidden" }}>
-            <div style={{ width: "100%", maxWidth: "500px", height: "480px", backgroundImage: "url(/images/lion.png)", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "right center" }} />
-          </div>
+          <div className="lion-image" />
         </div>
       </section>
 
@@ -198,7 +189,7 @@ export default function About() {
       {/* LIVED EXPERIENCE */}
       <section style={{ backgroundColor: "#f5f0eb", padding: "100px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "start" }}>
+          <div className="grid-2col" style={{ alignItems: "start" }}>
             <div>
               <h2
                 style={{

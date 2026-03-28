@@ -43,3 +43,136 @@
     -moz-osx-font-smoothing: grayscale;
   }
 }
+
+/* ─── RESPONSIVE UTILITIES ────────────────────────────────────── */
+
+/* Two-column grids → single column on mobile */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Three-column grids → 2 col tablet, 1 col mobile */
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Footer grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+}
+
+/* Contact info+form grid */
+.grid-contact {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Contact name row */
+.grid-name {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Lion section — full-bleed right edge */
+.lion-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  overflow: hidden;
+}
+
+.lion-image {
+  height: 520px;
+  background-image: url(/images/lion.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* Process phase number+content grid */
+.grid-phase {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 40px;
+}
+
+/* Tablet: ≤ 900px */
+@media (max-width: 900px) {
+  .grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Landscape mobile / small tablet: ≤ 844px */
+@media (max-width: 844px) {
+  .grid-2col {
+    gap: 48px;
+  }
+}
+
+/* Mobile: ≤ 767px */
+@media (max-width: 767px) {
+  .grid-2col,
+  .grid-contact,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .grid-3col {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .grid-name {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Global: tighten horizontal padding on mobile */
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Contact form card — tighten on mobile */
+  .contact-card {
+    padding: 28px !important;
+  }
+
+  /* Process phase: collapse number above content */
+  .grid-phase {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Lion: hide image on mobile, show text full-width */
+  .lion-section {
+    grid-template-columns: 1fr;
+  }
+
+  .lion-image {
+    display: none;
+  }
+
+  /* Reduce heavy vertical padding on mobile */
+  .section-pad {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .hero-pad {
+    padding-top: 120px !important;
+    padding-bottom: 60px !important;
+  }
+}

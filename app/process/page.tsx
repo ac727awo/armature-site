@@ -102,10 +102,8 @@ export default function Process() {
           {phases.map((phase, i) => (
             <div
               key={phase.number}
+              className="grid-phase"
               style={{
-                display: "grid",
-                gridTemplateColumns: "80px 1fr",
-                gap: "40px",
                 marginBottom: i < phases.length - 1 ? "80px" : 0,
                 paddingBottom: i < phases.length - 1 ? "80px" : 0,
                 borderBottom: i < phases.length - 1 ? "1px solid rgba(28, 56, 40, 0.08)" : "none",
@@ -142,7 +140,7 @@ export default function Process() {
       {/* HOW IT BEGINS */}
       <section style={{ backgroundColor: "#ede8e0", padding: "100px 32px", borderTop: "1px solid rgba(28, 56, 40, 0.08)" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px" }}>
+          <div className="grid-2col" style={{ gap: "64px" }}>
             <div>
               <h2 style={{ fontFamily: HEADING, fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: "500", color: "#1c3828", letterSpacing: "-0.01em", lineHeight: "1.2", margin: "0 0 20px 0" }}>
                 How it begins

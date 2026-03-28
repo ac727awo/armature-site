@@ -15,13 +15,8 @@ export default function Footer() {
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr 1fr",
-            gap: "64px",
-            marginBottom: "56px",
-          }}
           className="footer-grid"
+          style={{ marginBottom: "56px" }}
         >
           {/* Brand */}
           <div>
