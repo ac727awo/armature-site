@@ -117,9 +117,9 @@ export default function Contact() {
                       <option value="500k-1m">$500K – $1M</option>
                       <option value="1-2.5m">$1M – $2.5M</option>
                       <option value="2.5-5m">$2.5M – $5M</option>
-                      <option value="5-10m">$5M – $10M</option>
-                      <option value="10-25m">$10M – $25M</option>
-                      <option value="25m-plus">$25M+</option>
+                      <option value="5-8m">$5M – $8M</option>
+                      <option value="8-15m">$8M – $15M</option>
+                      <option value="15m-plus">$15M+</option>
                     </select>
                   </div>
                   <div style={{ marginBottom: "28px" }}>
