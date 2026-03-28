@@ -74,6 +74,7 @@ export default function Insights() {
     <>
       {/* HERO */}
       <section
+        className="hero-pad"
         style={{
           backgroundColor: "#f5f0eb",
           paddingTop: "160px",
@@ -97,8 +98,8 @@ export default function Insights() {
       </section>
 
       {/* FILTER */}
-      <section style={{ backgroundColor: "#ede8e0", padding: "32px 32px", borderBottom: "1px solid rgba(28, 56, 40, 0.08)" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", gap: "8px", flexWrap: "wrap" }}>
+      <section style={{ backgroundColor: "#ede8e0", padding: "24px 20px", borderBottom: "1px solid rgba(28, 56, 40, 0.08)", overflowX: "auto" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", gap: "8px", flexWrap: "wrap", minWidth: "min-content" }}>
           {categories.map((cat) => (
             <button
               key={cat}

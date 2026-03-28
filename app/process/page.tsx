@@ -77,6 +77,7 @@ export default function Process() {
     <>
       {/* HERO */}
       <section
+        className="hero-pad"
         style={{
           backgroundColor: "#f5f0eb",
           paddingTop: "160px",

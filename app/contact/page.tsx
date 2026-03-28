@@ -6,16 +6,42 @@ const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: React.FormEvent) {
+  const [form, setForm] = useState({
+    firstName: "", lastName: "", email: "",
+    phone: "", assets: "", message: "",
+  });
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
     <>
       {/* HERO */}
       <section
+        className="hero-pad"
         style={{
           backgroundColor: "#f5f0eb",
           paddingTop: "160px",
@@ -95,59 +121,69 @@ export default function Contact() {
                   <div className="grid-name" style={{ marginBottom: "20px" }}>
                     <div>
                       <label style={labelStyle}>First Name</label>
-                      <input type="text" placeholder="John" required style={inputStyle} />
+                      <input name="firstName" type="text" placeholder="John" required value={form.firstName} onChange={handleChange} style={inputStyle} />
                     </div>
                     <div>
                       <label style={labelStyle}>Last Name</label>
-                      <input type="text" placeholder="Smith" required style={inputStyle} />
+                      <input name="lastName" type="text" placeholder="Smith" required value={form.lastName} onChange={handleChange} style={inputStyle} />
                     </div>
                   </div>
                   <div style={{ marginBottom: "20px" }}>
                     <label style={labelStyle}>Email Address</label>
-                    <input type="email" placeholder="john@example.com" required style={inputStyle} />
+                    <input name="email" type="email" placeholder="john@example.com" required value={form.email} onChange={handleChange} style={inputStyle} />
                   </div>
                   <div style={{ marginBottom: "20px" }}>
                     <label style={labelStyle}>Phone Number (Optional)</label>
-                    <input type="tel" placeholder="(555) 123-4567" style={inputStyle} />
+                    <input name="phone" type="tel" placeholder="(555) 123-4567" value={form.phone} onChange={handleChange} style={inputStyle} />
                   </div>
                   <div style={{ marginBottom: "20px" }}>
                     <label style={labelStyle}>Investable Assets</label>
-                    <select style={{ ...inputStyle, cursor: "pointer" }}>
+                    <select name="assets" value={form.assets} onChange={handleChange} style={{ ...inputStyle, cursor: "pointer" }}>
                       <option value="">Select a range</option>
-                      <option value="under-500k">Under $500K</option>
-                      <option value="500k-1m">$500K – $1M</option>
-                      <option value="1-2.5m">$1M – $2.5M</option>
-                      <option value="2.5-5m">$2.5M – $5M</option>
-                      <option value="5-8m">$5M – $8M</option>
-                      <option value="8-15m">$8M – $15M</option>
-                      <option value="15m-plus">$15M+</option>
+                      <option value="Under $500K">Under $500K</option>
+                      <option value="$500K – $1M">$500K – $1M</option>
+                      <option value="$1M – $2.5M">$1M – $2.5M</option>
+                      <option value="$2.5M – $5M">$2.5M – $5M</option>
+                      <option value="$5M – $8M">$5M – $8M</option>
+                      <option value="$8M – $15M">$8M – $15M</option>
+                      <option value="$15M+">$15M+</option>
                     </select>
                   </div>
                   <div style={{ marginBottom: "28px" }}>
                     <label style={labelStyle}>How can we help you?</label>
                     <textarea
+                      name="message"
                       placeholder="Tell us about your financial goals and what you're looking for..."
                       rows={4}
+                      value={form.message}
+                      onChange={handleChange}
                       style={{ ...inputStyle, resize: "vertical", minHeight: "100px" }}
                     />
                   </div>
+                  {error && (
+                    <p style={{ fontFamily: BODY, fontSize: "13px", color: "#8b3a3a", margin: "0 0 16px 0", padding: "12px 16px", backgroundColor: "rgba(139,58,58,0.08)", border: "1px solid rgba(139,58,58,0.2)" }}>
+                      {error}
+                    </p>
+                  )}
                   <button
                     type="submit"
+                    disabled={sending}
                     style={{
                       width: "100%",
                       fontFamily: BODY,
                       fontSize: "13px",
                       color: "#f5f0eb",
-                      backgroundColor: "#1c3828",
+                      backgroundColor: sending ? "#4a6155" : "#1c3828",
                       border: "none",
                       padding: "16px 32px",
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
                       fontWeight: "600",
-                      cursor: "pointer",
+                      cursor: sending ? "not-allowed" : "pointer",
+                      transition: "background-color 0.2s",
                     }}
                   >
-                    Request Consultation
+                    {sending ? "Sending…" : "Request Consultation"}
                   </button>
                   <p style={{ fontFamily: BODY, fontSize: "11px", color: "#6a8070", lineHeight: "1.6", margin: "16px 0 0 0", textAlign: "center" }}>
                     By submitting this form, you agree to our Privacy Policy and consent to being contacted regarding your inquiry.
