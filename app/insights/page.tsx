@@ -9,7 +9,7 @@ const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
 const articles = [
   {
     category: "Capital Efficiency",
-    date: "February 2026",
+    date: "March 2026",
     readTime: "2 min read",
     title: "Capital Efficiency Is a Condition, Not a Goal",
     excerpt: "Most discussions about capital efficiency start in the wrong place. Efficiency is not something you achieve — it is a condition you either maintain or let erode.",
@@ -27,7 +27,7 @@ const articles = [
   },
   {
     category: "Private Investments",
-    date: "December 2025",
+    date: "January 2026",
     readTime: "2 min read",
     title: "Private Investments Need Roles, Not Just Returns",
     excerpt: "Private investments fail more often from confusion than conviction. The issue is rarely access. It's clarity of purpose.",
@@ -54,7 +54,7 @@ const articles = [
   },
   {
     category: "Long-Term Planning",
-    date: "November 2025",
+    date: "October 2025",
     readTime: "2 min read",
     title: "The Case for Disciplined Diversification",
     excerpt: "Most portfolios are diversified. Very few are disciplined. The difference isn't the number of assets — it's whether diversification was designed to withstand different kinds of stress.",
