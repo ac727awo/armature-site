@@ -48,11 +48,11 @@ export default function Home() {
         <div
           style={{
             position: "absolute",
-            bottom: "-32px",
+            bottom: "-40px",
             left: 0,
             right: 0,
-            height: "220px",
-            background: "linear-gradient(to bottom, transparent 0%, rgba(245,240,235,0.3) 35%, rgba(245,240,235,0.75) 65%, #f5f0eb 100%)",
+            height: "320px",
+            background: "linear-gradient(to bottom, transparent 0%, rgba(245,240,235,0.04) 15%, rgba(245,240,235,0.10) 25%, rgba(245,240,235,0.20) 38%, rgba(245,240,235,0.38) 50%, rgba(245,240,235,0.58) 62%, rgba(245,240,235,0.76) 74%, rgba(245,240,235,0.90) 85%, rgba(245,240,235,0.97) 93%, #f5f0eb 100%)",
             pointerEvents: "none",
             zIndex: 1,
           }}
