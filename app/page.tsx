@@ -7,7 +7,7 @@ const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
 export const metadata = {
   title: "Armature Wealth Office | A Better Way to Manage Wealth",
   description:
-    "A wealth operating system for accomplished professionals with $10M–$25M+ net worth. Governance, integration, and clarity.",
+    "A wealth operating system for accomplished professionals with $8M–$15M+ net worth. Governance, integration, and clarity.",
 };
 
 export default function Home() {
@@ -119,7 +119,7 @@ export default function Home() {
                 maxWidth: "500px",
               }}
             >
-              For professionals with $10M–$25M+ net worth. If your financial
+              For professionals with $8M–$15M+ net worth. If your financial
               life still feels simple, it may not be time yet.
             </p>
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
