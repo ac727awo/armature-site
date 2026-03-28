@@ -168,9 +168,8 @@ export default function Services() {
               Armature holds that system together so the principal doesn&apos;t have to.
             </p>
           </div>
-          <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
-            {/* Lion placeholder — replace with /images/lion.png when asset is ready */}
-            <div style={{ width: "100%", maxWidth: "420px", aspectRatio: "1/0.9", backgroundImage: "url(/images/lion.png)", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center right" }} />
+          <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", overflow: "hidden" }}>
+            <div style={{ width: "100%", maxWidth: "500px", height: "480px", backgroundImage: "url(/images/lion.png)", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "right center" }} />
           </div>
         </div>
       </section>

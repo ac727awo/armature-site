@@ -44,10 +44,10 @@ export default function Nav() {
         {/* Logo */}
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
           <Image
-            src="/logo.png"
+            src="/logo-dark.png"
             alt="Armature Wealth Office"
-            width={776}
-            height={226}
+            width={732}
+            height={177}
             priority
             style={{ height: "36px", width: "auto" }}
           />
