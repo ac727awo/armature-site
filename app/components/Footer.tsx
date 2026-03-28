@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
 const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
@@ -26,13 +25,32 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ marginBottom: "20px" }}>
-              <Image
-                src="/logo-light.svg"
-                alt="Armature Wealth Office"
-                width={180}
-                height={48}
-                style={{ height: "38px", width: "auto" }}
-              />
+              <span
+                style={{
+                  fontFamily: HEADING,
+                  fontSize: "16px",
+                  fontWeight: "500",
+                  color: "#f5f0eb",
+                  letterSpacing: "0.05em",
+                  textTransform: "uppercase",
+                }}
+              >
+                Armature
+              </span>
+              <span
+                style={{
+                  fontFamily: BODY,
+                  fontSize: "10px",
+                  color: "#8aab96",
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  fontWeight: "500",
+                  display: "block",
+                  marginTop: "4px",
+                }}
+              >
+                Wealth Office
+              </span>
             </div>
             <p
               style={{

@@ -1,5 +1,4 @@
 import CTASection from "../components/CTASection";
-import Image from "next/image";
 
 const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
 const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
@@ -54,20 +53,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* LION DIVIDER */}
-      <div style={{ backgroundColor: "#f5f0eb", display: "flex", justifyContent: "center", padding: "48px 0 0" }}>
-        <Image
-          src="/lion.svg"
-          alt=""
-          width={160}
-          height={144}
-          style={{ opacity: 0.12, width: "120px", height: "auto" }}
-          aria-hidden="true"
-        />
-      </div>
-
       {/* MAIN CONTENT */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "56px 32px 100px" }}>
+      <section style={{ backgroundColor: "#f5f0eb", padding: "100px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div
             style={{
@@ -115,6 +102,31 @@ export default function About() {
                 backgroundPosition: "center",
               }}
             />
+          </div>
+        </div>
+      </section>
+
+      {/* LION SECTION */}
+      <section style={{ backgroundColor: "#f5f0eb", padding: "80px 32px", borderTop: "1px solid rgba(28,56,40,0.08)" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
+          <div>
+            <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 24px 0" }}>Armature Wealth Office</p>
+            <h2 style={{ fontFamily: HEADING, fontSize: "clamp(22px, 3vw, 36px)", fontWeight: "500", color: "#1c3828", letterSpacing: "-0.02em", lineHeight: "1.2", margin: "0 0 28px 0" }}>
+              What&apos;s missing is not intelligence or effort.
+            </h2>
+            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
+              It&apos;s a wealth operating system that brings everything into one clear view, so you can author capital deliberately, rather than react to it.
+            </p>
+            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
+              As complexity compounds, communication fragments, and infrastructure quietly lags behind. So do trade-offs, dependencies, and second-order effects.
+            </p>
+            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#2e4e3a", lineHeight: "1.75", fontStyle: "italic", margin: 0 }}>
+              If your financial life still feels simple, it may not be time yet. If it feels harder to see clearly, that&apos;s not a problem, it&apos;s a signal.
+            </p>
+          </div>
+          <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
+            {/* Lion placeholder — replace with /images/lion.png when asset is ready */}
+            <div style={{ width: "100%", maxWidth: "420px", aspectRatio: "1/0.9", backgroundImage: "url(/images/lion.png)", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center right" }} />
           </div>
         </div>
       </section>

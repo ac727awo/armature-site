@@ -1,5 +1,4 @@
 import CTASection from "../components/CTASection";
-import Image from "next/image";
 
 const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
 const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
@@ -122,25 +121,7 @@ export default function Services() {
       </section>
 
       {/* INTEGRATION SECTION */}
-      <section style={{ backgroundColor: "#ede8e0", padding: "100px 32px", borderTop: "1px solid rgba(28, 56, 40, 0.08)", position: "relative", overflow: "hidden" }}>
-        {/* Lion watermark */}
-        <Image
-          src="/lion.svg"
-          alt=""
-          width={420}
-          height={378}
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            right: "-40px",
-            bottom: "-20px",
-            width: "320px",
-            height: "auto",
-            opacity: 0.07,
-            pointerEvents: "none",
-            userSelect: "none",
-          }}
-        />
+      <section style={{ backgroundColor: "#ede8e0", padding: "100px 32px", borderTop: "1px solid rgba(28, 56, 40, 0.08)" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
             <div style={{ aspectRatio: "4/3", backgroundColor: "#c8d0c4", backgroundImage: "url(/images/services-system.jpg)", backgroundSize: "cover", backgroundPosition: "center top" }} />
@@ -168,6 +149,28 @@ export default function Services() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LION SECTION */}
+      <section style={{ backgroundColor: "#f5f0eb", padding: "80px 32px", borderTop: "1px solid rgba(28,56,40,0.08)" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
+          <div>
+            <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 24px 0" }}>Governance First</p>
+            <h2 style={{ fontFamily: HEADING, fontSize: "clamp(22px, 3vw, 36px)", fontWeight: "500", color: "#1c3828", letterSpacing: "-0.02em", lineHeight: "1.2", margin: "0 0 28px 0" }}>
+              The system only works if it holds together.
+            </h2>
+            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
+              Each service exists as part of an integrated whole. Tax, estate, investment, income, and risk are not separate conversations — they are one system.
+            </p>
+            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#2e4e3a", lineHeight: "1.75", fontStyle: "italic", margin: 0 }}>
+              Armature holds that system together so the principal doesn&apos;t have to.
+            </p>
+          </div>
+          <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
+            {/* Lion placeholder — replace with /images/lion.png when asset is ready */}
+            <div style={{ width: "100%", maxWidth: "420px", aspectRatio: "1/0.9", backgroundImage: "url(/images/lion.png)", backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center right" }} />
           </div>
         </div>
       </section>
