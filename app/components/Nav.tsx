@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
@@ -41,46 +42,15 @@ export default function Nav() {
         }}
       >
         {/* Logo */}
-        <Link
-          href="/"
-          style={{
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-          }}
-        >
-          <span
-            style={{
-              fontFamily: HEADING,
-              fontSize: "17px",
-              fontWeight: "500",
-              color: "#1c3828",
-              letterSpacing: "0.04em",
-              textTransform: "uppercase",
-            }}
-          >
-            Armature
-          </span>
-          <span
-            style={{
-              width: "1px",
-              height: "16px",
-              backgroundColor: "rgba(28, 56, 40, 0.25)",
-            }}
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+          <Image
+            src="/logo.svg"
+            alt="Armature Wealth Office"
+            width={180}
+            height={48}
+            priority
+            style={{ height: "38px", width: "auto" }}
           />
-          <span
-            style={{
-              fontFamily: BODY,
-              fontSize: "10px",
-              color: "#4a6155",
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              fontWeight: "500",
-            }}
-          >
-            Wealth Office
-          </span>
         </Link>
 
         {/* Desktop links */}

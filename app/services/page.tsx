@@ -1,4 +1,5 @@
 import CTASection from "../components/CTASection";
+import Image from "next/image";
 
 const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
 const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
@@ -121,7 +122,25 @@ export default function Services() {
       </section>
 
       {/* INTEGRATION SECTION */}
-      <section style={{ backgroundColor: "#ede8e0", padding: "100px 32px", borderTop: "1px solid rgba(28, 56, 40, 0.08)" }}>
+      <section style={{ backgroundColor: "#ede8e0", padding: "100px 32px", borderTop: "1px solid rgba(28, 56, 40, 0.08)", position: "relative", overflow: "hidden" }}>
+        {/* Lion watermark */}
+        <Image
+          src="/lion.svg"
+          alt=""
+          width={420}
+          height={378}
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            right: "-40px",
+            bottom: "-20px",
+            width: "320px",
+            height: "auto",
+            opacity: 0.07,
+            pointerEvents: "none",
+            userSelect: "none",
+          }}
+        />
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
             <div style={{ aspectRatio: "4/3", backgroundColor: "#c8d0c4", backgroundImage: "url(/images/services-system.jpg)", backgroundSize: "cover", backgroundPosition: "center top" }} />

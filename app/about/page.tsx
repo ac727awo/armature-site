@@ -1,4 +1,5 @@
 import CTASection from "../components/CTASection";
+import Image from "next/image";
 
 const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
 const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
@@ -53,8 +54,20 @@ export default function About() {
         </div>
       </section>
 
+      {/* LION DIVIDER */}
+      <div style={{ backgroundColor: "#f5f0eb", display: "flex", justifyContent: "center", padding: "48px 0 0" }}>
+        <Image
+          src="/lion.svg"
+          alt=""
+          width={160}
+          height={144}
+          style={{ opacity: 0.12, width: "120px", height: "auto" }}
+          aria-hidden="true"
+        />
+      </div>
+
       {/* MAIN CONTENT */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "100px 32px" }}>
+      <section style={{ backgroundColor: "#f5f0eb", padding: "56px 32px 100px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div
             style={{
