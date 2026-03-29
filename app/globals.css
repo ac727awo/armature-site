@@ -84,7 +84,7 @@
   background-image: url(/images/lion.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right bottom;
 }
 
 .lion-image-gold {

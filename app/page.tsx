@@ -523,15 +523,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROCESS — alt cream */}
+      {/* PROCESS — dark green bg, horizontal circled steps */}
       <section
         style={{
-          backgroundColor: "#ede8e0",
+          backgroundColor: "#0f2218",
           padding: "120px 32px",
-          borderTop: "1px solid rgba(28, 56, 40, 0.08)",
         }}
       >
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
           <p
             style={{
               fontFamily: BODY,
@@ -550,10 +549,10 @@ export default function Home() {
               fontFamily: HEADING,
               fontSize: "clamp(26px, 3.5vw, 42px)",
               fontWeight: "500",
-              color: "#1c3828",
+              color: "#f5f0eb",
               letterSpacing: "-0.02em",
               lineHeight: "1.2",
-              margin: "0 0 28px 0",
+              margin: "0 0 20px 0",
             }}
           >
             A system built around you, not sold to you.
@@ -562,62 +561,97 @@ export default function Home() {
             style={{
               fontFamily: BODY,
               fontSize: "16px",
-              color: "#4a6155",
+              color: "#8aab96",
               lineHeight: "1.75",
-              margin: "0 0 48px 0",
+              margin: "0 auto 72px auto",
+              maxWidth: "640px",
             }}
           >
             Everything begins with a diagnostic conversation. No pitch. No
             pressure. Just pattern recognition. From there, a system is
             designed — and then operated — around your actual life.
           </p>
-          {[
-            "Map your current landscape",
-            "Identify what's missing to support the next phase",
-            "Design a coordinated capital system",
-            "Install authorship rules and decision architecture",
-            "Stay alongside you as the system carries the load",
-          ].map((step, i) => (
+
+          {/* Steps row */}
+          <div style={{ position: "relative", display: "flex", alignItems: "flex-start" }}>
+            {/* Connector line behind circles */}
             <div
-              key={step}
               style={{
-                display: "flex",
-                gap: "24px",
-                marginBottom: "24px",
-                alignItems: "flex-start",
+                position: "absolute",
+                top: "36px",
+                left: "10%",
+                right: "10%",
+                height: "1px",
+                backgroundColor: "#b8913a",
+                opacity: 0.35,
               }}
-            >
-              <span
+            />
+            {[
+              "Map your current landscape",
+              "Identify what's missing to support the next phase",
+              "Design a coordinated capital system",
+              "Install authorship rules and decision architecture",
+              "Stay alongside you as the system carries the load",
+            ].map((step, i) => (
+              <div
+                key={step}
                 style={{
-                  fontFamily: BODY,
-                  fontSize: "11px",
-                  color: "#b8913a",
-                  letterSpacing: "0.1em",
-                  fontWeight: "600",
-                  minWidth: "28px",
-                  paddingTop: "3px",
-                  flexShrink: 0,
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  padding: "0 12px",
+                  position: "relative",
+                  zIndex: 1,
                 }}
               >
-                0{i + 1}
-              </span>
-              <span
-                style={{
-                  fontFamily: BODY,
-                  fontSize: "16px",
-                  color: "#2e4e3a",
-                  lineHeight: "1.5",
-                }}
-              >
-                {step}
-              </span>
-            </div>
-          ))}
+                <div
+                  style={{
+                    width: "72px",
+                    height: "72px",
+                    borderRadius: "50%",
+                    border: "1.5px solid #b8913a",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "24px",
+                    backgroundColor: "#0f2218",
+                    flexShrink: 0,
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: BODY,
+                      fontSize: "14px",
+                      color: "#b8913a",
+                      fontWeight: "600",
+                      letterSpacing: "0.05em",
+                    }}
+                  >
+                    0{i + 1}
+                  </span>
+                </div>
+                <p
+                  style={{
+                    fontFamily: BODY,
+                    fontSize: "13px",
+                    color: "#c8d8cc",
+                    lineHeight: "1.6",
+                    margin: 0,
+                    textAlign: "center",
+                  }}
+                >
+                  {step}
+                </p>
+              </div>
+            ))}
+          </div>
+
           <div
             style={{
-              marginTop: "40px",
-              paddingTop: "32px",
-              borderTop: "1px solid rgba(28, 56, 40, 0.15)",
+              marginTop: "64px",
+              paddingTop: "48px",
+              borderTop: "1px solid rgba(184, 145, 58, 0.25)",
             }}
           >
             <p
@@ -625,8 +659,9 @@ export default function Home() {
                 fontFamily: HEADING,
                 fontSize: "20px",
                 fontWeight: "500",
-                color: "#1c3828",
+                color: "#f5f0eb",
                 lineHeight: "1.6",
+                fontStyle: "italic",
                 margin: "0 0 8px 0",
               }}
             >
@@ -636,7 +671,7 @@ export default function Home() {
               style={{
                 fontFamily: BODY,
                 fontSize: "16px",
-                color: "#4a6155",
+                color: "#8aab96",
                 lineHeight: "1.6",
                 fontStyle: "italic",
                 margin: "0 0 40px 0",
@@ -649,8 +684,8 @@ export default function Home() {
               style={{
                 fontFamily: BODY,
                 fontSize: "12px",
-                color: "#1c3828",
-                border: "1.5px solid #1c3828",
+                color: "#f5f0eb",
+                border: "1.5px solid rgba(245, 240, 235, 0.45)",
                 padding: "12px 28px",
                 textDecoration: "none",
                 letterSpacing: "0.1em",
@@ -909,6 +944,7 @@ export default function Home() {
                 excerpt:
                   "Most discussions about capital efficiency start in the wrong place. Efficiency is not something you achieve — it is a condition you either maintain or let erode.",
                 href: "/insights/capital-efficiency-is-a-condition",
+                image: "/images/insights-capital-efficiency.jpg",
               },
               {
                 category: "Tax Strategy",
@@ -917,6 +953,7 @@ export default function Home() {
                 excerpt:
                   "Most tax inefficiency does not come from bad advice. It comes from decisions made in isolation. Tax drag compounds quietly across years.",
                 href: "/insights/tax-drag-is-a-structural-issue",
+                image: "/images/insights-tax-drag.jpg",
               },
               {
                 category: "Private Investments",
@@ -925,6 +962,7 @@ export default function Home() {
                 excerpt:
                   "Private investments fail more often from confusion than conviction. The issue is rarely access. It's clarity of purpose.",
                 href: "/insights/private-investments-need-roles",
+                image: "/images/insights-private-investments.jpg",
               },
             ].map((article) => (
               <article
@@ -932,88 +970,102 @@ export default function Home() {
                 style={{
                   backgroundColor: "#f5f0eb",
                   border: "1px solid rgba(28, 56, 40, 0.12)",
-                  padding: "36px 32px",
                   display: "flex",
                   flexDirection: "column",
+                  overflow: "hidden",
                 }}
               >
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "20px",
-                  }}
-                >
-                  <span
+                <Link href={article.href} style={{ display: "block", textDecoration: "none" }}>
+                  <div
                     style={{
-                      fontFamily: BODY,
-                      fontSize: "10px",
-                      color: "#b8913a",
-                      letterSpacing: "0.12em",
-                      textTransform: "uppercase",
-                      fontWeight: "600",
+                      width: "100%",
+                      aspectRatio: "3/2",
+                      backgroundImage: `url(${article.image})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundColor: "#c8d0c4",
+                    }}
+                  />
+                </Link>
+                <div style={{ padding: "28px 28px 32px", display: "flex", flexDirection: "column", flex: 1 }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      marginBottom: "14px",
                     }}
                   >
-                    {article.category}
-                  </span>
-                  <span
+                    <span
+                      style={{
+                        fontFamily: BODY,
+                        fontSize: "10px",
+                        color: "#b8913a",
+                        letterSpacing: "0.12em",
+                        textTransform: "uppercase",
+                        fontWeight: "600",
+                      }}
+                    >
+                      {article.category}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: BODY,
+                        fontSize: "11px",
+                        color: "#6a8070",
+                      }}
+                    >
+                      {article.date}
+                    </span>
+                  </div>
+                  <h3
                     style={{
-                      fontFamily: BODY,
-                      fontSize: "11px",
-                      color: "#6a8070",
+                      fontFamily: HEADING,
+                      fontSize: "18px",
+                      fontWeight: "500",
+                      color: "#1c3828",
+                      lineHeight: "1.3",
+                      margin: "0 0 14px 0",
+                      letterSpacing: "-0.01em",
+                      flex: 1,
                     }}
                   >
-                    {article.date}
-                  </span>
-                </div>
-                <h3
-                  style={{
-                    fontFamily: HEADING,
-                    fontSize: "18px",
-                    fontWeight: "500",
-                    color: "#1c3828",
-                    lineHeight: "1.3",
-                    margin: "0 0 16px 0",
-                    letterSpacing: "-0.01em",
-                    flex: 1,
-                  }}
-                >
+                    <Link
+                      href={article.href}
+                      style={{ color: "inherit", textDecoration: "none" }}
+                    >
+                      {article.title}
+                    </Link>
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: BODY,
+                      fontSize: "14px",
+                      color: "#4a6155",
+                      lineHeight: "1.65",
+                      margin: "0 0 24px 0",
+                    }}
+                  >
+                    {article.excerpt}
+                  </p>
                   <Link
                     href={article.href}
-                    style={{ color: "inherit", textDecoration: "none" }}
+                    style={{
+                      fontFamily: BODY,
+                      fontSize: "12px",
+                      color: "#1c3828",
+                      textDecoration: "none",
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      fontWeight: "600",
+                      borderBottom: "1.5px solid #1c3828",
+                      paddingBottom: "2px",
+                      display: "inline-block",
+                    }}
                   >
-                    {article.title}
+                    Read More
                   </Link>
-                </h3>
-                <p
-                  style={{
-                    fontFamily: BODY,
-                    fontSize: "14px",
-                    color: "#4a6155",
-                    lineHeight: "1.65",
-                    margin: "0 0 28px 0",
-                  }}
-                >
-                  {article.excerpt}
-                </p>
-                <Link
-                  href={article.href}
-                  style={{
-                    fontFamily: BODY,
-                    fontSize: "12px",
-                    color: "#1c3828",
-                    textDecoration: "none",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    fontWeight: "600",
-                    borderBottom: "1.5px solid #1c3828",
-                    paddingBottom: "2px",
-                    display: "inline-block",
-                  }}
-                >
-                  Read More
-                </Link>
+                </div>
               </article>
             ))}
           </div>
