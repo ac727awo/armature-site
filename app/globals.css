@@ -134,6 +134,25 @@
     grid-template-columns: 1fr;
   }
 
+  .process-steps {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 8px;
+  }
+
+  .process-connector {
+    display: none;
+  }
+
+  .insight-cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .insight-card-meta {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 40px;

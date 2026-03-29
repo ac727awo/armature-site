@@ -573,9 +573,10 @@ export default function Home() {
           </p>
 
           {/* Steps row */}
-          <div style={{ position: "relative", display: "flex", alignItems: "flex-start" }}>
+          <div className="process-steps" style={{ position: "relative", display: "flex", alignItems: "flex-start" }}>
             {/* Connector line behind circles */}
             <div
+              className="process-connector"
               style={{
                 position: "absolute",
                 top: "36px",
@@ -929,6 +930,7 @@ export default function Home() {
           </div>
 
           <div
+            className="insight-cards-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
@@ -989,6 +991,7 @@ export default function Home() {
                 </Link>
                 <div style={{ padding: "28px 28px 32px", display: "flex", flexDirection: "column", flex: 1 }}>
                   <div
+                    className="insight-card-meta"
                     style={{
                       display: "flex",
                       justifyContent: "space-between",
