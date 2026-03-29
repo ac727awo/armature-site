@@ -1,4 +1,4 @@
-/images/integration-diagram.jpgimport CTASection from "../components/CTASection";
+import CTASection from "../components/CTASection";
 
 const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
 const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
