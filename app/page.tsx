@@ -491,7 +491,7 @@ export default function Home() {
               style={{
                 aspectRatio: "3/4",
                 backgroundColor: "#c8d0c4",
-                backgroundImage: "url(/images/Gemini_Generated_Image_ju4kmju4kmju4kmj.png)",
+                backgroundImage: "url(/images/integration-diagram.jpg)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 display: "flex",
