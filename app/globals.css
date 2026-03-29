@@ -75,7 +75,7 @@
 .lion-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: end;
   overflow: hidden;
 }
 
