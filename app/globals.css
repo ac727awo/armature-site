@@ -10,18 +10,14 @@
 }
 
 @theme inline {
-  /* Brand greens */
   --color-forest: #1c3828;
   --color-forest-dark: #0f2218;
   --color-forest-deep: #0a1a10;
-  /* Brand golds */
   --color-gold: #b8913a;
   --color-gold-light: #d4a84c;
-  /* Cream backgrounds */
   --color-cream: #f5f0eb;
   --color-cream-alt: #ede8e0;
   --color-cream-dark: #e4ddd4;
-  /* Text */
   --color-text-primary: #1c3828;
   --color-text-muted: #4a6155;
   --color-text-light: #7a9080;
@@ -44,9 +40,6 @@
   }
 }
 
-/* ─── RESPONSIVE UTILITIES ────────────────────────────────────── */
-
-/* Two-column grids → single column on mobile */
 .grid-2col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -54,21 +47,18 @@
   align-items: start;
 }
 
-/* Three-column grids → 2 col tablet, 1 col mobile */
 .grid-3col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 
-/* Footer grid */
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 64px;
 }
 
-/* Contact info+form grid */
 .grid-contact {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -76,14 +66,12 @@
   align-items: start;
 }
 
-/* Contact name row */
 .grid-name {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
-/* Lion section — full-bleed right edge */
 .lion-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -99,39 +87,61 @@
   background-position: right center;
 }
 
-/* Process phase number+content grid */
+.lion-image-gold {
+  height: 520px;
+  background-image: url(/images/lion.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  filter: brightness(0) saturate(100%) invert(72%) sepia(48%) saturate(527%) hue-rotate(3deg) brightness(103%);
+}
+
+.lion-image-gold-left {
+  height: 520px;
+  background-image: url(/images/lion.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  filter: brightness(0) saturate(100%) invert(72%) sepia(48%) saturate(527%) hue-rotate(3deg) brightness(103%);
+  transform: scaleX(-1);
+}
+
 .grid-phase {
   display: grid;
   grid-template-columns: 80px 1fr;
   gap: 40px;
 }
 
-/* Tablet: ≤ 900px */
 @media (max-width: 900px) {
   .grid-3col {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Landscape mobile / small tablet: ≤ 844px */
 @media (max-width: 844px) {
   .grid-2col {
     gap: 48px;
   }
 }
 
-/* Mobile: ≤ 767px */
 @media (max-width: 767px) {
-  .grid-2col,
-  .grid-contact,
-  .footer-grid {
+  .grid-2col {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
   .grid-3col {
     grid-template-columns: 1fr;
-    gap: 32px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .grid-contact {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .grid-name {
@@ -139,40 +149,18 @@
     gap: 16px;
   }
 
-  /* Global: tighten horizontal padding on mobile */
-  section {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  /* Contact form card — tighten on mobile */
-  .contact-card {
-    padding: 28px !important;
-  }
-
-  /* Process phase: collapse number above content */
-  .grid-phase {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  /* Lion: hide image on mobile, show text full-width */
   .lion-section {
     grid-template-columns: 1fr;
   }
 
-  .lion-image {
+  .lion-image,
+  .lion-image-gold,
+  .lion-image-gold-left {
     display: none;
   }
 
-  /* Reduce heavy vertical padding on mobile */
-  .section-pad {
-    padding-top: 60px !important;
-    padding-bottom: 60px !important;
-  }
-
-  .hero-pad {
-    padding-top: 120px !important;
-    padding-bottom: 60px !important;
+  .grid-phase {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
