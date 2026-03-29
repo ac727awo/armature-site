@@ -1,518 +1,173 @@
-https://github.com/ac727awo/armature-site/edit/main/app/page.tsx
 import CTASection from "../components/CTASection";
 
+const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
+const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
+
 export const metadata = {
-  title: "About Us | Armature Wealth Partners",
+  title: "Services | Armature Wealth Partners",
   description:
-    "Built for the phase that comes after success. Armature exists for a specific moment in a professional's life.",
+    "Designed as a system. Operated as one. A wealth operating system for accomplished professionals.",
 };
 
-export default function About() {
+export default function Services() {
+  const services = [
+    {
+      title: "Portfolio & Capital Oversight",
+      body: "We oversee portfolios with an emphasis on role clarity and durability, not constant optimization.",
+      items: [
+        "defining what each pool of capital is for",
+        "aligning risk with purpose",
+        "considering liquidity and downside before allocation",
+        "ensuring portfolios behave as intended across cycles",
+      ],
+      closing: "The objective is not activity. It is reliability.",
+    },
+    {
+      title: "Income Design & Capital Efficiency",
+      body: "As wealth matures, the question shifts. Not how fast can it grow, but how can it be preserved to support the life being built.",
+      items: [
+        "structure capital to generate reliable, tax-aware cash flow",
+        "reduce reliance on earned income over time",
+        "avoid introducing unnecessary complexity",
+      ],
+      closing: "Income is designed to simplify decisions, not create new ones.",
+    },
+    {
+      title: "Tax-Aware Structuring",
+      body: "Taxes quietly erode outcomes when treated as an afterthought. We integrate tax considerations directly into:",
+      items: ["investment structure", "entity design", "distribution planning"],
+      closing: "Good structure compounds. Poor structure leaks.",
+    },
+    {
+      title: "Private & Alternative Investments",
+      body: "Where appropriate, we evaluate select private and alternative investments as complements.",
+      items: [
+        "introduced selectively",
+        "stress-tested carefully",
+        "integrated only when they serve a clear role",
+      ],
+      closing: "Not every opportunity deserves capital. Fewer deserve attention.",
+    },
+    {
+      title: "Continuity & Long-Term Stewardship",
+      body: "Beyond accumulation, wealth requires continuity. We help clients think through:",
+      items: [
+        "ownership and control over time",
+        "generational transfer and intent",
+        "charitable and philanthropic structure",
+        "long-term stewardship",
+      ],
+      closing: "Continuity is designed. Not improvised.",
+    },
+  ];
+
   return (
     <>
       {/* HERO */}
       <section
         style={{
-          backgroundColor: "#05120e",
+          backgroundColor: "#f5f0eb",
           paddingTop: "160px",
           paddingBottom: "80px",
           paddingLeft: "32px",
           paddingRight: "32px",
-          borderBottom: "1px solid rgba(201, 168, 76, 0.08)",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        {/* Gold lion watermark */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "-80px",
-            right: "-60px",
-            width: "560px",
-            height: "560px",
-            opacity: 0.07,
-            pointerEvents: "none",
-            zIndex: 0,
-            backgroundImage: "url(/images/lion.png)",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "bottom right",
-            filter: "brightness(0) saturate(100%) invert(72%) sepia(48%) saturate(527%) hue-rotate(3deg) brightness(103%)",
-          }}
-        />
-        <div style={{ maxWidth: "800px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-          <p
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "11px",
-              color: "#c9a84c",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              margin: "0 0 24px 0",
-            }}
-          >
-            About Armature
-          </p>
-          <h1
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "clamp(32px, 5vw, 58px)",
-              fontWeight: "400",
-              color: "#f0ebe0",
-              letterSpacing: "-0.02em",
-              lineHeight: "1.1",
-              margin: 0,
-            }}
-          >
-            Built for the phase that comes after success.
-          </h1>
-        </div>
-      </section>
-
-      {/* MAIN CONTENT */}
-      <section style={{ backgroundColor: "#05120e", padding: "100px 32px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "80px",
-              alignItems: "start",
-            }}
-          >
-            <div>
-              <h2
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "clamp(22px, 3vw, 34px)",
-                  fontWeight: "400",
-                  color: "#f0ebe0",
-                  letterSpacing: "-0.02em",
-                  lineHeight: "1.25",
-                  margin: "0 0 28px 0",
-                }}
-              >
-                Armature exists for a specific moment in a professional&apos;s
-                life.
-              </h2>
-              <p
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "16px",
-                  color: "#9aab9f",
-                  lineHeight: "1.75",
-                  margin: "0 0 20px 0",
-                }}
-              >
-                It&apos;s the point where earning more no longer creates
-                clarity. Where adding another advisor doesn&apos;t reduce
-                complexity — it adds to it.
-              </p>
-              <p
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "16px",
-                  color: "#9aab9f",
-                  lineHeight: "1.75",
-                  margin: "0 0 20px 0",
-                }}
-              >
-                For many accomplished professionals, wealth is technically
-                &quot;handled&quot; — yet still requires coordination, still
-                demands attention, still sits uneasily without a governing
-                structure.
-              </p>
-              <p
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "16px",
-                  color: "#9aab9f",
-                  lineHeight: "1.75",
-                  margin: "0 0 20px 0",
-                }}
-              >
-                That is not a failure of discipline or intelligence. It is a
-                signal that the system has not kept pace with the complexity.
-              </p>
-              <p
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "16px",
-                  color: "#b8c8be",
-                  lineHeight: "1.75",
-                  margin: 0,
-                }}
-              >
-                Armature was built to address that phase.
-              </p>
-            </div>
-
-            {/* Image */}
-            <div
-              style={{
-                aspectRatio: "3/4",
-                backgroundColor: "#0a1e15",
-                backgroundImage: "url(/images/physician.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT WE ACTUALLY DO */}
-      <section
-        style={{
-          backgroundColor: "#040f0b",
-          padding: "100px 32px",
-          borderTop: "1px solid rgba(201, 168, 76, 0.08)",
+          borderBottom: "1px solid rgba(28, 56, 40, 0.1)",
         }}
       >
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <h2
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "clamp(22px, 3vw, 34px)",
-              fontWeight: "400",
-              color: "#f0ebe0",
-              letterSpacing: "-0.02em",
-              lineHeight: "1.25",
-              margin: "0 0 28px 0",
-            }}
-          >
-            What we actually do
-          </h2>
-          <p
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "16px",
-              color: "#9aab9f",
-              lineHeight: "1.75",
-              margin: "0 0 20px 0",
-            }}
-          >
-            We do not sell products. We do not manage portfolios in isolation.
-            We do not optimize tactics one at a time.
+          <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 24px 0" }}>
+            Our Services
           </p>
-          <p
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "16px",
-              color: "#9aab9f",
-              lineHeight: "1.75",
-              margin: "0 0 20px 0",
-            }}
-          >
-            Armature designs and maintains a wealth operating system — one that
-            brings advisors, assets, decisions, and oversight into a coherent
-            structure.
-          </p>
-          <p
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "16px",
-              color: "#9aab9f",
-              lineHeight: "1.75",
-              margin: "0 0 60px 0",
-            }}
-          >
-            This isn&apos;t about building something flashy. It is clarity,
-            durability, and reduced dependence on your constant attention.
-          </p>
-
-          <h2
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "clamp(22px, 3vw, 34px)",
-              fontWeight: "400",
-              color: "#f0ebe0",
-              letterSpacing: "-0.02em",
-              lineHeight: "1.25",
-              margin: "0 0 24px 0",
-            }}
-          >
-            Who this is for
-          </h2>
-          <p
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "16px",
-              color: "#9aab9f",
-              lineHeight: "1.75",
-              margin: "0 0 24px 0",
-            }}
-          >
-            Our clients are already successful. They are physicians, founders,
-            and professionals who:
-          </p>
-          {[
-            "followed the rules",
-            "built income responsibly",
-            "accumulated across accounts, entities, and strategies",
-            "sense there is a cleaner way to operate at this level",
-          ].map((item) => (
-            <div
-              key={item}
-              style={{
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "16px",
-                marginBottom: "16px",
-              }}
-            >
-              <span
-                style={{
-                  color: "#c9a84c",
-                  fontSize: "14px",
-                  paddingTop: "2px",
-                  flexShrink: 0,
-                }}
-              >
-                —
-              </span>
-              <span
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "16px",
-                  color: "#b8c8be",
-                  lineHeight: "1.5",
-                }}
-              >
-                {item}
-              </span>
-            </div>
-          ))}
-          <p
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "16px",
-              color: "#9aab9f",
-              lineHeight: "1.75",
-              fontStyle: "italic",
-              margin: "32px 0 0 0",
-            }}
-          >
-            They are not looking for more ideas. They are looking for a better
-            way of seeing the whole.
+          <h1 style={{ fontFamily: HEADING, fontSize: "clamp(32px, 5vw, 58px)", fontWeight: "500", color: "#1c3828", letterSpacing: "-0.02em", lineHeight: "1.1", margin: "0 0 28px 0" }}>
+            Designed as a system. Operated as one.
+          </h1>
+          <p style={{ fontFamily: BODY, fontSize: "18px", color: "#4a6155", lineHeight: "1.7", margin: 0 }}>
+            Armature does not offer standalone services. What we provide is a wealth operating system — a coordinated approach to every dimension of financial life.
           </p>
         </div>
       </section>
 
-      {/* LIVED EXPERIENCE */}
-      <section style={{ backgroundColor: "#05120e", padding: "100px 32px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "80px",
-              alignItems: "start",
-            }}
-          >
-            <div>
-              <h2
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "clamp(22px, 3vw, 34px)",
-                  fontWeight: "400",
-                  color: "#f0ebe0",
-                  letterSpacing: "-0.02em",
-                  lineHeight: "1.25",
-                  margin: "0 0 28px 0",
-                }}
-              >
-                Lived experience, not theory.
+      {/* SERVICE BLOCKS */}
+      <section style={{ backgroundColor: "#f5f0eb", padding: "100px 32px" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          {services.map((service, i) => (
+            <div
+              key={service.title}
+              style={{
+                marginBottom: i < services.length - 1 ? "72px" : 0,
+                paddingBottom: i < services.length - 1 ? "72px" : 0,
+                borderBottom: i < services.length - 1 ? "1px solid rgba(28, 56, 40, 0.1)" : "none",
+              }}
+            >
+              <h2 style={{ fontFamily: HEADING, fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: "500", color: "#1c3828", letterSpacing: "-0.01em", lineHeight: "1.2", margin: "0 0 20px 0" }}>
+                {service.title}
               </h2>
-              <p
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "16px",
-                  color: "#9aab9f",
-                  lineHeight: "1.75",
-                  margin: "0 0 40px 0",
-                }}
-              >
-                Armature was built by a healthcare professional trained in
-                high-stakes decision-making under uncertainty. That background
-                shaped everything: how we assess risk, how we design structure,
-                how we hold complexity without losing signal.
+              <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
+                {service.body}
               </p>
-
-              <h3
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  color: "#f0ebe0",
-                  margin: "0 0 16px 0",
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                How we think
-              </h3>
-              <p
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "15px",
-                  color: "#9aab9f",
-                  lineHeight: "1.75",
-                  margin: "0 0 20px 0",
-                }}
-              >
-                There is a point where traditional &quot;wealth
-                management&quot; stops being sufficient. At that stage:
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 20px 0" }}>
+                {service.items.map((item) => (
+                  <li key={item} style={{ fontFamily: BODY, fontSize: "15px", color: "#4a6155", lineHeight: "1.65", paddingLeft: "20px", borderLeft: "2px solid #b8913a", margin: "0 0 10px 0" }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#2e4e3a", fontStyle: "italic", margin: 0 }}>
+                {service.closing}
               </p>
-              {[
-                "decisions interact with each other",
-                "risk lives between domains",
-                "behavior matters as much as math",
-                "oversight becomes the hidden cost",
-              ].map((item) => (
-                <p
-                  key={item}
-                  style={{
-                    fontFamily: "Georgia, 'Times New Roman', serif",
-                    fontSize: "15px",
-                    color: "#7a9083",
-                    lineHeight: "1.65",
-                    paddingLeft: "16px",
-                    borderLeft: "1px solid rgba(201, 168, 76, 0.2)",
-                    margin: "0 0 10px 0",
-                  }}
-                >
-                  {item}
-                </p>
-              ))}
             </div>
+          ))}
+        </div>
+      </section>
 
+      {/* INTEGRATION SECTION */}
+      <section style={{ backgroundColor: "#ede8e0", padding: "100px 32px", borderTop: "1px solid rgba(28, 56, 40, 0.08)" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
+            <div style={{ aspectRatio: "4/3", backgroundColor: "#c8d0c4", backgroundImage: "url(/images/Gemini_Generated_Image_ju4kmju4kmju4kmj.png)", backgroundSize: "cover", backgroundPosition: "center" }} />
             <div>
-              <h3
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  color: "#f0ebe0",
-                  margin: "0 0 16px 0",
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                How we work
-              </h3>
-              <p
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "15px",
-                  color: "#9aab9f",
-                  lineHeight: "1.75",
-                  margin: "0 0 20px 0",
-                }}
-              >
-                That experience shaped everything: deliberate, not reactive.
-                Structured, not rushed. Long-horizon, not quarterly.
+              <h2 style={{ fontFamily: HEADING, fontSize: "clamp(22px, 3vw, 34px)", fontWeight: "500", color: "#1c3828", letterSpacing: "-0.02em", lineHeight: "1.2", margin: "0 0 20px 0" }}>
+                Integration over isolation
+              </h2>
+              <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
+                Traditional advisory models operate in silos. Ours does not.
               </p>
-              <p
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "15px",
-                  color: "#9aab9f",
-                  lineHeight: "1.75",
-                  margin: "0 0 40px 0",
-                }}
-              >
-                We believe wealth works best when every asset has a defined
-                role, every decision fits into a broader framework, and
-                oversight is designed — not improvised.
+              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 48px 0" }}>
+                In a governed system: tax decisions inform investment structure, estate planning shapes ownership and control, income design coordinates with liquidity needs. Nothing operates in isolation.
               </p>
-              <p
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "15px",
-                  color: "#c9a84c",
-                  fontStyle: "italic",
-                  lineHeight: "1.65",
-                  margin: "0 0 48px 0",
-                }}
-              >
-                We co-invest. We move carefully. We design systems meant to
-                hold.
-              </p>
-
-              <h3
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "18px",
-                  fontWeight: "600",
-                  color: "#f0ebe0",
-                  margin: "0 0 24px 0",
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                What clients notice
+              <h3 style={{ fontFamily: HEADING, fontSize: "16px", fontWeight: "500", color: "#1c3828", margin: "0 0 28px 0" }}>
+                How the system stays aligned
               </h3>
               {[
-                "This feels cleaner than what I had before.",
-                "I spend less time thinking about money.",
-                "Decisions don't stack up the way they used to.",
-              ].map((quote) => (
-                <div
-                  key={quote}
-                  style={{
-                    margin: "0 0 16px 0",
-                    padding: "20px 24px",
-                    borderLeft: "2px solid rgba(201, 168, 76, 0.4)",
-                    backgroundColor: "rgba(201, 168, 76, 0.04)",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontFamily: "Georgia, 'Times New Roman', serif",
-                      fontSize: "15px",
-                      color: "#b8c8be",
-                      fontStyle: "italic",
-                      lineHeight: "1.6",
-                      margin: 0,
-                    }}
-                  >
-                    &quot;{quote}&quot;
-                  </p>
+                { title: "Whole-System View", body: "We begin with a complete understanding of your financial picture." },
+                { title: "Coordinated Decisions", body: "Every strategy is assessed for interaction effects, sequencing, and long-term impact." },
+                { title: "Ongoing Alignment", body: "Periodic reviews ensure the system evolves as life, markets, and priorities change — without reintroducing complexity." },
+              ].map((item) => (
+                <div key={item.title} style={{ marginBottom: "24px", paddingLeft: "20px", borderLeft: "2px solid #b8913a" }}>
+                  <h4 style={{ fontFamily: HEADING, fontSize: "15px", fontWeight: "500", color: "#1c3828", margin: "0 0 6px 0" }}>{item.title}</h4>
+                  <p style={{ fontFamily: BODY, fontSize: "14px", color: "#4a6155", lineHeight: "1.65", margin: 0 }}>{item.body}</p>
                 </div>
               ))}
-              <p
-                style={{
-                  fontFamily: "Georgia, 'Times New Roman', serif",
-                  fontSize: "14px",
-                  color: "#6b7f74",
-                  lineHeight: "1.65",
-                  margin: "24px 0 0 0",
-                }}
-              >
-                Nothing dramatic changes day one. What changes is how the
-                system carries forward. What we build resembles how
-                centimillionaire families quietly operate — without requiring
-                you to become one first.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* LION SECTION */}
-      <section style={{ backgroundColor: "#ede8e0", borderTop: "1px solid rgba(28,56,40,0.08)" }}>
+      <section style={{ backgroundColor: "#f5f0eb", borderTop: "1px solid rgba(28,56,40,0.08)" }}>
         <div className="lion-section">
-          <div style={{ padding: "80px 60px 80px 32px", maxWidth: "600px", marginLeft: "auto" }}>
-            <p style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase" as const, margin: "0 0 24px 0" }}>
+          <div className="lion-image-gold-left" />
+          <div style={{ padding: "80px 32px 80px 60px", maxWidth: "600px" }}>
+            <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase" as const, fontWeight: 600, margin: "0 0 24px 0" }}>
               Armature
             </p>
-            <h2 style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 400, color: "#1c3828", letterSpacing: "-0.02em", lineHeight: 1.2, margin: "0 0 20px 0" }}>
-              Structure holds what success builds.
+            <h2 style={{ fontFamily: HEADING, fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 500, color: "#1c3828", letterSpacing: "-0.02em", lineHeight: 1.2, margin: "0 0 20px 0" }}>
+              A system that governs itself.
             </h2>
-            <p style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontSize: "16px", color: "#4a6155", lineHeight: 1.75, margin: 0 }}>
-              The system is not finished when wealth is accumulated. It is finished when it can carry forward — with or without your constant attention.
+            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: 1.75, margin: 0 }}>
+              Every service we provide is designed to coordinate with the others. Not a collection of strategies — a single, coherent operating system.
             </p>
           </div>
-          <div className="lion-image-gold" />
         </div>
       </section>
 
