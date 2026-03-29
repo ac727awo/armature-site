@@ -124,7 +124,7 @@ export default function Services() {
       <section style={{ backgroundColor: "#ede8e0", padding: "100px 32px", borderTop: "1px solid rgba(28, 56, 40, 0.08)" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
-            <div style={{ aspectRatio: "4/3", backgroundColor: "#c8d0c4", backgroundImage: "url(/Gemini_Generated_Image_ccm8gdccm8gdccm8.png)", backgroundSize: "cover", backgroundPosition: "center" }} />
+            <div style={{ aspectRatio: "4/3", backgroundColor: "#c8d0c4", backgroundImage: "url(/images/Gemini_Generated_Image_l9lxpml9lxpml9lx.png)", backgroundSize: "cover", backgroundPosition: "center" }} />
             <div>
               <h2 style={{ fontFamily: HEADING, fontSize: "clamp(22px, 3vw, 34px)", fontWeight: "500", color: "#1c3828", letterSpacing: "-0.02em", lineHeight: "1.2", margin: "0 0 20px 0" }}>
                 Integration over isolation
