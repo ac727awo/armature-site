@@ -152,25 +152,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
-
-      {/* LION SECTION */}
-      <section style={{ backgroundColor: "#f5f0eb", borderTop: "1px solid rgba(28,56,40,0.08)" }}>
-        <div className="lion-section">
-          <div className="lion-image-gold-left" />
-          <div style={{ padding: "80px 32px 80px 60px", maxWidth: "600px" }}>
-            <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase" as const, fontWeight: 600, margin: "0 0 24px 0" }}>
-              Armature
-            </p>
-            <h2 style={{ fontFamily: HEADING, fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 500, color: "#1c3828", letterSpacing: "-0.02em", lineHeight: 1.2, margin: "0 0 20px 0" }}>
-              A system that governs itself.
-            </h2>
-            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: 1.75, margin: 0 }}>
-              Every service we provide is designed to coordinate with the others. Not a collection of strategies — a single, coherent operating system.
-            </p>
-          </div>
-        </div>
-      </section>
       <CTASection />
     </>
   );
