@@ -11,7 +11,6 @@ const links = [
   { href: "/services", label: "Services" },
   { href: "/process", label: "Process" },
   { href: "/insights", label: "Insights" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Nav() {
