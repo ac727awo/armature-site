@@ -140,13 +140,11 @@ export default function Contact() {
                     <label style={labelStyle}>Investable Assets</label>
                     <select name="assets" value={form.assets} onChange={handleChange} style={{ ...inputStyle, cursor: "pointer" }}>
                       <option value="">Select a range</option>
-                      <option value="Under $500K">Under $500K</option>
-                      <option value="$500K – $1M">$500K – $1M</option>
-                      <option value="$1M – $2.5M">$1M – $2.5M</option>
                       <option value="$2.5M – $5M">$2.5M – $5M</option>
                       <option value="$5M – $8M">$5M – $8M</option>
                       <option value="$8M – $15M">$8M – $15M</option>
-                      <option value="$15M+">$15M+</option>
+                      <option value="$15M – $25M">$15M – $25M</option>
+                      <option value="$25M+">$25M+</option>
                     </select>
                   </div>
                   <div style={{ marginBottom: "28px" }}>

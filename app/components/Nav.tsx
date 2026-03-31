@@ -109,7 +109,7 @@ export default function Nav() {
               el.style.backgroundColor = "#1c3828";
             }}
           >
-            Get Your Freedom Index
+            Request a Conversation
           </Link>
         </div>
 
@@ -190,7 +190,7 @@ export default function Nav() {
               fontWeight: "500",
             }}
           >
-            Get Your Freedom Index
+            Request a Conversation
           </Link>
         </div>
       )}
