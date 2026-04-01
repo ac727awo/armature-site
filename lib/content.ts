@@ -3,11 +3,10 @@ import path from "path";
 
 const contentDir = path.join(process.cwd(), "content");
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function getContent(name: string): any {
+export function getContent<T = any>(name: string): T {
   const filePath = path.join(contentDir, `${name}.json`);
   const raw = fs.readFileSync(filePath, "utf-8");
-  return JSON.parse(raw);
+  return JSON.parse(raw) as T;
 }
 
 export function getAllContent(): { name: string; data: Record<string, unknown> }[] {
