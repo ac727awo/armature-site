@@ -162,7 +162,7 @@ export default function About() {
               </div>
             ))}
           </div>
-        </diw>
+        </div>
       </section>
 
       {/* CLIENT PROFILE SECTION */}
