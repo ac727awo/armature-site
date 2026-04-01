@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "title": "Services | Armature Wealth Office",
+    "description": "A coordinated wealth operating system. Not advice in isolation — integrated governance across your entire financial life."
+  },
+  "hero": {
+    "eyebrow": "Our Services",
+    "heading": "A system, not a stack of services."
+  },
+  "intro": {
+    "body1": "Traditional advisory models separate your financial life into silos — investments here, tax there, estate somewhere else. Each advisor operates within their domain, correctly. What no one owns is the interaction between them.",
+    "body2": "Armature replaces that fragmentation with a wealth operating system — a single governing structure that holds everything in view, coordinates across domains, and reduces the number of decisions that require your direct involvement."
+  },
+  "coreDomains": {
+    "heading": "Core domains of the operating system",
+    "domains": [
+      {
+        "title": "Investment Governance",
+        "body": "Portfolio construction, allocation discipline, manager selection, and ongoing rebalancing — all governed by a written investment policy, not market sentiment."
+      },
+      {
+        "title": "Tax Architecture",
+        "body": "Cross-domain tax coordination — not just this year's return, but the structural interaction between income, gains, charitable giving, entity distributions, and estate transfers."
+      },
+      {
+        "title": "Estate & Entity Structuring",
+        "body": "Trusts, LLCs, family entities, and ownership structures — reviewed for alignment with your current goals, not just the year they were created."
+      },
+      {
+        "title": "Risk & Insurance Design",
+        "body": "Comprehensive risk assessment across personal liability, professional exposure, property, and key-person risk — designed to protect the whole, not just the parts."
+      },
+      {
+        "title": "Cash Flow & Liquidity Architecture",
+        "body": "Designed income from all sources — practice, portfolio, real estate, entities — structured for tax efficiency and reduced principal oversight."
+      },
+      {
+        "title": "Advisor Coordination & Oversight",
+        "body": "Your CPA, attorney, insurance broker, and investment managers — held accountable to one operating plan, with clear deliverables and shared context."
+      }
+    ]
+  },
+  "integration": {
+    "heading": "Integration is the product",
+    "body1": "The value of Armature is not in any single domain. It is in the integration across all of them. Every decision is made with visibility into what it affects elsewhere.",
+    "body2": "A Roth conversion is evaluated against this year's income, the estate plan, and the charitable giving strategy — simultaneously. A real estate acquisition is assessed for its tax impact, its liquidity effect, and its role in the portfolio — before the LOI is signed.",
+    "closing": "This is what a wealth operating system does. It holds the full picture so you don't have to.",
+    "image": "/images/integration-diagram.jpg"
+  }
+}

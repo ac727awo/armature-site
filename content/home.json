@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "title": "Armature Wealth Office | A Better Way to Manage Wealth",
+    "description": "A wealth operating system for accomplished professionals with $10M–$25M+ net worth. Governance, integration, and clarity."
+  },
+  "hero": {
+    "eyebrow": "Armature Wealth Office",
+    "heading": "Your wealth deserves better decisions.",
+    "subheading": "For accomplished professionals whose success outpaced the systems meant to govern it.",
+    "qualifier": "For professionals with $8M–$15M net worth. If your financial life still feels simple, it may not be time yet.",
+    "cta1Text": "See How the System Works →",
+    "cta1Href": "/process",
+    "cta2Text": "Begin with a Diagnostic Conversation",
+    "cta2Href": "/contact",
+    "backgroundImage": "/images/hero-bg.jpg"
+  },
+  "whatsMissing": {
+    "heading": "What's missing is not intelligence or effort.",
+    "body1": "It's a wealth operating system that brings everything into one clear view, so you can author capital decisions from a position of clarity — not reaction.",
+    "body2": "As complexity compounds, communication fragments, and infrastructure quietly lags behind. So do traditional advisory models — built for a simpler version of your financial life.",
+    "body3": "If your financial life still feels simple, it may not be time yet. If it feels harder to see clearly than it should — that is the signal."
+  },
+  "whyClients": {
+    "eyebrow": "Why clients choose Armature",
+    "intro": "Clients work with Armature because they value clarity over activity. Not more inputs. Not more ideas. A governing system that holds.",
+    "items": [
+      {
+        "title": "Authorship before action",
+        "body": "Decisions follow structure, not urgency."
+      },
+      {
+        "title": "Downside-aware by design",
+        "body": "Systems are first built to reduce mistakes and risk, not just pursue outcomes."
+      },
+      {
+        "title": "Integrated by default",
+        "body": "Charities, entities, estate, governance, insurance, investments, planning, risk, redundancies, and tax — held in one coherent view."
+      },
+      {
+        "title": "Long-horizon thinking",
+        "body": "Capital is authored with decades in mind."
+      }
+    ],
+    "closing": "The goal is not control for its own sake, but independence, calm, and a trajectory that holds.",
+    "image": "/images/governance-desk.jpg"
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "heading": "This is not traditional wealth management.",
+    "intro": "We design and maintain a wealth operating system — one that brings advisors, assets, decisions, and oversight into a single coherent structure.",
+    "subIntro": "Our work typically includes:",
+    "items": [
+      { "action": "Reduce", "object": "cognitive load" },
+      { "action": "Limit", "object": "behavioral risk" },
+      { "action": "Preserve", "object": "optionality" },
+      { "action": "Allow", "object": "wealth to function without constant oversight" }
+    ],
+    "closing": "The work is quiet by design. The impact is cumulative.",
+    "image": "/images/integration-diagram.jpg",
+    "imageCaption": "Including access to select private and alternative investments"
+  },
+  "process": {
+    "eyebrow": "Our Process",
+    "heading": "A system built around you, not sold to you.",
+    "intro": "Everything begins with a diagnostic conversation. No pitch. No pressure. Just pattern recognition. From there, a system is designed — and then operated — around your actual life.",
+    "steps": [
+      "Map your current landscape",
+      "Identify what's missing to support the next phase",
+      "Design a coordinated capital system",
+      "Install authorship rules and decision architecture",
+      "Stay alongside you as the system carries the load"
+    ],
+    "closingLine1": "You remain the principal. You retain final authority.",
+    "closingLine2": "The system does the work."
+  },
+  "about": {
+    "eyebrow": "About Armature",
+    "heading": "Built from lived experience, not theory.",
+    "body1": "Armature was built by a healthcare professional trained in high-stakes decision-making under uncertainty. That background shaped everything: how we assess risk, how we design structure, how we hold complexity without losing signal.",
+    "body2": "Before this system existed for clients, it was built personally — through real assets, real losses, and real decisions under pressure.",
+    "accent": "We co-invest. We move deliberately. We do not rush capital.",
+    "image": "/images/professional.jpg"
+  },
+  "insights": {
+    "eyebrow": "Insights",
+    "heading": "What wealth starts to feel like after the noise fades.",
+    "intro": "We write for those who have already succeeded — and are ready for clarity, structure, and authorship over what comes next.",
+    "teasers": [
+      "Why wealth feels heavier than it should",
+      "When systems matter more than strategies",
+      "The behavioral cost of fragmented decisions",
+      "How clarity changes trajectories"
+    ],
+    "closing": "These are not lessons. They are signals of readiness."
+  },
+  "closingStatement": {
+    "eyebrow": "Armature Wealth Partners",
+    "heading": "The system should carry more. You should carry less.",
+    "body": "Most of what you track, coordinate, and worry about was never meant to live in your head. That is what a wealth operating system is for."
+  },
+  "cta": {
+    "eyebrow": "Begin the Conversation",
+    "heading": "If what you have read reflects what you already feel, the timing may be right.",
+    "body": "No pitch. No pressure. Just a focused diagnostic conversation — to determine whether what we build is appropriate for what you need.",
+    "buttonText": "Request a Conversation",
+    "buttonHref": "/contact"
+  }
+}

@@ -14,6 +14,20 @@ export async function POST(request: Request) {
       );
     }
 
+    // Push to Google Sheets via Apps Script (non-blocking)
+    const sheetsUrl = process.env.GOOGLE_SHEETS_WEBHOOK;
+    if (sheetsUrl) {
+      fetch(sheetsUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName, lastName, email, phone, assets, message,
+          timestamp: new Date().toISOString(),
+          source: "website",
+        }),
+      }).catch(() => {}); // Fire and forget
+    }
+
     await resend.emails.send({
       from: "Armature Wealth Office <contact@armatureoffice.com>",
       to: ["alex@assiduouscre.com"],

@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "About Us | Armature Wealth Office",
+    "description": "Built for the phase that comes after success. Armature exists for a specific moment in a professional's life."
+  },
+  "hero": {
+    "eyebrow": "About Armature",
+    "heading": "Built for the phase that comes after success."
+  },
+  "origin": {
+    "heading": "The origin is clinical, not financial.",
+    "paragraphs": [
+      "Most wealth management firms begin inside the financial industry. Armature did not. It began inside a clinical operating environment — shaped by the same principles that govern decisions under uncertainty, information asymmetry, and high consequence.",
+      "The founder's background in anesthesiology and healthcare operations created a natural framework: monitor the system, anticipate failures before they surface, maintain readiness, and intervene only when the data supports it. These are not financial metaphors. They are operating disciplines.",
+      "Armature was built because the founder's own financial life demanded it. Multiple entities, real estate holdings, practice income, investment portfolios, insurance structures, estate plans — all managed by competent professionals, none of whom could see the full picture. The coordination gap was not a service problem. It was a structural one.",
+      "What began as a personal operating system became a practice — because the pattern is remarkably consistent across high-earning professionals."
+    ]
+  },
+  "philosophy": {
+    "heading": "What we believe",
+    "items": [
+      {
+        "title": "Governance before strategy",
+        "body": "The right structure precedes the right decision."
+      },
+      {
+        "title": "Signal before noise",
+        "body": "We reduce what you monitor and elevate what matters."
+      },
+      {
+        "title": "Integration before fragmentation",
+        "body": "Every advisor, asset, and entity is held in a single coherent view."
+      },
+      {
+        "title": "Continuity before complexity",
+        "body": "Systems are designed to endure — not to impress."
+      },
+      {
+        "title": "Authorship before delegation",
+        "body": "The principal retains authority. The system does the work."
+      }
+    ]
+  },
+  "clientProfile": {
+    "heading": "Who we serve",
+    "intro": "Armature serves a specific client: an accomplished professional — typically a physician, specialist, or healthcare executive — with $8M–$15M+ in net worth, and a financial life that has outgrown informal coordination.",
+    "signals": [
+      "Multiple advisory relationships, none of which see the full picture",
+      "Real estate, entities, or business interests managed separately",
+      "A sense that things are working — but not held together",
+      "Growing awareness that the next phase requires more structure",
+      "A desire to delegate oversight without losing authority"
+    ],
+    "closing": "If this describes your current position, the timing may be right."
+  },
+  "closing": {
+    "heading": "This is not a pitch. It is a pattern.",
+    "body": "Armature exists for a specific moment in a professional's life. When success has arrived, the complexity has compounded, and the question is no longer 'how do I grow?' but 'how do I hold this together?' — that is when governance matters most."
+  }
+}

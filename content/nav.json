@@ -1,0 +1,12 @@
+{
+  "brand": "Armature",
+  "brandSub": "WEALTH OFFICE",
+  "links": [
+    { "label": "ABOUT", "href": "/about" },
+    { "label": "SERVICES", "href": "/services" },
+    { "label": "PROCESS", "href": "/process" },
+    { "label": "INSIGHTS", "href": "/insights" }
+  ],
+  "ctaText": "REQUEST A CONVERSATION",
+  "ctaHref": "/contact"
+}
