@@ -1,213 +1,178 @@
 import { getContent } from "../../lib/content";
 import CTASection from "../components/CTASection";
 
-const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
-const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
+const HEADING = "'Operetta 12', serif";
+const BODY = "'Archivo', sans-serif";
 
-export async function generateMetadata() {
-  const content = getContent<{
-    meta: { title: string; description: string };
-  }>("process");
-  return {
-    title: content.meta.title,
-    description: content.meta.description,
-  };
-}
+export const metadata = {
+  title: "Our Process | Armature Wealth Office",
+  description: "A five-phase engagement designed to bring order to complexity.",
+};
 
-export default function Process() {
-  const content = getContent<{
-    meta: { title: string; description: string };
-    hero: { eyebrow: string; heading: string };
-    intro: { body1: string; body2: string };
-    phases: Array<{
-      number: string;
-      title: string;
-      body: string;
-      outcome: string;
-    }>;
-    closing: { heading: string; body: string };
-  }>("process");
+export default async function Process() {
+  const data = await getContent("process");
 
   return (
-    <>
+    <main>
       {/* HERO */}
       <section
-        className="hero-pad"
         style={{
           backgroundColor: "#f5f0eb",
-          paddingTop: "160px",
-          paddingBottom: "80px",
-          paddingLeft: "32px",
-          paddingRight: "32px",
-          borderBottom: "1px solid rgba(28, 56, 40, 0.1)",
+          padding: "140px 32px 80px",
+          textAlign: "center" as const,
         }}
       >
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <p
-            style={{
-              fontFamily: BODY,
-              fontSize: "11px",
-              color: "#b8913a",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              fontWeight: "600",
-              margin: "0 0 24px 0",
-            }}
-          >
-            {content.hero.eyebrow}
-          </p>
-          <h1
-            style={{
-              fontFamily: HEADING,
-              fontSize: "clamp(32px, 5vw, 58px)",
-              fontWeight: "500",
-              color: "#1c3828",
-              letterSpacing: "-0.02em",
-              lineHeight: "1.1",
-              margin: 0,
-            }}
-          >
-            {content.hero.heading}
-          </h1>
-        </div>
+        <p
+          style={{
+            fontFamily: BODY,
+            fontSize: "11px",
+            letterSpacing: "3px",
+            textTransform: "uppercase" as const,
+            color: "#b8913a",
+            marginBottom: "20px",
+          }}
+        >
+          {data.hero.eyebrow}
+        </p>
+        <h1
+          style={{
+            fontFamily: HEADING,
+            fontSize: "clamp(32px, 5vw, 58px)",
+            fontWeight: "400",
+            color: "#1c3828",
+            maxWidth: "800px",
+            margin: "0 auto",
+            lineHeight: "1.15",
+          }}
+        >
+          {data.hero.heading}
+        </h1>
       </section>
 
-      {/* INTRO SECTION */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "100px 32px" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+      {/* INTRO */}
+      <section style={{ backgroundColor: "#f5f0eb", padding: "0 32px 80px" }}>
+        <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" as const }}>
           <p
             style={{
               fontFamily: BODY,
               fontSize: "16px",
+              lineHeight: "1.8",
               color: "#4a6155",
-              lineHeight: "1.75",
-              margin: "0 0 20px 0",
+              marginBottom: "16px",
             }}
           >
-            {content.intro.body1}
+            {data.intro.body1}
           </p>
           <p
             style={{
               fontFamily: BODY,
               fontSize: "16px",
+              lineHeight: "1.8",
               color: "#4a6155",
-              lineHeight: "1.75",
-              margin: 0,
             }}
           >
-            {content.intro.body2}
+            {data.intro.body2}
           </p>
         </div>
       </section>
 
       {/* PHASES */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "100px 32px" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          {content.phases.map((phase, i) => (
-            <div
-              key={phase.number}
-              className="grid-phase"
-              style={{
-                marginBottom: i < content.phases.length - 1 ? "80px" : 0,
-                paddingBottom: i < content.phases.length - 1 ? "80px" : 0,
-                borderBottom:
-                  i < content.phases.length - 1
-                    ? "1px solid rgba(28, 56, 40, 0.08)"
-                    : "none",
-              }}
-            >
-              <div>
-                <span
-                  style={{
-                    fontFamily: HEADING,
-                    fontSize: "32px",
-                    fontWeight: "500",
-                    color: "rgba(184,145,58,0.4)",
-                    letterSpacing: "-0.02em",
-                    lineHeight: "1",
-                  }}
-                >
-                  {phase.number}
-                </span>
+      <section style={{ backgroundColor: "#ede8e0", padding: "80px 32px" }}>
+        <div style={{ maxWidth: "880px", margin: "0 auto" }}>
+          {data.phases.map(
+            (
+              phase: { number: string; title: string; body: string; outcome: string },
+              i: number
+            ) => (
+              <div
+                key={i}
+                style={{
+                  display: "flex",
+                  gap: "32px",
+                  marginBottom: i < data.phases.length - 1 ? "56px" : "0",
+                  flexWrap: "wrap" as const,
+                }}
+              >
+                <div style={{ minWidth: "60px" }}>
+                  <span
+                    style={{
+                      fontFamily: HEADING,
+                      fontSize: "32px",
+                      color: "#b8913a",
+                      fontWeight: "400",
+                    }}
+                  >
+                    {phase.number}
+                  </span>
+                </div>
+                <div style={{ flex: 1, minWidth: "280px" }}>
+                  <h3
+                    style={{
+                      fontFamily: HEADING,
+                      fontSize: "clamp(20px, 2.5vw, 28px)",
+                      fontWeight: "400",
+                      color: "#1c3828",
+                      marginBottom: "12px",
+                    }}
+                  >
+                    {phase.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: BODY,
+                      fontSize: "15px",
+                      lineHeight: "1.7",
+                      color: "#4a6155",
+                      marginBottom: "12px",
+                    }}
+                  >
+                    {phase.body}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: BODY,
+                      fontSize: "14px",
+                      color: "#6a8070",
+                      fontStyle: "italic",
+                    }}
+                  >
+                    {phase.outcome}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h2
-                  style={{
-                    fontFamily: HEADING,
-                    fontSize: "clamp(20px, 2.5vw, 28px)",
-                    fontWeight: "500",
-                    color: "#1c3828",
-                    letterSpacing: "-0.01em",
-                    lineHeight: "1.2",
-                    margin: "0 0 20px 0",
-                  }}
-                >
-                  {phase.title}
-                </h2>
-                <p
-                  style={{
-                    fontFamily: BODY,
-                    fontSize: "16px",
-                    color: "#4a6155",
-                    lineHeight: "1.75",
-                    margin: "0 0 20px 0",
-                  }}
-                >
-                  {phase.body}
-                </p>
-                <p
-                  style={{
-                    fontFamily: BODY,
-                    fontSize: "15px",
-                    color: "#2e4e3a",
-                    fontStyle: "italic",
-                    margin: 0,
-                  }}
-                >
-                  {phase.outcome}
-                </p>
-              </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </section>
 
-      {/* CLOSING SECTION */}
-      <section
-        style={{
-          backgroundColor: "#ede8e0",
-          padding: "100px 32px",
-          borderTop: "1px solid rgba(28, 56, 40, 0.08)",
-        }}
-      >
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+      {/* CLOSING */}
+      <section style={{ backgroundColor: "#f5f0eb", padding: "80px 32px" }}>
+        <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" as const }}>
           <h2
             style={{
               fontFamily: HEADING,
               fontSize: "clamp(22px, 3vw, 34px)",
-              fontWeight: "500",
+              fontWeight: "400",
               color: "#1c3828",
-              letterSpacing: "-0.02em",
-              lineHeight: "1.25",
-              margin: "0 0 28px 0",
+              marginBottom: "20px",
             }}
           >
-            {content.closing.heading}
+            {data.closing.heading}
           </h2>
           <p
             style={{
               fontFamily: BODY,
               fontSize: "16px",
+              lineHeight: "1.8",
               color: "#4a6155",
-              lineHeight: "1.75",
-              margin: 0,
             }}
           >
-            {content.closing.body}
+            {data.closing.body}
           </p>
         </div>
       </section>
 
       <CTASection />
-    </>
-  (ßB€°(€€€€€€€€€€€€€õô(€€€€€€€€€€€€ø(€€€€€€€€€€€€€í½¹Ñ•¹Ğ¹±½Í¥¹œ¹¡•…‘¥¹ô(€€€€€€€€€€€€ğ½ Èø(€€€€€€€€€€€€ñÀ(€€€€€€€€€€€€€ÍÑå±”õíì(€€€€€€€€€€€€€€€™½¹Ñ…µ¥±äè	=d°(€€€€€€€€€€€€€€€™½¹ÑM¥é”è€ˆÄÙÁàˆ°(€€€€€€€€€€€€€€€½±½Èè€ˆŒÑ„ØÄÔÔˆ°(€€€€€€€€€€€€€€€±¥¹•!•¥¡Ğè€ˆÄ¸ÜÔˆ°(€€€€€€€€€€€€€€€µ…É¥¸è€À°(€€€€€€€€€€€€€õô(€€€€€€€€€€€€ø(€€€€€€€€€€€€€í½¹Ñ•¹Ğ¹±½Í¥¹œ¹‰½‘åô(€€€€€€€€€€€€ğ½Àø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€ğ½Í•Ñ¥½¸ø((€€€€€€€€ñQM•Ñ¥½¸€¼ø(€€€€ğ¼ø(€€<£}
+    </main>
+  );
+}

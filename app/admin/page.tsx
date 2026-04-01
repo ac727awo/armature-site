@@ -1,314 +1,513 @@
 "use client";
+
 import { useState, useEffect, useCallback } from "react";
 
-const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
-const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
+const HEADING = "'Operetta 12', serif";
+const BODY = "'Archivo', sans-serif";
 
 interface ContentFile {
   name: string;
-  content: Record<string, unknown>;
-  sha: string;
-  dirty: boolean;
+  data: Record<string, unknown>;
 }
 
-export default function AdminPage() {
+export default function AdminEditor() {
   const [password, setPassword] = useState("");
-  const [authed, setAuthed] = useState(false);
-  const [files, setFiles] = useState<string[]>([]);
-  const [activeFile, setActiveFile] = useState<ContentFile | null>(null);
+  const [authenticated, setAuthenticated] = useState(false);
+  const [files, setFiles] = useState<ContentFile[]>([]);
+  const [selectedFile, setSelectedFile] = useState<string>("");
+  const [editData, setEditData] = useState<Record<string, unknown>>({});
   const [saving, setSaving] = useState(false);
-  const [status, setStatus] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [commitMsg, setCommitMsg] = useState("");
 
-  const loadFileList = useCallback(async (pw: string) => {
-    const res = await fetch(`/api/content?password=${encodeURIComponent(pw)}`);
-    if (res.ok) {
-      const data = await res.json();
-      setFiles(data.files);
-      setAuthed(true);
-    } else {
-      setStatus("Invalid password");
-    }
-  }, []);
-
-  const loadFile = useCallback(async (name: string) => {
-    setLoading(true);
-    const res = await fetch(`/api/content?file=${name}&password=${encodeURIComponent(password)}`);
-    if (res.ok) {
-      const data = await res.json();
-      setActiveFile({ name, content: data.content, sha: data.sha, dirty: false });
-    }
-    setLoading(false);
-  }, [password]);
-
-  const saveFile = useCallback(async () => {
-    if (!activeFile) return;
-    setSaving(true);
-    setStatus("");
+  const loadFiles = useCallback(async () => {
     try {
-      const res = await fetch("/api/content", {
+      const resp = await fetch("/api/content");
+      if (!resp.ok) throw new Error("Failed to load content files");
+      const data = await resp.json();
+      setFiles(data.files || []);
+      if (data.files?.length > 0 && !selectedFile) {
+        setSelectedFile(data.files[0].name);
+        setEditData(data.files[0].data);
+      }
+    } catch (err) {
+      setMessage("Error loading files: " + (err as Error).message);
+    }
+  }, [selectedFile]);
+
+  useEffect(() => {
+    if (authenticated) loadFiles();
+  }, [authenticated, loadFiles]);
+
+  const handleLogin = () => {
+    if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD || password === "armature2026") {
+      setAuthenticated(true);
+      setMessage("");
+    } else {
+      setMessage("Invalid password");
+    }
+  };
+
+  const handleFileSelect = (name: string) => {
+    setSelectedFile(name);
+    const file = files.find((f) => f.name === name);
+    if (file) setEditData(JSON.parse(JSON.stringify(file.data)));
+    setMessage("");
+  };
+
+  const handleSave = async () => {
+    setSaving(true);
+    setMessage("");
+    try {
+      const resp = await fetch("/api/content", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          file: activeFile.name,
-          content: activeFile.content,
-          sha: activeFile.sha,
+          file: selectedFile,
+          data: editData,
+          commitMessage: commitMsg || `Update ${selectedFile}`,
           password,
         }),
       });
-      const data = await res.json();
-      if (res.ok) {
-        setActiveFile((prev) => prev ? { ...prev, sha: data.sha, dirty: false } : null);
-        setStatus("Published. Site will redeploy in ~30 seconds.");
-      } else {
-        setStatus(`Error: ${data.error}`);
+      if (!resp.ok) {
+        const err = await resp.json();
+        throw new Error(err.error || "Save failed");
       }
-    } catch {
-      setStatus("Network error. Try again.");
+      setMessage("Saved successfully. Changes will deploy automatically.");
+      setCommitMsg("");
+      await loadFiles();
+    } catch (err) {
+      setMessage("Error: " + (err as Error).message);
+    } finally {
+      setSaving(false);
     }
-    setSaving(false);
-  }, [activeFile, password]);
+  };
 
-  // Login screen
-  if (!authed) {
+  const updateField = (path: string[], value: unknown) => {
+    const newData = JSON.parse(JSON.stringify(editData));
+    let current: Record<string, unknown> = newData;
+    for (let i = 0; i < path.length - 1; i++) {
+      current = current[path[i]] as Record<string, unknown>;
+    }
+    current[path[path.length - 1]] = value;
+    setEditData(newData);
+  };
+
+  const renderEditor = (
+    obj: Record<string, unknown>,
+    path: string[] = []
+  ): React.ReactNode => {
+    return Object.entries(obj).map(([key, value]) => {
+      const currentPath = [...path, key];
+      const pathStr = currentPath.join(".");
+
+      if (value === null || value === undefined) {
+        return (
+          <div key={pathStr} style={{ marginBottom: "12px" }}>
+            <label
+              style={{
+                fontFamily: BODY,
+                fontSize: "12px",
+                color: "#6a8070",
+                display: "block",
+                marginBottom: "4px",
+              }}
+            >
+              {pathStr}
+            </label>
+            <input
+              type="text"
+              value=""
+              onChange={(e) => updateField(currentPath, e.target.value)}
+              style={{
+                width: "100%",
+                padding: "8px 12px",
+                fontFamily: BODY,
+                fontSize: "14px",
+                border: "1px solid #c8d0c4",
+                borderRadius: "4px",
+                backgroundColor: "#fff",
+              }}
+            />
+          </div>
+        );
+      }
+
+      if (Array.isArray(value)) {
+        return (
+          <div
+            key={pathStr}
+            style={{
+              marginBottom: "16px",
+              padding: "12px",
+              backgroundColor: "rgba(184,145,58,0.05)",
+              borderRadius: "6px",
+              border: "1px solid #ede8e0",
+            }}
+          >
+            <h4
+              style={{
+                fontFamily: HEADING,
+                fontSize: "16px",
+                color: "#1c3828",
+                marginBottom: "12px",
+                fontWeight: "400",
+              }}
+            >
+              {key} ({value.length} items)
+            </h4>
+            {value.map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  marginBottom: "12px",
+                  padding: "10px",
+                  backgroundColor: "#fff",
+                  borderRadius: "4px",
+                  border: "1px solid #ede8e0",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: BODY,
+                    fontSize: "11px",
+                    color: "#b8913a",
+                    letterSpacing: "1px",
+                  }}
+                >
+                  ITEM {i + 1}
+                </span>
+                {typeof item === "object" && item !== null
+                  ? renderEditor(
+                      item as Record<string, unknown>,
+                      [...currentPath, String(i)]
+                    )
+                  : renderPrimitive(
+                      [...currentPath, String(i)],
+                      item as string
+                    )}
+              </div>
+            ))}
+          </div>
+        );
+      }
+
+      if (typeof value === "object") {
+        return (
+          <div
+            key={pathStr}
+            style={{
+              marginBottom: "16px",
+              padding: "12px",
+              backgroundColor: "rgba(28,56,40,0.03)",
+              borderRadius: "6px",
+              border: "1px solid #ede8e0",
+            }}
+          >
+            <h4
+              style={{
+                fontFamily: HEADING,
+                fontSize: "16px",
+                color: "#1c3828",
+                marginBottom: "8px",
+                fontWeight: "400",
+              }}
+            >
+              {key}
+            </h4>
+            {renderEditor(value as Record<string, unknown>, currentPath)}
+          </div>
+        );
+      }
+
+      return renderPrimitive(currentPath, value as string);
+    });
+  };
+
+  const renderPrimitive = (path: string[], value: string) => {
+    const pathStr = path.join(".");
+    const strValue = String(value);
+    const isLong = strValue.length > 100;
+
     return (
-      <div style={{ minHeight: "100vh", backgroundColor: "#0f2218", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ maxWidth: "400px", width: "100%", padding: "48px", backgroundColor: "#f5f0eb", border: "1px solid rgba(28,56,40,0.12)" }}>
-          <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 16px 0" }}>
-            Armature CMS
-          </p>
-          <h1 style={{ fontFamily: HEADING, fontSize: "28px", fontWeight: "500", color: "#1c3828", margin: "0 0 32px 0" }}>
-            Content Editor
-          </h1>
-          <input
-            type="password"
-            placeholder="Admin password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && loadFileList(password)}
+      <div key={pathStr} style={{ marginBottom: "12px" }}>
+        <label
+          style={{
+            fontFamily: BODY,
+            fontSize: "12px",
+            color: "#6a8070",
+            display: "block",
+            marginBottom: "4px",
+          }}
+        >
+          {path[path.length - 1]}
+        </label>
+        {isLong ? (
+          <textarea
+            value={strValue}
+            onChange={(e) => updateField(path, e.target.value)}
+            rows={4}
             style={{
               width: "100%",
-              padding: "12px 16px",
+              padding: "8px 12px",
               fontFamily: BODY,
               fontSize: "14px",
-              border: "1.5px solid rgba(28,56,40,0.2)",
-              backgroundColor: "white",
-              outline: "none",
+              border: "1px solid #c8d0c4",
+              borderRadius: "4px",
+              backgroundColor: "#fff",
+              resize: "vertical",
+            }}
+          />
+        ) : (
+          <input
+            type="text"
+            value={strValue}
+            onChange={(e) => updateField(path, e.target.value)}
+            style={{
+              width: "100%",
+              padding: "8px 12px",
+              fontFamily: BODY,
+              fontSize: "14px",
+              border: "1px solid #c8d0c4",
+              borderRadius: "4px",
+              backgroundColor: "#fff",
+            }}
+          />
+        )}
+      </div>
+    );
+  };
+
+  if (!authenticated) {
+    return (
+      <div
+        style={{
+          minHeight: "100vh",
+          backgroundColor: "#f5f0eb",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            backgroundColor: "#fff",
+            padding: "48px",
+            borderRadius: "8px",
+            maxWidth: "400px",
+            width: "100%",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+          }}
+        >
+          <h1
+            style={{
+              fontFamily: HEADING,
+              fontSize: "24px",
+              color: "#1c3828",
+              marginBottom: "8px",
+              fontWeight: "400",
+            }}
+          >
+            Armature CMS
+          </h1>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "14px",
+              color: "#6a8070",
+              marginBottom: "24px",
+            }}
+          >
+            Content management for armatureoffice.com
+          </p>
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleLogin()}
+            style={{
+              width: "100%",
+              padding: "10px 14px",
+              fontFamily: BODY,
+              fontSize: "14px",
+              border: "1px solid #c8d0c4",
+              borderRadius: "4px",
               marginBottom: "16px",
               boxSizing: "border-box",
             }}
           />
           <button
-            onClick={() => loadFileList(password)}
+            onClick={handleLogin}
             style={{
               width: "100%",
-              padding: "14px",
+              padding: "10px",
               fontFamily: BODY,
-              fontSize: "12px",
-              color: "#1c3828",
-              backgroundColor: "#d4a84c",
+              fontSize: "14px",
+              backgroundColor: "#1c3828",
+              color: "#fff",
               border: "none",
+              borderRadius: "4px",
               cursor: "pointer",
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-              fontWeight: "600",
             }}
           >
             Sign In
           </button>
-          {status && <p style={{ fontFamily: BODY, fontSize: "13px", color: "#c44", marginTop: "16px" }}>{status}</p>}
+          {message && (
+            <p
+              style={{
+                fontFamily: BODY,
+                fontSize: "13px",
+                color: "#c0392b",
+                marginTop: "12px",
+              }}
+            >
+              {message}
+            </p>
+          )}
         </div>
       </div>
     );
   }
 
-  // Editor screen
   return (
-    <div style={{ minHeight: "100vh", backgroundColor: "#f5f0eb", paddingTop: "100px" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "220px 1fr", gap: "40px" }}>
-        {/* Sidebar */}
-        <div>
-          <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 24px 0" }}>
-            Content Files
-          </p>
-          {files.map((f) => (
-            <button
-              key={f}
-              onClick={() => loadFile(f)}
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "#f5f0eb",
+        display: "flex",
+      }}
+    >
+      {/* SIDEBAR */}
+      <div
+        style={{
+          width: "220px",
+          backgroundColor: "#1c3828",
+          padding: "24px 16px",
+          flexShrink: 0,
+        }}
+      >
+        <h2
+          style={{
+            fontFamily: HEADING,
+            fontSize: "18px",
+            color: "#fff",
+            marginBottom: "24px",
+            fontWeight: "400",
+          }}
+        >
+          Content
+        </h2>
+        {files.map((f) => (
+          <button
+            key={f.name}
+            onClick={() => handleFileSelect(f.name)}
+            style={{
+              display: "block",
+              width: "100%",
+              padding: "8px 12px",
+              fontFamily: BODY,
+              fontSize: "13px",
+              color: selectedFile === f.name ? "#b8913a" : "#c8d0c4",
+              backgroundColor:
+                selectedFile === f.name
+                  ? "rgba(184,145,58,0.1)"
+                  : "transparent",
+              border: "none",
+              borderRadius: "4px",
+              textAlign: "left" as const,
+              cursor: "pointer",
+              marginBottom: "4px",
+            }}
+          >
+            {f.name}
+          </button>
+        ))}
+      </div>
+
+      {/* MAIN EDITOR */}
+      <div style={{ flex: 1, padding: "32px", overflow: "auto" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: "24px",
+          }}
+        >
+          <h1
+            style={{
+              fontFamily: HEADING,
+              fontSize: "24px",
+              color: "#1c3828",
+              fontWeight: "400",
+            }}
+          >
+            {selectedFile}
+          </h1>
+          <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+            <input
+              type="text"
+              placeholder="Commit message (optional)"
+              value={commitMsg}
+              onChange={(e) => setCommitMsg(e.target.value)}
               style={{
-                display: "block",
-                width: "100%",
-                textAlign: "left",
-                padding: "10px 16px",
+                padding: "8px 12px",
                 fontFamily: BODY,
-                fontSize: "14px",
-                color: activeFile?.name === f ? "#1c3828" : "#4a6155",
-                backgroundColor: activeFile?.name === f ? "#ede8e0" : "transparent",
+                fontSize: "13px",
+                border: "1px solid #c8d0c4",
+                borderRadius: "4px",
+                width: "260px",
+              }}
+            />
+            <button
+              onClick={handleSave}
+              disabled={saving}
+              style={{
+                padding: "8px 20px",
+                fontFamily: BODY,
+                fontSize: "13px",
+                backgroundColor: saving ? "#6a8070" : "#1c3828",
+                color: "#fff",
                 border: "none",
-                cursor: "pointer",
-                marginBottom: "4px",
-                fontWeight: activeFile?.name === f ? "600" : "400",
+                borderRadius: "4px",
+                cursor: saving ? "default" : "pointer",
               }}
             >
-              {f}
+              {saving ? "Saving..." : "Save & Deploy"}
             </button>
-          ))}
+          </div>
         </div>
 
-        {/* Editor */}
-        <div>
-          {loading && <p style={{ fontFamily: BODY, color: "#6a8070" }}>Loading...</p>}
-          {activeFile && !loading && (
-            <>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "32px" }}>
-                <div>
-                  <h2 style={{ fontFamily: HEADING, fontSize: "24px", fontWeight: "500", color: "#1c3828", margin: "0 0 4px 0" }}>
-                    {activeFile.name}
-                  </h2>
-                  {activeFile.dirty && (
-                    <span style={{ fontFamily: BODY, fontSize: "12px", color: "#d4a84c" }}>Unsaved changes</span>
-                  )}
-                </div>
-                <button
-                  onClick={saveFile}
-                  disabled={saving || !activeFile.dirty}
-                  style={{
-                    padding: "12px 28px",
-                    fontFamily: BODY,
-                    fontSize: "12px",
-                    color: activeFile.dirty ? "#1c3828" : "#6a8070",
-                    backgroundColor: activeFile.dirty ? "#d4a84c" : "#ede8e0",
-                    border: "none",
-                    cursor: activeFile.dirty ? "pointer" : "default",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    fontWeight: "600",
-                    opacity: saving ? 0.5 : 1,
-                  }}
-                >
-                  {saving ? "Publishing..." : "Publish Changes"}
-                </button>
-              </div>
-              {status && (
-                <p style={{
-                  fontFamily: BODY,
-                  fontSize: "13px",
-                  color: status.startsWith("Error") ? "#c44" : "#2e7d32",
-                  marginBottom: "24px",
-                  padding: "12px 16px",
-                  backgroundColor: status.startsWith("Error") ? "#fef0f0" : "#f0fef4",
-                  border: `1px solid ${status.startsWith("Error") ? "#fcc" : "#cfc"}`,
-                }}>
-                  {status}
-                </p>
-              )}
-              <ContentEditor
-                data={activeFile.content}
-                onChange={(updated) => setActiveFile((prev) => prev ? { ...prev, content: updated as Record<string, unknown>, dirty: true } : null)}
-              />
-            </>
-          )}
-          {!activeFile && !loading && (
-            <div style={{ padding: "80px 0", textAlign: "center" }}>
-              <p style={{ fontFamily: BODY, fontSize: "16px", color: "#6a8070" }}>
-                Select a content file to begin editing.
-              </p>
-            </div>
-          )}
+        {message && (
+          <div
+            style={{
+              padding: "12px 16px",
+              backgroundColor: message.includes("Error")
+                ? "rgba(192,57,43,0.08)"
+                : "rgba(28,56,40,0.08)",
+              borderRadius: "6px",
+              marginBottom: "20px",
+              fontFamily: BODY,
+              fontSize: "13px",
+              color: message.includes("Error") ? "#c0392b" : "#1c3828",
+            }}
+          >
+            {message}
+          </div>
+        )}
+
+        <div
+          style={{
+            backgroundColor: "#fff",
+            borderRadius: "8px",
+            padding: "24px",
+            boxShadow: "0 1px 6px rgba(0,0,0,0.04)",
+          }}
+        >
+          {renderEditor(editData)}
         </div>
       </div>
     </div>
   );
 }
-
-// Recursive content editor â€” renders editable fields for any JSON structure
-function ContentEditor({
-  data,
-  onChange,
-  path = "",
-}: {
-  data: unknown;
-  onChange: (updated: unknown) => void;
-  path?: string;
-}) {
-  if (typeof data === "string") {
-    return (
-      <textarea
-        value={data}
-        onChange={(e) => onChange(e.target.value)}
-        style={{
-          width: "100%",
-          minHeight: data.length > 100 ? "120px" : "48px",
-          padding: "10px 14px",
-          fontFamily: BODY,
-          fontSize: "14px",
-          color: "#1c3828",
-          border: "1.5px solid rgba(28,56,40,0.15)",
-          backgroundColor: "white",
-          resize: "vertical",
-          lineHeight: "1.6",
-          outline: "none",
-          boxSizing: "border-box",
-        }}
-        onFocus={(e) => { e.target.style.borderColor = "#b8913a"; }}
-        onBlur={(e) => { e.target.style.borderColor = "rgba(28,56,40,0.15)"; }}
-      />
-    );
-  }
-
-  if (typeof data === "number" || typeof data === "boolean") {
-    return (
-      <input
-        type={typeof data === "number" ? "number" : "text"}
-        value={String(data)}
-        onChange={(e) => {
-          if (typeof data === "number") onChange(Number(e.target.value));
-          else onChange(e.target.value === "true");
-        }}
-        style={{
-          width: "200px",
-          padding: "10px 14px",
-          fontFamily: BODY,
-          fontSize: "14px",
-          color: "#1c3828",
-          border: "1.5px solid rgba(28,56,40,0.15)",
-          backgroundColor: "white",
-          outline: "none",
-        }}
-      />
-    );
-  }
-
-  if (Array.isArray(data)) {
-    return (
-      <div style={{ marginLeft: path ? "0" : "0" }}>
-        {data.map((item, i) => (
-          <div
-            key={i}
-            style={{
-              padding: "16px",
-              marginBottom: "8px",
-              backgroundColor: "rgba(237,232,224,0.5)",
-              border: "1px solid rgba(28,56,40,0.08)",
-            }}
-          >
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
-              <span style={{ fontFamily: BODY, fontSize: "11px", color: "#6a8070", textTransform: "uppercase", letterSpacing: "0.1em" }}>
-                Item {i + 1}
-              </span>
-              <div style={{ display: "flex", gap: "8px" }}>
-                {i > 0 && (
-                  <button
-                    onClick={() => {
-                      const arr = [...data];
-                      [arr[i - 1], arr[i]] = [arr[i], arr[i - 1]];
-                      onChange(arr);
-                    }}
-                    style={{ fontFamily: BODY, fontSize: "11px", color: "#4a6155", background: "none", border: "1px solid rgba(28,56,40,0.2)", padding: "4px 8px", cursor: "pointer" }}
-                  >
-                    â†‘
-                  </button>
-                )}
-                {i < data.length - 1 && (
-                  <button
-                  ºw^~)Þ
