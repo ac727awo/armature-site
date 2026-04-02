@@ -220,8 +220,9 @@ export default function About() {
                 "behavior matters as much as math",
                 "oversight becomes the hidden cost",
               ].map((item) => (
-                <p key={item} style={{ fontFamily: BODY, fontSize: "15px", color: "#4a6155", lineHeight: "1.65", paddingLeft: "16px", borderLeft: "2px solid #b8913a", margin: "0 0 10px 0" }}>
-                  {item}
+                <p key={item} style={{ fontFamily: BODY, fontSize: "15px", color: "#4a6155", lineHeight: "1.65", paddingLeft: "4px", margin: "0 0 10px 0", display: "flex", alignItems: "baseline", gap: "10px" }}>
+                  <span style={{ color: "#b8913a", fontSize: "14px", flexShrink: 0 }}>&#x25B8;</span>
+                  <span>{item}</span>
                 </p>
               ))}
             </div>
