@@ -45,7 +45,7 @@ export default async function Process() {
             lineHeight: "1.15",
           }}
         >
-          {data.hero.heading}
+          Designed around your life.<br />Not sold into it.
         </h1>
       </section>
 
