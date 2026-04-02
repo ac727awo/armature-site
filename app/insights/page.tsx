@@ -84,6 +84,7 @@ export default function Insights() {
               color: "#4a6155",
               lineHeight: "1.75",
               margin: 0,
+              textAlign: "center" as const,
             }}
           >
             We write for those who have already succeeded and are ready for structure, clarity, and authorship over what comes next. These are not market commentaries. They are governance perspectives.
