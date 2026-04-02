@@ -97,7 +97,7 @@ export default function AdminEditor() {
     obj: Record<string, unknown>,
     path: string[] = []
   ): React.ReactNode => {
-    return Object.entries(obj).map(([key, value]) => {
+    return Object.entries(obj || {}).map(([key, value]) => {
       const currentPath = [...path, key];
       const pathStr = currentPath.join(".");
 
