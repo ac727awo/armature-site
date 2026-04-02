@@ -520,7 +520,7 @@ export default function Home() {
               margin: "0 0 20px 0",
             }}
           >
-            {c.process.heading}
+            A system built around you,<br />not sold to you.
           </h2>
           <p
             style={{
@@ -835,7 +835,7 @@ export default function Home() {
                 margin: "0 0 28px 0",
               }}
             >
-              {c.insights.heading}
+              What wealth starts to feel like<br />after the noise fades.
             </h2>
             <p
               style={{
