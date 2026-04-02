@@ -108,6 +108,8 @@ export default async function Services() {
                       fontWeight: "400",
                       color: "#1c3828",
                       marginBottom: "10px",
+                      textDecoration: "underline",
+                      textUnderlineOffset: "4px",
                     }}
                   >
                     {domain.title}
@@ -187,14 +189,14 @@ export default async function Services() {
             </p>
           </div>
           {data.integration.image && (
-            <div style={{ flex: 1, minWidth: "280px", aspectRatio: "4/3", overflow: "hidden", borderRadius: "8px", border: "1px solid #c8d0c4" }}>
+            <div style={{ flex: 1, minWidth: "280px" }}>
               <img
                 src={data.integration.image}
                 alt="Integration"
                 style={{
                   width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
+                  borderRadius: "8px",
+                  border: "1px solid #c8d0c4",
                 }}
               />
             </div>
