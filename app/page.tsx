@@ -108,7 +108,7 @@ export default function Home() {
                 fontWeight: "300",
               }}
             >
-              {c.hero.subheading}
+              For accomplished professionals whose success outpaced<br />the systems meant to govern it.
             </p>
             <p
               style={{
