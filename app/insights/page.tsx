@@ -183,7 +183,6 @@ export default function Insights() {
                     lineHeight: "1.3",
                     margin: "0 0 14px 0",
                     letterSpacing: "-0.01em",
-                    flex: 1,
                   }}
                 >
                   <Link
@@ -217,6 +216,7 @@ export default function Insights() {
                     borderBottom: "1.5px solid #1c3828",
                     paddingBottom: "2px",
                     display: "inline-block",
+                    marginTop: "auto",
                   }}
                 >
                   Read More
