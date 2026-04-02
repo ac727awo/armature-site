@@ -157,7 +157,7 @@ export default async function Process() {
               marginBottom: "20px",
             }}
           >
-            {data.closing.heading}
+            The system does the work.<br />You retain the authority.
           </h2>
           <p
             style={{
