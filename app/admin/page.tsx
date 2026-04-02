@@ -33,7 +33,7 @@ export default function AdminEditor() {
     } catch (err) {
       setMessage("Error loading files: " + (err as Error).message);
     }
-  }, [selectedFile]);
+  }, [selectedFile, password]);
 
   useEffect(() => {
     if (authenticated) loadFiles();
