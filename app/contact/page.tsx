@@ -110,10 +110,55 @@ export default function Contact() {
               </p>
 
               {submitted ? (
-                <div style={{ padding: "32px 0", textAlign: "center" }}>
-                  <p style={{ fontFamily: HEADING, fontSize: "18px", color: "#b8913a", margin: "0 0 16px 0" }}>Thank you.</p>
-                  <p style={{ fontFamily: BODY, fontSize: "15px", color: "#4a6155", lineHeight: "1.7", margin: 0 }}>
-                    We&apos;ll be in touch within one business day to schedule your conversation.
+                <div style={{ padding: "32px 0" }}>
+                  <p style={{ fontFamily: HEADING, fontSize: "22px", color: "#b8913a", margin: "0 0 8px 0", textAlign: "center" }}>Received.</p>
+                  <p style={{ fontFamily: BODY, fontSize: "15px", color: "#1c3828", lineHeight: "1.7", margin: "0 0 24px 0", textAlign: "center" }}>
+                    A member of our team will reach out within one business day<br />to schedule your private conversation.
+                  </p>
+
+                  <div style={{ borderTop: "1px solid rgba(28, 56, 40, 0.12)", paddingTop: "28px", marginTop: "28px" }}>
+                    <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 16px 0" }}>
+                      What to expect
+                    </p>
+                    {[
+                      { step: "01", text: "A brief scheduling note from our team — no forms, no friction." },
+                      { step: "02", text: "A 30-minute diagnostic conversation, private and confidential." },
+                      { step: "03", text: "A clear picture of whether this system belongs in your life right now." },
+                    ].map((item) => (
+                      <div key={item.step} style={{ display: "flex", gap: "14px", marginBottom: "14px", alignItems: "baseline" }}>
+                        <span style={{ fontFamily: HEADING, fontSize: "14px", color: "#b8913a", flexShrink: 0 }}>{item.step}</span>
+                        <p style={{ fontFamily: BODY, fontSize: "14px", color: "#4a6155", lineHeight: "1.6", margin: 0 }}>{item.text}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div style={{ borderTop: "1px solid rgba(28, 56, 40, 0.12)", paddingTop: "24px", marginTop: "24px" }}>
+                    <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 12px 0" }}>
+                      While you wait
+                    </p>
+                    <p style={{ fontFamily: BODY, fontSize: "14px", color: "#4a6155", lineHeight: "1.65", margin: "0 0 16px 0" }}>
+                      Most of the principals we work with share a common realization: the complexity didn&apos;t come from poor decisions — it came from outgrowing the systems around them.
+                    </p>
+                    <a
+                      href="/insights/capital-efficiency"
+                      style={{
+                        fontFamily: BODY,
+                        fontSize: "12px",
+                        color: "#1c3828",
+                        letterSpacing: "0.08em",
+                        textTransform: "uppercase",
+                        fontWeight: "600",
+                        textDecoration: "none",
+                        borderBottom: "1px solid #b8913a",
+                        paddingBottom: "2px",
+                      }}
+                    >
+                      Read: Capital Efficiency Is a Condition, Not a Goal &rarr;
+                    </a>
+                  </div>
+
+                  <p style={{ fontFamily: BODY, fontSize: "13px", color: "#6a8070", fontStyle: "italic", lineHeight: "1.6", margin: "28px 0 0 0", textAlign: "center" }}>
+                    You made the right call. Clarity starts here.
                   </p>
                 </div>
               ) : (
