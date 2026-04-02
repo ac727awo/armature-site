@@ -104,12 +104,13 @@ export default async function Services() {
                   <h3
                     style={{
                       fontFamily: HEADING,
-                      fontSize: "clamp(18px, 2vw, 22px)",
+                      fontSize: "clamp(15px, 1.6vw, 19px)",
                       fontWeight: "400",
                       color: "#1c3828",
                       marginBottom: "10px",
                       textDecoration: "underline",
                       textUnderlineOffset: "4px",
+                      whiteSpace: "nowrap" as const,
                     }}
                   >
                     {domain.title}
