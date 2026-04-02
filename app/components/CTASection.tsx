@@ -63,8 +63,9 @@ export default function CTASection() {
             marginBottom: "12px",
           }}
         >
-          No urgency. No commitment. Just a clear look at whether this kind of
-          system belongs in your life, now or later.
+          No urgency. No commitment. Just a clear look at whether
+          <br />
+          this kind of system belongs in your life, now or later.
         </p>
         <p
           style={{
