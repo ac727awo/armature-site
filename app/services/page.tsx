@@ -189,14 +189,14 @@ export default async function Services() {
             </p>
           </div>
           {data.integration.image && (
-            <div style={{ flex: 1, minWidth: "280px" }}>
+            <div style={{ flex: 1, minWidth: "280px", aspectRatio: "4/3", overflow: "hidden", borderRadius: "8px", border: "1px solid #c8d0c4" }}>
               <img
                 src={data.integration.image}
                 alt="Integration"
                 style={{
                   width: "100%",
-                  borderRadius: "8px",
-                  border: "1px solid #c8d0c4",
+                  height: "100%",
+                  objectFit: "cover",
                 }}
               />
             </div>
