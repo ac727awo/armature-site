@@ -1025,6 +1025,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CLOSING STATEMENT — lion watermark bottom-right */}
+      <section
+        style={{
+          backgroundColor: "#ede8e0",
+          padding: "120px 32px",
+          borderTop: "1px solid rgba(28, 56, 40, 0.08)",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        {/* Lion watermark — bottom-right corner */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "-60px",
+            right: "-40px",
+            width: "520px",
+            height: "520px",
+            opacity: 0.17,
+            pointerEvents: "none",
+            zIndex: 0,
+            backgroundImage: "url(/images/lion.png)",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "bottom right",
+            filter: "brightness(0) saturate(100%) invert(72%) sepia(48%) saturate(527%) hue-rotate(3deg) brightness(103%)",
+          }}
+        />
+        <div style={{ maxWidth: "680px", margin: "0 auto", position: "relative", zIndex: 1 }}>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "11px",
+              color: "#b8913a",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              fontWeight: "600",
+              margin: "0 0 24px 0",
+            }}
+          >
+            {c.closingStatement.eyebrow}
+          </p>
+          <h2
+            style={{
+              fontFamily: HEADING,
+              fontSize: "clamp(26px, 3.5vw, 42px)",
+              fontWeight: "500",
+              color: "#1c3828",
+              letterSpacing: "-0.02em",
+              lineHeight: "1.2",
+              margin: "0 0 24px 0",
+            }}
+          >
+            The system should carry more.<br />You should carry less.
+          </h2>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "16px",
+              color: "#4a6155",
+              lineHeight: "1.75",
+              margin: 0,
+              maxWidth: "540px",
+            }}
+          >
+            {c.closingStatement.body}
+          </p>
+        </div>
+      </section>
+
       <CTASection />
     </>
   );
