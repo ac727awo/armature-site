@@ -397,6 +397,7 @@ export default function Home() {
                     marginBottom: "14px",
                   }}
                 >
+                  <span style={{ color: "#b8913a", fontSize: "14px", flexShrink: 0 }}>&#x25B8;</span>
                   <span
                     style={{
                       fontFamily: BODY,
