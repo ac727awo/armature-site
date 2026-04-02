@@ -45,7 +45,7 @@ export default async function Services() {
             lineHeight: "1.15",
           }}
         >
-          {data.hero.heading}
+          A system,<br />not a stack of services.
         </h1>
       </section>
 
