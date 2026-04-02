@@ -731,7 +731,7 @@ export default function Home() {
                 margin: "0 0 40px 0",
               }}
             >
-              {c.about.accent}
+              We move deliberately. We do not rush capital.
             </p>
             <Link
               href="/about"
@@ -862,7 +862,7 @@ export default function Home() {
                   gap: "12px",
                 }}
               >
-                <span style={{ color: "#b8913a", fontSize: "8px", flexShrink: 0, position: "relative" as const, top: "-1px" }}>&#x25C6;</span>
+                <span style={{ color: "#b8913a", fontSize: "11px", flexShrink: 0, position: "relative" as const, top: "-1px" }}>&#x25C6;</span>
                 <span>{item}</span>
               </p>
             ))}
