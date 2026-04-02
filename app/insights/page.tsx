@@ -86,7 +86,7 @@ export default function Insights() {
               margin: 0,
             }}
           >
-            {c.intro}
+            We write for those who have already succeeded — and are ready for structure, clarity,<br />and authorship over what comes next. These are not market commentaries. They are governance perspectives.
           </p>
         </div>
       </section>
