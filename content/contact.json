@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "title": "Contact | Armature Wealth Office",
+    "description": "Begin with a diagnostic conversation. No pitch, no pressure — just clarity."
+  },
+  "hero": {
+    "eyebrow": "Contact",
+    "heading": "Begin with a conversation."
+  },
+  "intro": {
+    "body": "If what you have read reflects what you already feel, the next step is a focused diagnostic conversation — confidential, with no obligation.",
+    "note": "This form is not a commitment. It is a signal of interest."
+  },
+  "form": {
+    "submitText": "Request a Conversation",
+    "successHeading": "Thank you.",
+    "successBody": "We received your inquiry. A member of our team will respond within one business day.",
+    "assetOptions": [
+      "Under $5M",
+      "$5M – $8M",
+      "$8M – $15M",
+      "$15M – $25M",
+      "$25M+"
+    ]
+  },
+  "sidebar": {
+    "heading": "What to expect",
+    "items": [
+      {
+        "title": "Confidential",
+        "body": "All conversations are treated as strictly privileged."
+      },
+      {
+        "title": "No obligation",
+        "body": "The diagnostic conversation is complimentary and carries no commitment."
+      },
+      {
+        "title": "Direct access",
+        "body": "You will speak directly with a principal — not a sales team."
+      }
+    ],
+    "directEmail": "alex@armatureoffice.com"
+  }
+}

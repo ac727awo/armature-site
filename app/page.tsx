@@ -1,16 +1,18 @@
 import Link from "next/link";
+import { getContent } from "../lib/content";
 import CTASection from "./components/CTASection";
 
 const HEADING = "'Operetta 12', Georgia, 'Times New Roman', serif";
 const BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
 
-export const metadata = {
-  title: "Armature Wealth Office | A Better Way to Manage Wealth",
-  description:
-    "A wealth operating system for accomplished professionals with $10M–$25M+ net worth. Governance, integration, and clarity.",
-};
+export async function generateMetadata() {
+  const data = getContent<{ meta: { title: string; description: string } }>("home");
+  return { title: data.meta.title, description: data.meta.description };
+}
 
 export default function Home() {
+  const c = getContent<Record<string, any>>("home");
+
   return (
     <>
       {/* HERO — stays dark green with vignette */}
@@ -29,7 +31,7 @@ export default function Home() {
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: "url(/images/hero-bg.jpg)",
+            backgroundImage: `url(${c.hero.backgroundImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center 30%",
             opacity: 0.3,
@@ -80,7 +82,7 @@ export default function Home() {
                 margin: "0 0 28px 0",
               }}
             >
-              Armature Wealth Office
+              {c.hero.eyebrow}
             </p>
             <h1
               style={{
@@ -93,7 +95,7 @@ export default function Home() {
                 margin: "0 0 28px 0",
               }}
             >
-              Your wealth deserves better decisions.
+              {c.hero.heading}
             </h1>
             <p
               style={{
@@ -106,8 +108,7 @@ export default function Home() {
                 fontWeight: "300",
               }}
             >
-              For accomplished professionals whose success outpaced the systems
-              meant to govern it.
+              {c.hero.subheading}
             </p>
             <p
               style={{
@@ -119,12 +120,11 @@ export default function Home() {
                 maxWidth: "500px",
               }}
             >
-              For professionals with $8M–$15M net worth. If your financial
-              life still feels simple, it may not be time yet.
+              {c.hero.qualifier}
             </p>
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
               <Link
-                href="/process"
+                href={c.hero.cta1Href}
                 style={{
                   fontFamily: BODY,
                   fontSize: "13px",
@@ -138,10 +138,10 @@ export default function Home() {
                   display: "inline-block",
                 }}
               >
-                See How the System Works →
+                {c.hero.cta1Text}
               </Link>
               <Link
-                href="/contact"
+                href={c.hero.cta2Href}
                 style={{
                   fontFamily: BODY,
                   fontSize: "13px",
@@ -155,7 +155,7 @@ export default function Home() {
                   display: "inline-block",
                 }}
               >
-                Begin with a Diagnostic Conversation
+                {c.hero.cta2Text}
               </Link>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function Home() {
               margin: "0 0 32px 0",
             }}
           >
-            What&apos;s missing is not intelligence or effort.
+            {c.whatsMissing.heading}
           </h2>
           <p
             style={{
@@ -188,9 +188,7 @@ export default function Home() {
               fontWeight: "300",
             }}
           >
-            It&apos;s a wealth operating system that brings everything into one
-            clear view, so you can author capital decisions from a position of
-            clarity — not reaction.
+            {c.whatsMissing.body1}
           </p>
           <p
             style={{
@@ -201,9 +199,7 @@ export default function Home() {
               margin: "0 0 24px 0",
             }}
           >
-            As complexity compounds, communication fragments, and infrastructure
-            quietly lags behind. So do traditional advisory models — built for a
-            simpler version of your financial life.
+            {c.whatsMissing.body2}
           </p>
           <p
             style={{
@@ -214,9 +210,7 @@ export default function Home() {
               margin: 0,
             }}
           >
-            If your financial life still feels simple, it may not be time yet.
-            If it feels harder to see clearly than it should — that is the
-            signal.
+            {c.whatsMissing.body3}
           </p>
         </div>
       </section>
@@ -243,7 +237,7 @@ export default function Home() {
             style={{
               aspectRatio: "4/5",
               backgroundColor: "#c8d0c4",
-              backgroundImage: "url(/images/governance-desk.jpg)",
+              backgroundImage: `url(${c.whyClients.image})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               position: "relative",
@@ -270,7 +264,7 @@ export default function Home() {
                 margin: "0 0 24px 0",
               }}
             >
-              Why clients choose Armature
+              {c.whyClients.eyebrow}
             </p>
             <p
               style={{
@@ -281,28 +275,9 @@ export default function Home() {
                 margin: "0 0 48px 0",
               }}
             >
-              Clients work with Armature because they value clarity over
-              activity. Not more inputs. Not more ideas. A governing system that
-              holds.
+              {c.whyClients.intro}
             </p>
-            {[
-              {
-                title: "Authorship before action",
-                body: "Decisions follow structure, not urgency.",
-              },
-              {
-                title: "Downside-aware by design",
-                body: "Systems are first built to reduce mistakes and risk, not just pursue outcomes.",
-              },
-              {
-                title: "Integrated by default",
-                body: "Charities, entities, estate, governance, insurance, investments, planning, risk, redundancies, and tax — held in one coherent view.",
-              },
-              {
-                title: "Long-horizon thinking",
-                body: "Capital is authored with decades in mind.",
-              },
-            ].map((item) => (
+            {c.whyClients.items.map((item: { title: string; body: string }) => (
               <div
                 key={item.title}
                 style={{
@@ -346,8 +321,7 @@ export default function Home() {
                 margin: "8px 0 0 0",
               }}
             >
-              The goal is not control for its own sake, but independence, calm,
-              and a trajectory that holds.
+              {c.whyClients.closing}
             </p>
           </div>
         </div>
@@ -376,7 +350,7 @@ export default function Home() {
                   margin: "0 0 24px 0",
                 }}
               >
-                Our Services
+                {c.services.eyebrow}
               </p>
               <h2
                 style={{
@@ -389,7 +363,7 @@ export default function Home() {
                   margin: "0 0 28px 0",
                 }}
               >
-                This is not traditional wealth management.
+                {c.services.heading}
               </h2>
               <p
                 style={{
@@ -400,9 +374,7 @@ export default function Home() {
                   margin: "0 0 24px 0",
                 }}
               >
-                We design and maintain a wealth operating system — one that
-                brings advisors, assets, decisions, and oversight into a single
-                coherent structure.
+                {c.services.intro}
               </p>
               <p
                 style={{
@@ -413,17 +385,9 @@ export default function Home() {
                   margin: "0 0 32px 0",
                 }}
               >
-                Our work typically includes:
+                {c.services.subIntro}
               </p>
-              {[
-                { action: "Reduce", object: "cognitive load" },
-                { action: "Limit", object: "behavioral risk" },
-                { action: "Preserve", object: "optionality" },
-                {
-                  action: "Allow",
-                  object: "wealth to function without constant oversight",
-                },
-              ].map((item) => (
+              {c.services.items.map((item: { action: string; object: string }) => (
                 <div
                   key={item.action}
                   style={{
@@ -467,7 +431,7 @@ export default function Home() {
                   margin: "32px 0 40px 0",
                 }}
               >
-                The work is quiet by design. The impact is cumulative.
+                {c.services.closing}
               </p>
               <Link
                 href="/services"
@@ -491,7 +455,7 @@ export default function Home() {
               style={{
                 aspectRatio: "3/4",
                 backgroundColor: "#c8d0c4",
-                backgroundImage: "url(/images/integration-diagram.jpg)",
+                backgroundImage: `url(${c.services.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 display: "flex",
@@ -515,7 +479,7 @@ export default function Home() {
                     margin: 0,
                   }}
                 >
-                  Including access to select private and alternative investments
+                  {c.services.imageCaption}
                 </p>
               </div>
             </div>
@@ -542,7 +506,7 @@ export default function Home() {
               margin: "0 0 24px 0",
             }}
           >
-            Our Process
+            {c.process.eyebrow}
           </p>
           <h2
             style={{
@@ -555,7 +519,7 @@ export default function Home() {
               margin: "0 0 20px 0",
             }}
           >
-            A system built around you, not sold to you.
+            {c.process.heading}
           </h2>
           <p
             style={{
@@ -567,9 +531,7 @@ export default function Home() {
               maxWidth: "640px",
             }}
           >
-            Everything begins with a diagnostic conversation. No pitch. No
-            pressure. Just pattern recognition. From there, a system is
-            designed — and then operated — around your actual life.
+            {c.process.intro}
           </p>
 
           {/* Steps row */}
@@ -587,13 +549,7 @@ export default function Home() {
                 opacity: 0.35,
               }}
             />
-            {[
-              "Map your current landscape",
-              "Identify what's missing to support the next phase",
-              "Design a coordinated capital system",
-              "Install authorship rules and decision architecture",
-              "Stay alongside you as the system carries the load",
-            ].map((step, i) => (
+            {c.process.steps.map((step: string, i: number) => (
               <div
                 key={step}
                 style={{
@@ -666,7 +622,7 @@ export default function Home() {
                 margin: "0 0 8px 0",
               }}
             >
-              You remain the principal. You retain final authority.
+              {c.process.closingLine1}
             </p>
             <p
               style={{
@@ -678,7 +634,7 @@ export default function Home() {
                 margin: "0 0 40px 0",
               }}
             >
-              The system does the work.
+              {c.process.closingLine2}
             </p>
             <Link
               href="/process"
@@ -725,7 +681,7 @@ export default function Home() {
                 margin: "0 0 24px 0",
               }}
             >
-              About Armature
+              {c.about.eyebrow}
             </p>
             <h2
               style={{
@@ -738,7 +694,7 @@ export default function Home() {
                 margin: "0 0 28px 0",
               }}
             >
-              Built from lived experience, not theory.
+              {c.about.heading}
             </h2>
             <p
               style={{
@@ -749,10 +705,7 @@ export default function Home() {
                 margin: "0 0 24px 0",
               }}
             >
-              Armature was built by a healthcare professional trained in
-              high-stakes decision-making under uncertainty. That background
-              shaped everything: how we assess risk, how we design structure,
-              how we hold complexity without losing signal.
+              {c.about.body1}
             </p>
             <p
               style={{
@@ -763,9 +716,7 @@ export default function Home() {
                 margin: "0 0 24px 0",
               }}
             >
-              Before this system existed for clients, it was built personally —
-              through real assets, real losses, and real decisions under
-              pressure.
+              {c.about.body2}
             </p>
             <p
               style={{
@@ -777,7 +728,7 @@ export default function Home() {
                 margin: "0 0 40px 0",
               }}
             >
-              We co-invest. We move deliberately. We do not rush capital.
+              {c.about.accent}
             </p>
             <Link
               href="/about"
@@ -801,7 +752,7 @@ export default function Home() {
             style={{
               aspectRatio: "4/5",
               backgroundColor: "#c8d0c4",
-              backgroundImage: "url(/images/professional.jpg)",
+              backgroundImage: `url(${c.about.image})`,
               backgroundSize: "cover",
               backgroundPosition: "center top",
               position: "relative",
@@ -868,7 +819,7 @@ export default function Home() {
                 margin: "0 0 24px 0",
               }}
             >
-              Insights
+              {c.insights.eyebrow}
             </p>
             <h2
               style={{
@@ -881,7 +832,7 @@ export default function Home() {
                 margin: "0 0 28px 0",
               }}
             >
-              What wealth starts to feel like after the noise fades.
+              {c.insights.heading}
             </h2>
             <p
               style={{
@@ -892,15 +843,9 @@ export default function Home() {
                 margin: "0 0 24px 0",
               }}
             >
-              We write for those who have already succeeded — and are ready for
-              clarity, structure, and authorship over what comes next.
+              {c.insights.intro}
             </p>
-            {[
-              "Why wealth feels heavier than it should",
-              "When systems matter more than strategies",
-              "The behavioral cost of fragmented decisions",
-              "How clarity changes trajectories",
-            ].map((item) => (
+            {c.insights.teasers.map((item: string) => (
               <p
                 key={item}
                 style={{
@@ -925,7 +870,7 @@ export default function Home() {
                 margin: "20px 0 0 0",
               }}
             >
-              These are not lessons. They are signals of readiness.
+              {c.insights.closing}
             </p>
           </div>
 
@@ -938,139 +883,114 @@ export default function Home() {
               marginBottom: "48px",
             }}
           >
-            {[
-              {
-                category: "Capital Efficiency",
-                date: "February 2026",
-                title: "Capital Efficiency Is a Condition, Not a Goal",
-                excerpt:
-                  "Most discussions about capital efficiency start in the wrong place. Efficiency is not something you achieve — it is a condition you either maintain or let erode.",
-                href: "/insights/capital-efficiency-is-a-condition",
-                image: "/images/insights-capital-efficiency.jpg",
-              },
-              {
-                category: "Tax Strategy",
-                date: "February 2026",
-                title: "Tax Drag Is a Structural Issue, Not a Tactical One",
-                excerpt:
-                  "Most tax inefficiency does not come from bad advice. It comes from decisions made in isolation. Tax drag compounds quietly across years.",
-                href: "/insights/tax-drag-is-a-structural-issue",
-                image: "/images/insights-tax-drag.jpg",
-              },
-              {
-                category: "Private Investments",
-                date: "December 2025",
-                title: "Private Investments Need Roles, Not Just Returns",
-                excerpt:
-                  "Private investments fail more often from confusion than conviction. The issue is rarely access. It's clarity of purpose.",
-                href: "/insights/private-investments-need-roles",
-                image: "/images/insights-private-investments.jpg",
-              },
-            ].map((article) => (
-              <article
-                key={article.href}
-                style={{
-                  backgroundColor: "#f5f0eb",
-                  border: "1px solid rgba(28, 56, 40, 0.12)",
-                  display: "flex",
-                  flexDirection: "column",
-                  overflow: "hidden",
-                }}
-              >
-                <Link href={article.href} style={{ display: "block", textDecoration: "none" }}>
-                  <div
-                    style={{
-                      width: "100%",
-                      aspectRatio: "3/2",
-                      backgroundImage: `url(${article.image})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      backgroundColor: "#c8d0c4",
-                    }}
-                  />
-                </Link>
-                <div style={{ padding: "28px 28px 32px", display: "flex", flexDirection: "column", flex: 1 }}>
-                  <div
-                    className="insight-card-meta"
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      marginBottom: "14px",
-                    }}
-                  >
-                    <span
+            {(() => {
+              const insightsData = getContent<{ articles: Array<{ slug: string; category: string; date: string; title: string; excerpt: string; image: string }> }>("insights");
+              return insightsData.articles.slice(0, 3).map((article) => (
+                <article
+                  key={article.slug}
+                  style={{
+                    backgroundColor: "#f5f0eb",
+                    border: "1px solid rgba(28, 56, 40, 0.12)",
+                    display: "flex",
+                    flexDirection: "column",
+                    overflow: "hidden",
+                  }}
+                >
+                  <Link href={`/insights/${article.slug}`} style={{ display: "block", textDecoration: "none" }}>
+                    <div
+                      style={{
+                        width: "100%",
+                        aspectRatio: "3/2",
+                        backgroundImage: `url(${article.image})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundColor: "#c8d0c4",
+                      }}
+                    />
+                  </Link>
+                  <div style={{ padding: "28px 28px 32px", display: "flex", flexDirection: "column", flex: 1 }}>
+                    <div
+                      className="insight-card-meta"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        marginBottom: "14px",
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontFamily: BODY,
+                          fontSize: "10px",
+                          color: "#b8913a",
+                          letterSpacing: "0.12em",
+                          textTransform: "uppercase",
+                          fontWeight: "600",
+                        }}
+                      >
+                        {article.category}
+                      </span>
+                      <span
+                        style={{
+                          fontFamily: BODY,
+                          fontSize: "11px",
+                          color: "#6a8070",
+                        }}
+                      >
+                        {article.date}
+                      </span>
+                    </div>
+                    <h3
+                      style={{
+                        fontFamily: HEADING,
+                        fontSize: "18px",
+                        fontWeight: "500",
+                        color: "#1c3828",
+                        lineHeight: "1.3",
+                        margin: "0 0 14px 0",
+                        letterSpacing: "-0.01em",
+                        flex: 1,
+                      }}
+                    >
+                      <Link
+                        href={`/insights/${article.slug}`}
+                        style={{ color: "inherit", textDecoration: "none" }}
+                      >
+                        {article.title}
+                      </Link>
+                    </h3>
+                    <p
                       style={{
                         fontFamily: BODY,
-                        fontSize: "10px",
-                        color: "#b8913a",
-                        letterSpacing: "0.12em",
+                        fontSize: "14px",
+                        color: "#4a6155",
+                        lineHeight: "1.65",
+                        margin: "0 0 24px 0",
+                      }}
+                    >
+                      {article.excerpt}
+                    </p>
+                    <Link
+                      href={`/insights/${article.slug}`}
+                      style={{
+                        fontFamily: BODY,
+                        fontSize: "12px",
+                        color: "#1c3828",
+                        textDecoration: "none",
+                        letterSpacing: "0.08em",
                         textTransform: "uppercase",
                         fontWeight: "600",
+                        borderBottom: "1.5px solid #1c3828",
+                        paddingBottom: "2px",
+                        display: "inline-block",
                       }}
                     >
-                      {article.category}
-                    </span>
-                    <span
-                      style={{
-                        fontFamily: BODY,
-                        fontSize: "11px",
-                        color: "#6a8070",
-                      }}
-                    >
-                      {article.date}
-                    </span>
-                  </div>
-                  <h3
-                    style={{
-                      fontFamily: HEADING,
-                      fontSize: "18px",
-                      fontWeight: "500",
-                      color: "#1c3828",
-                      lineHeight: "1.3",
-                      margin: "0 0 14px 0",
-                      letterSpacing: "-0.01em",
-                      flex: 1,
-                    }}
-                  >
-                    <Link
-                      href={article.href}
-                      style={{ color: "inherit", textDecoration: "none" }}
-                    >
-                      {article.title}
+                      Read More
                     </Link>
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: BODY,
-                      fontSize: "14px",
-                      color: "#4a6155",
-                      lineHeight: "1.65",
-                      margin: "0 0 24px 0",
-                    }}
-                  >
-                    {article.excerpt}
-                  </p>
-                  <Link
-                    href={article.href}
-                    style={{
-                      fontFamily: BODY,
-                      fontSize: "12px",
-                      color: "#1c3828",
-                      textDecoration: "none",
-                      letterSpacing: "0.08em",
-                      textTransform: "uppercase",
-                      fontWeight: "600",
-                      borderBottom: "1.5px solid #1c3828",
-                      paddingBottom: "2px",
-                      display: "inline-block",
-                    }}
-                  >
-                    Read More
-                  </Link>
-                </div>
-              </article>
-            ))}
+                  </div>
+                </article>
+              ));
+            })()}
           </div>
 
           <div style={{ textAlign: "center" }}>
@@ -1135,7 +1055,7 @@ export default function Home() {
               margin: "0 0 24px 0",
             }}
           >
-            Armature Wealth Partners
+            {c.closingStatement.eyebrow}
           </p>
           <h2
             style={{
@@ -1148,7 +1068,7 @@ export default function Home() {
               margin: "0 0 24px 0",
             }}
           >
-            The system should carry more. You should carry less.
+            {c.closingStatement.heading}
           </h2>
           <p
             style={{
@@ -1160,7 +1080,7 @@ export default function Home() {
               maxWidth: "540px",
             }}
           >
-            Most of what you track, coordinate, and worry about was never meant to live in your head. That is what a wealth operating system is for.
+            {c.closingStatement.body}
           </p>
           <Link
             href="/contact"
