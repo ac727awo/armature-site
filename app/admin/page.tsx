@@ -22,7 +22,7 @@ export default function AdminEditor() {
 
   const loadFiles = useCallback(async () => {
     try {
-      const resp = await fetch("/api/content");
+      const resp = await fetch(`/api/content?password=${encodeURIComponent(password)}`);
       if (!resp.ok) throw new Error("Failed to load content files");
       const data = await resp.json();
       setFiles(data.files || []);
