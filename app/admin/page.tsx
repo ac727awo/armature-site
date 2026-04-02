@@ -19,21 +19,35 @@ export default function AdminEditor() {
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
   const [commitMsg, setCommitMsg] = useState("");
+  const [fileSha, setFileSha] = useState("");
+
+  const loadFileContent = useCallback(async (name: string) => {
+    try {
+      const resp = await fetch(`/api/content?password=${encodeURIComponent(password)}&file=${encodeURIComponent(name)}`);
+      if (!resp.ok) throw new Error("Failed to load file content");
+      const data = await resp.json();
+      setEditData(data.content || {});
+      setFileSha(data.sha || "");
+    } catch (err) {
+      setMessage("Error loading file: " + (err as Error).message);
+    }
+  }, [password]);
 
   const loadFiles = useCallback(async () => {
     try {
       const resp = await fetch(`/api/content?password=${encodeURIComponent(password)}`);
       if (!resp.ok) throw new Error("Failed to load content files");
       const data = await resp.json();
-      setFiles(data.files || []);
-      if (data.files?.length > 0 && !selectedFile) {
-        setSelectedFile(data.files[0].name);
-        setEditData(data.files[0].data);
+      const names: string[] = data.files || [];
+      setFiles(names.map((n) => ({ name: n, data: {} })));
+      if (names.length > 0 && !selectedFile) {
+        setSelectedFile(names[0]);
+        loadFileContent(names[0]);
       }
     } catch (err) {
       setMessage("Error loading files: " + (err as Error).message);
     }
-  }, [selectedFile, password]);
+  }, [selectedFile, password, loadFileContent]);
 
   useEffect(() => {
     if (authenticated) loadFiles();
@@ -50,9 +64,9 @@ export default function AdminEditor() {
 
   const handleFileSelect = (name: string) => {
     setSelectedFile(name);
-    const file = files.find((f) => f.name === name);
-    if (file) setEditData(JSON.parse(JSON.stringify(file.data)));
+    setEditData({});
     setMessage("");
+    loadFileContent(name);
   };
 
   const handleSave = async () => {
@@ -64,7 +78,8 @@ export default function AdminEditor() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           file: selectedFile,
-          data: editData,
+          content: editData,
+          sha: fileSha,
           commitMessage: commitMsg || `Update ${selectedFile}`,
           password,
         }),
