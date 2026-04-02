@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-      {/* HERO â stays dark green with vignette */}
+      {/* HERO — stays dark green with vignette */}
       <section
         style={{
           minHeight: "100vh",
@@ -162,7 +162,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHAT'S MISSING â cream bg */}
+      {/* WHAT'S MISSING — cream bg */}
       <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <h2
@@ -215,7 +215,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY CLIENTS CHOOSE ARMATURE â alt cream */}
+      {/* WHY CLIENTS CHOOSE ARMATURE — alt cream */}
       <section
         style={{
           backgroundColor: "#ede8e0",
@@ -327,7 +327,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES â cream bg */}
+      {/* SERVICES — cream bg */}
       <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div
@@ -487,7 +487,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROCESS â dark green bg, horizontal circled steps */}
+      {/* PROCESS — dark green bg, horizontal circled steps */}
       <section
         style={{
           backgroundColor: "#0f2218",
@@ -657,7 +657,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT â cream bg */}
+      {/* ABOUT — cream bg */}
       <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
         <div
           style={{
@@ -798,7 +798,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INSIGHTS PREVIEW â alt cream */}
+      {/* INSIGHTS PREVIEW — alt cream */}
       <section
         style={{
           backgroundColor: "#ede8e0",
@@ -1015,7 +1015,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CLOSING STATEMENT â lion watermark bottom-right */}
+      {/* CLOSING STATEMENT — lion watermark bottom-right */}
       <section
         style={{
           backgroundColor: "#ede8e0",
@@ -1025,7 +1025,7 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
-        {/* Lion watermark â bottom-right corner */}
+        {/* Lion watermark — bottom-right corner */}
         <div
           style={{
             position: "absolute",
