@@ -889,7 +889,7 @@ export default function Home() {
             }}
           >
             {(() => {
-              const insightsData = getContent<{ articles: Array<{ slug: string; category: string; date: string; title: string; excerpt: string; image: string }> }>("insights");
+              const insightsData = getContent<{ articles: Array<{ slug: string; category: string; date: string; readTime: string; title: string; excerpt: string; image: string }> }>("insights");
               return insightsData.articles.slice(0, 3).map((article) => (
                 <article
                   key={article.slug}
@@ -940,9 +940,14 @@ export default function Home() {
                           fontFamily: BODY,
                           fontSize: "11px",
                           color: "#6a8070",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "8px",
                         }}
                       >
                         {article.date}
+                        <span style={{ color: "#b8913a" }}>·</span>
+                        {article.readTime}
                       </span>
                     </div>
                     <h3
