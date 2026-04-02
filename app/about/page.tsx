@@ -48,7 +48,7 @@ export default function About() {
               margin: 0,
             }}
           >
-            Built for the phase that comes after success.
+            Built for the phase<br />that comes after success.
           </h1>
         </div>
       </section>
