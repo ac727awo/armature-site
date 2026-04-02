@@ -694,7 +694,9 @@ export default function Home() {
                 margin: "0 0 28px 0",
               }}
             >
-              {c.about.heading}
+              Built from lived experience,
+              <br />
+              not theory.
             </h2>
             <p
               style={{
