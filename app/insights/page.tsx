@@ -189,7 +189,7 @@ export default function Insights() {
                     href={`/insights/${article.slug}`}
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
-                    {article.title}
+                    {article.title.includes(",") ? (<>{article.title.split(",")[0]},<br />{article.title.split(",").slice(1).join(",")}</>) : article.title}
                   </Link>
                 </h3>
                 <p
