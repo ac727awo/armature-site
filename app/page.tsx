@@ -856,12 +856,14 @@ export default function Home() {
                   fontSize: "14px",
                   color: "#4a6155",
                   lineHeight: "1.65",
-                  paddingLeft: "16px",
-                  borderLeft: "2px solid #b8913a",
-                  margin: "0 0 10px 0",
+                  margin: "0 0 12px 0",
+                  display: "flex",
+                  alignItems: "baseline",
+                  gap: "12px",
                 }}
               >
-                {item}
+                <span style={{ color: "#b8913a", fontSize: "8px", flexShrink: 0, position: "relative" as const, top: "-1px" }}>&#x25C6;</span>
+                <span>{item}</span>
               </p>
             ))}
             <p
