@@ -1073,7 +1073,7 @@ export default function Home() {
               margin: "0 0 24px 0",
             }}
           >
-            {c.closingStatement.heading}
+            The system should carry more.<br />You should carry less.
           </h2>
           <p
             style={{
