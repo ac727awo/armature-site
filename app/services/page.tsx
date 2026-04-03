@@ -50,7 +50,7 @@ export default async function Services() {
       </section>
 
       {/* INTRO */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "0 32px 80px" }}>
+      <section style={{ backgroundColor: "#ffffff", padding: "0 32px 80px" }}>
         <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" as const }}>
           <p
             style={{
@@ -77,7 +77,7 @@ export default async function Services() {
       </section>
 
       {/* CORE DOMAINS */}
-      <section style={{ backgroundColor: "#ffffff", padding: "80px 32px" }}>
+      <section style={{ backgroundColor: "#f5f0eb", padding: "80px 32px" }}>
         <div style={{ maxWidth: "960px", margin: "0 auto" }}>
           <h2
             style={{
@@ -208,7 +208,7 @@ export default async function Services() {
       {/* COST OF INACTION */}
       <section
         style={{
-          backgroundColor: "#f5f0eb",
+          backgroundColor: "#ffffff",
           padding: "100px 32px",
         }}
       >
@@ -318,7 +318,7 @@ export default async function Services() {
       {/* A NOTE ON FIT */}
       <section
         style={{
-          backgroundColor: "#ffffff",
+          backgroundColor: "#f5f0eb",
           padding: "100px 32px",
           borderTop: "1px solid rgba(28, 56, 40, 0.08)",
         }}
