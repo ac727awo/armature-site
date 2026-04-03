@@ -630,6 +630,19 @@ export default function Home() {
             </p>
             <p
               style={{
+                fontFamily: HEADING,
+                fontSize: "20px",
+                fontWeight: "500",
+                color: "#f5f0eb",
+                lineHeight: "1.6",
+                fontStyle: "italic",
+                margin: "0 0 8px 0",
+              }}
+            >
+              {c.process.closingLine2}
+            </p>
+            <p
+              style={{
                 fontFamily: BODY,
                 fontSize: "16px",
                 color: "#8aab96",
@@ -638,7 +651,7 @@ export default function Home() {
                 margin: "0 0 40px 0",
               }}
             >
-              {c.process.closingLine2}
+              {c.process.closingLine3}
             </p>
             <Link
               href="/process"
