@@ -38,8 +38,7 @@ export default function Footer() {
                 maxWidth: "320px",
               }}
             >
-              A trusted financial guide for accomplished individuals and families
-              seeking clarity, resilience, and enduring governance.
+              A living system for wealth that simplifies, protects, and compounds.
             </p>
           </div>
 
