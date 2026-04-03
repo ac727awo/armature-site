@@ -35,6 +35,7 @@ export default async function Process() {
           {data.hero.eyebrow}
         </p>
         <h1
+          className="process-hero-heading"
           style={{
             fontFamily: HEADING,
             fontSize: "clamp(32px, 5vw, 58px)",
