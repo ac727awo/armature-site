@@ -206,6 +206,10 @@
     border: none !important;
   }
 
+  .about-caption-overlay p {
+    color: #f5f0eb !important;
+  }
+
   .process-connector {
     display: none;
   }
