@@ -16,9 +16,9 @@
   },
   "whatsMissing": {
     "heading": "What's missing is not intelligence or effort.",
-    "body1": "It's a wealth operating system that brings everything into one clear view, so you can author capital decisions from a position of clarity — not reaction.",
-    "body2": "As complexity compounds, communication fragments, and infrastructure quietly lags behind. So do traditional advisory models — built for a simpler version of your financial life.",
-    "body3": "If your financial life still feels simple, it may not be time yet. If it feels harder to see clearly than it should — that is the signal."
+    "body1": "It’s a wealth operating system that brings everything into one clear view, so you can author capital decisions from a position of clarity. Not reaction.",
+    "body2": "As complexity compounds, communication fragments, and infrastructure quietly lags behind. So do traditional advisory models. They were built for a simpler version of your financial life.",
+    "body3": "If your financial life still feels simple, it may not be time yet. If it feels harder to see clearly than it should, that is the signal."
   },
   "whyClients": {
     "eyebrow": "Why clients choose Armature",
@@ -34,7 +34,7 @@
       },
       {
         "title": "Integrated by default",
-        "body": "Charities, entities, estate, governance, insurance, investments, planning, risk, redundancies, and tax — held in one coherent view."
+        "body": "Charities, entities, estate, governance, insurance, investments, planning, risk, redundancies, and tax. All held in one coherent view."
       },
       {
         "title": "Long-horizon thinking",
@@ -47,13 +47,25 @@
   "services": {
     "eyebrow": "Our Services",
     "heading": "This is not traditional wealth management.",
-    "intro": "We design and maintain a wealth operating system — one that brings advisors, assets, decisions, and oversight into a single coherent structure.",
+    "intro": "We design and maintain a wealth operating system. One that brings advisors, assets, decisions, and oversight into a single coherent structure.",
     "subIntro": "Our work typically includes:",
     "items": [
-      { "action": "Reduce", "object": "cognitive load" },
-      { "action": "Limit", "object": "behavioral risk" },
-      { "action": "Preserve", "object": "optionality" },
-      { "action": "Allow", "object": "wealth to function without constant oversight" }
+      {
+        "action": "Reduce",
+        "object": "cognitive load"
+      },
+      {
+        "action": "Limit",
+        "object": "behavioral risk"
+      },
+      {
+        "action": "Preserve",
+        "object": "optionality"
+      },
+      {
+        "action": "Allow",
+        "object": "wealth to function without constant oversight"
+      }
     ],
     "closing": "The work is quiet by design. The impact is cumulative.",
     "image": "/images/integration-diagram.jpg",
@@ -62,7 +74,7 @@
   "process": {
     "eyebrow": "Our Process",
     "heading": "A system built around you, not sold to you.",
-    "intro": "Everything begins with a diagnostic conversation. No pitch. No pressure. Just pattern recognition. From there, a system is designed — and then operated — around your actual life.",
+    "intro": "Everything begins with a diagnostic conversation. No pitch. No pressure. Just pattern recognition. From there, a system is designed and operated around your actual life.",
     "steps": [
       "Map your current landscape",
       "Identify what's missing to support the next phase",
@@ -77,14 +89,14 @@
     "eyebrow": "About Armature",
     "heading": "Built from lived experience, not theory.",
     "body1": "Armature was built by a healthcare professional trained in high-stakes decision-making under uncertainty. That background shaped everything: how we assess risk, how we design structure, how we hold complexity without losing signal.",
-    "body2": "Before this system existed for clients, it was built personally — through real assets, real losses, and real decisions under pressure.",
+    "body2": "Before this system existed for clients, it was built personally. Through real assets, real losses, and real decisions under pressure.",
     "accent": "We co-invest. We move deliberately. We do not rush capital.",
     "image": "/images/professional.jpg"
   },
   "insights": {
     "eyebrow": "Insights",
     "heading": "What wealth starts to feel like after the noise fades.",
-    "intro": "We write for those who have already succeeded — and are ready for clarity, structure, and authorship over what comes next.",
+    "intro": "We write for those who have already succeeded and are ready for clarity, structure, and authorship over what comes next.",
     "teasers": [
       "Why wealth feels heavier than it should",
       "When systems matter more than strategies",
@@ -101,7 +113,7 @@
   "cta": {
     "eyebrow": "Begin the Conversation",
     "heading": "If what you have read reflects what you already feel, the timing may be right.",
-    "body": "No pitch. No pressure. Just a focused diagnostic conversation — to determine whether what we build is appropriate for what you need.",
+    "body": "No pitch. No pressure. Just a focused diagnostic conversation to determine whether what we build is appropriate for what you need.",
     "buttonText": "Request a Conversation",
     "buttonHref": "/contact"
   }
