@@ -8,32 +8,32 @@
     "heading": "Designed around your life. Not sold into it."
   },
   "intro": {
-    "body1": "Armature does not begin with a product or a portfolio. It begins with a diagnostic conversation — a structured review of where things stand, what is working, and where the system has gaps.",
+    "body1": "Armature does not begin with a product or a portfolio. It begins with a diagnostic conversation. A structured review of where things stand, what is working, and where the system has gaps.",
     "body2": "From there, the process follows a deliberate sequence: understand, design, implement, and govern. Each phase builds on the one before. Nothing is rushed. Nothing is sold."
   },
   "phases": [
     {
       "number": "01",
       "title": "Diagnostic Conversation",
-      "body": "A focused, confidential conversation to understand your current financial landscape — assets, entities, advisors, goals, and concerns. No pitch. No commitment. Just clarity on where things stand.",
+      "body": "A focused, confidential conversation to understand your current financial landscape. Assets, entities, advisors, goals, and concerns. No pitch. No commitment. Just clarity on where things stand.",
       "outcome": "A clear picture of complexity, coordination gaps, and whether Armature is the right fit."
     },
     {
       "number": "02",
       "title": "Wealth Architecture Review",
-      "body": "A comprehensive review of your entire financial ecosystem — investment accounts, entity structures, insurance policies, estate documents, tax returns, and advisor relationships. Every element is mapped and assessed for alignment.",
+      "body": "A comprehensive review of your entire financial ecosystem. Investment accounts, entity structures, insurance policies, estate documents, tax returns, and advisor relationships. Every element is mapped and assessed for alignment.",
       "outcome": "A written assessment identifying structural gaps, inefficiencies, and integration opportunities."
     },
     {
       "number": "03",
       "title": "Operating System Design",
-      "body": "Based on the review, we design your wealth operating system — a governing framework that defines how capital is allocated, how advisors are coordinated, how decisions are made, and how risk is managed across the entire ecosystem.",
+      "body": "Based on the review, we design your wealth operating system. A governing framework that defines how capital is allocated, how advisors are coordinated, how decisions are made, and how risk is managed across the entire ecosystem.",
       "outcome": "A written operating plan with clear decision rights, advisor responsibilities, and governance rules."
     },
     {
       "number": "04",
       "title": "Implementation",
-      "body": "The operating system is built and activated — accounts restructured, advisors aligned, policies updated, entities reviewed, and reporting established. Implementation is methodical, not rushed.",
+      "body": "The operating system is built and activated. Accounts restructured, advisors aligned, policies updated, entities reviewed, and reporting established. Implementation is methodical, not rushed.",
       "outcome": "A fully operational wealth system with integrated oversight and clear reporting."
     },
     {
@@ -45,6 +45,6 @@
   ],
   "closing": {
     "heading": "The system does the work. You retain the authority.",
-    "body": "Most of what you currently track, coordinate, and worry about was never meant to live in your head. Armature exists to hold it — so you can focus on the decisions that only you can make."
+    "body": "Most of what you currently track, coordinate, and worry about was never meant to live in your head. Armature exists to hold it so you can focus on the decisions that only you can make."
   }
 }
