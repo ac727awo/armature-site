@@ -214,6 +214,10 @@
     color: #f5f0eb !important;
   }
 
+  .process-hero-heading {
+    font-size: 26px !important;
+  }
+
   .cta-break-mobile {
     display: inline !important;
   }
