@@ -61,7 +61,7 @@ export default async function Services() {
               marginBottom: "16px",
             }}
           >
-            Traditional advisory models separate your financial life into silos — investments here, tax there, estate somewhere else. Each advisor operates within their domain, correctly.<br /><br />What no one owns is the interaction between them.
+            Traditional advisory models separate your financial life into silos. Investments here, tax there, estate somewhere else. Each advisor operates within their domain, correctly.<br /><br />What no one owns is the interaction between them.
           </p>
           <p
             style={{
@@ -71,7 +71,7 @@ export default async function Services() {
               color: "#4a6155",
             }}
           >
-            Armature replaces that fragmentation with a wealth operating system —<br />a single governing structure that holds everything in view, coordinates across domains,<br />and reduces the number of decisions that require your direct involvement.
+            Armature replaces that fragmentation with a wealth operating system.<br />A single governing structure that holds everything in view, coordinates across domains,<br />and reduces the number of decisions that require your direct involvement.
           </p>
         </div>
       </section>
