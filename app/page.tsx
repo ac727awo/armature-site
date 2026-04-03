@@ -162,8 +162,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHAT'S MISSING — cream bg */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
+      {/* WHAT'S MISSING — white bg */}
+      <section style={{ backgroundColor: "#ffffff", padding: "120px 32px" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <h2
             style={{
@@ -334,10 +334,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY CLIENTS CHOOSE ARMATURE — alt cream */}
+      {/* WHY CLIENTS CHOOSE ARMATURE — cream */}
       <section
         style={{
-          backgroundColor: "#ede8e0",
+          backgroundColor: "#f5f0eb",
           padding: "120px 32px",
           borderTop: "1px solid rgba(28, 56, 40, 0.08)",
         }}
@@ -448,8 +448,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES — cream bg */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
+      {/* SERVICES — white bg */}
+      <section style={{ backgroundColor: "#ffffff", padding: "120px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div
             className="services-grid"
@@ -793,8 +793,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT — alt-cream bg */}
-      <section style={{ backgroundColor: "#ede8e0", padding: "120px 32px" }}>
+      {/* ABOUT — cream bg */}
+      <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
         <div
           className="about-grid"
           style={{
