@@ -783,7 +783,7 @@ export default function Home() {
                   margin: "0 0 6px 0",
                 }}
               >
-                Armature Philosophy
+                Our Philosophy
               </p>
               <p
                 style={{
@@ -794,7 +794,7 @@ export default function Home() {
                   margin: 0,
                 }}
               >
-                Our guiding principle
+                Scale without structure doesn&#39;t compound.
               </p>
             </div>
           </div>
