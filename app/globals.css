@@ -112,6 +112,10 @@
   gap: 40px;
 }
 
+.cta-break-mobile {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .grid-3col {
     grid-template-columns: repeat(2, 1fr);
@@ -208,6 +212,10 @@
 
   .about-caption-overlay p {
     color: #f5f0eb !important;
+  }
+
+  .cta-break-mobile {
+    display: inline !important;
   }
 
   .process-connector {
