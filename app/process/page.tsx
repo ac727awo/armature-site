@@ -290,7 +290,7 @@ export default async function Process() {
               lineHeight: "1.3",
             }}
           >
-            Core architecture in weeks. Full system within 90 days.
+            Core architecture in weeks.<br />Full system within 90 days.
           </h2>
           <div style={{ display: "flex", flexDirection: "column" as const, gap: "0" }}>
             {[
