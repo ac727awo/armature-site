@@ -315,6 +315,80 @@ export default async function Services() {
         </div>
       </section>
 
+      {/* A NOTE ON FIT */}
+      <section
+        style={{
+          backgroundColor: "#ede8e0",
+          padding: "100px 32px",
+          borderTop: "1px solid rgba(28, 56, 40, 0.08)",
+        }}
+      >
+        <div style={{ maxWidth: "720px", margin: "0 auto" }}>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "11px",
+              color: "#b8913a",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase" as const,
+              fontWeight: "600",
+              margin: "0 0 24px 0",
+              textAlign: "center" as const,
+            }}
+          >
+            A Note on Fit
+          </p>
+          <h2
+            style={{
+              fontFamily: HEADING,
+              fontSize: "clamp(22px, 3vw, 34px)",
+              fontWeight: "400",
+              color: "#1c3828",
+              textAlign: "center" as const,
+              marginBottom: "32px",
+              lineHeight: "1.3",
+            }}
+          >
+            This is not for everyone.<br />That is by design.
+          </h2>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "16px",
+              lineHeight: "1.8",
+              color: "#4a6155",
+              marginBottom: "20px",
+            }}
+          >
+            If you are still in accumulation mode and growing aggressively, a private wealth office is premature. If your financial life is simple and well-handled by a single advisor, you do not need this layer yet. If you prefer to manage everything yourself and that system is working, we respect that entirely.
+          </p>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "16px",
+              lineHeight: "1.8",
+              color: "#4a6155",
+              marginBottom: "20px",
+            }}
+          >
+            Armature is built for the professional whose success has created complexity that has outgrown informal coordination. Multiple entities, multiple advisors, multiple priorities — and a growing awareness that no one is holding the full picture together.
+          </p>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "16px",
+              lineHeight: "1.8",
+              color: "#2e4e3a",
+              fontStyle: "italic",
+              textAlign: "center" as const,
+              margin: 0,
+            }}
+          >
+            If that describes where you are, this was built for you.
+          </p>
+        </div>
+      </section>
+
       <CTASection />
     </main>
   );
