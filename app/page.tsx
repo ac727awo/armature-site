@@ -236,7 +236,7 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            The Family Office Function
+            The Private Wealth Office
           </p>
           <h2
             style={{
@@ -307,6 +307,19 @@ export default function Home() {
           </div>
           <p
             style={{
+              fontFamily: HEADING,
+              fontSize: "clamp(18px, 2.5vw, 22px)",
+              fontWeight: "500",
+              color: "#f5f0eb",
+              lineHeight: "1.4",
+              textAlign: "center",
+              margin: "0 0 16px 0",
+            }}
+          >
+            Right now, you are the system. That is the risk.
+          </p>
+          <p
+            style={{
               fontFamily: BODY,
               fontSize: "15px",
               color: "#c8d8cc",
@@ -316,7 +329,79 @@ export default function Home() {
               margin: 0,
             }}
           >
-            The family office serves the family. In all its needs, goals, risks, and the unknowns no one else is watching for.
+            If something happens to you — an injury, a health event, a season where you simply cannot carry it — the entire structure depends on your presence. The private wealth office exists so it doesn&apos;t have to.
+          </p>
+        </div>
+      </section>
+
+      {/* WHO THIS IS NOT FOR — cream */}
+      <section
+        style={{
+          backgroundColor: "#f5f0eb",
+          padding: "80px 32px",
+          borderTop: "1px solid rgba(28, 56, 40, 0.08)",
+        }}
+      >
+        <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" }}>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "11px",
+              color: "#b8913a",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              fontWeight: "600",
+              margin: "0 0 24px 0",
+            }}
+          >
+            A Note on Fit
+          </p>
+          <h2
+            style={{
+              fontFamily: HEADING,
+              fontSize: "clamp(22px, 3vw, 34px)",
+              fontWeight: "500",
+              color: "#1c3828",
+              letterSpacing: "-0.02em",
+              lineHeight: "1.25",
+              margin: "0 0 32px 0",
+            }}
+          >
+            This is not for everyone. That is by design.
+          </h2>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "15px",
+              color: "#4a6155",
+              lineHeight: "1.75",
+              margin: "0 0 32px 0",
+            }}
+          >
+            If you are still in accumulation mode and growing aggressively, a private wealth office is premature. If your financial life is simple and well-handled by a single advisor, you do not need this layer yet. If you prefer to manage everything yourself and that system is working, we respect that entirely.
+          </p>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "15px",
+              color: "#4a6155",
+              lineHeight: "1.75",
+              margin: "0 0 32px 0",
+            }}
+          >
+            Armature is built for the professional whose success has created complexity that has outgrown informal coordination. Multiple entities, multiple advisors, multiple priorities — and a growing awareness that no one is holding the full picture together.
+          </p>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "15px",
+              color: "#2e4e3a",
+              lineHeight: "1.75",
+              fontStyle: "italic",
+              margin: 0,
+            }}
+          >
+            If that describes where you are, this was built for you.
           </p>
         </div>
       </section>
