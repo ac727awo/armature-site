@@ -53,7 +53,7 @@ export default async function Process() {
       </section>
 
       {/* INTRO */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "0 32px 80px" }}>
+      <section style={{ backgroundColor: "#ffffff", padding: "0 32px 80px" }}>
         <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" as const }}>
           <p
             style={{
@@ -80,7 +80,7 @@ export default async function Process() {
       </section>
 
       {/* PHASES */}
-      <section style={{ backgroundColor: "#ffffff", padding: "80px 32px" }}>
+      <section style={{ backgroundColor: "#f5f0eb", padding: "80px 32px" }}>
         <div style={{ maxWidth: "880px", margin: "0 auto" }}>
           {data.phases.map(
             (
@@ -263,7 +263,7 @@ export default async function Process() {
       </section>
 
       {/* TIMELINE */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "80px 32px" }}>
+      <section style={{ backgroundColor: "#ffffff", padding: "80px 32px" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <p
             style={{
@@ -371,7 +371,7 @@ export default async function Process() {
       </section>
 
       {/* CLOSING */}
-      <section style={{ backgroundColor: "#ffffff", padding: "80px 32px" }}>
+      <section style={{ backgroundColor: "#f5f0eb", padding: "80px 32px" }}>
         <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center" as const }}>
           <h2
             style={{
