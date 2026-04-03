@@ -140,30 +140,56 @@
   }
 
   .services-grid > div:last-child {
-    max-width: 480px;
-    margin: 0 auto;
     width: 100%;
+    aspect-ratio: 3/4;
+  }
+
+  .why-clients-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .why-clients-image {
+    width: 100%;
+    aspect-ratio: 3/4 !important;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .about-image {
+    width: 100%;
+    aspect-ratio: 3/4 !important;
   }
 
   .process-steps {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px 8px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px 0px;
   }
 
-  .process-steps > div:nth-child(4),
-  .process-steps > div:nth-child(5) {
-    grid-row: 2;
+  .process-steps > div:nth-child(1) {
+    grid-column: 1 / span 2;
+  }
+
+  .process-steps > div:nth-child(2) {
+    grid-column: 3 / span 2;
+  }
+
+  .process-steps > div:nth-child(3) {
+    grid-column: 5 / span 2;
   }
 
   .process-steps > div:nth-child(4) {
-    grid-column: 1 / 2;
-    margin-left: 50%;
+    grid-row: 2;
+    grid-column: 2 / span 2;
   }
 
   .process-steps > div:nth-child(5) {
-    grid-column: 2 / 3;
-    margin-right: 50%;
+    grid-row: 2;
+    grid-column: 4 / span 2;
   }
 
   .about-caption-overlay {
