@@ -72,10 +72,10 @@ export default function About() {
                 Armature exists for a specific moment in a professional&apos;s life.
               </h2>
               <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-                It&apos;s the point where earning more no longer creates clarity. Where adding another advisor doesn&apos;t reduce complexity — it adds to it.
+                It&apos;s the point where earning more no longer creates clarity. Where adding another advisor doesn&apos;t reduce complexity. It adds to it.
               </p>
               <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-                For many accomplished professionals, wealth is technically &quot;handled&quot; — yet still requires coordination, still demands attention, still sits uneasily without a governing structure.
+                For many accomplished professionals, wealth is technically &quot;handled.&quot; Yet it still requires coordination, still demands attention, still sits uneasily without a governing structure.
               </p>
               <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
                 That is not a failure of discipline or intelligence. It is a signal that the system has not kept pace with the complexity.
@@ -147,7 +147,7 @@ export default function About() {
             We do not sell products. We do not manage portfolios in isolation. We do not optimize tactics one at a time.
           </p>
           <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-            Armature designs and maintains a wealth operating system — one that brings advisors, assets, decisions, and oversight into a coherent structure.
+            Armature designs and maintains a wealth operating system. One that brings advisors, assets, decisions, and oversight into a coherent structure.
           </p>
           <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 60px 0" }}>
             This isn&apos;t about building something flashy. It is clarity, durability, and reduced dependence on your constant attention.
@@ -235,7 +235,7 @@ export default function About() {
                 That experience shaped everything: deliberate, not reactive. Structured, not rushed. Long-horizon, not quarterly.
               </p>
               <p style={{ fontFamily: BODY, fontSize: "15px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 40px 0" }}>
-                We believe wealth works best when every asset has a defined role, every decision fits into a broader framework, and oversight is designed — not improvised.
+                We believe wealth works best when every asset has a defined role, every decision fits into a broader framework, and oversight is designed. Not improvised.
               </p>
               <p style={{ fontFamily: BODY, fontSize: "15px", color: "#b8913a", fontStyle: "italic", lineHeight: "1.65", margin: "0 0 48px 0" }}>
                 We co-invest. We move carefully. We design systems meant to hold.
