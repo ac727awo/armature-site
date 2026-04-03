@@ -13,6 +13,11 @@ const links = [
   { href: "/insights", label: "Insights" },
 ];
 
+const mobileLinks = [
+  { href: "/", label: "Home" },
+  ...links,
+];
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
 
@@ -151,7 +156,7 @@ export default function Nav() {
           }}
           className="md:hidden"
         >
-          {links.map((link) => (
+          {mobileLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
