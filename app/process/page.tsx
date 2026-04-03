@@ -222,16 +222,16 @@ export default async function Process() {
                   alignItems: "flex-start",
                 }}
               >
-                <span
-                  style={{
-                    color: "#b8913a",
-                    fontSize: "14px",
-                    lineHeight: "1.7",
-                    flexShrink: 0,
-                  }}
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  style={{ flexShrink: 0, marginTop: "3px" }}
                 >
-                  —
-                </span>
+                  <circle cx="9" cy="9" r="8.5" stroke="#b8913a" strokeWidth="1" fill="none" />
+                  <path d="M5.5 9.5L7.5 11.5L12.5 6.5" stroke="#b8913a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                </svg>
                 <p
                   style={{
                     fontFamily: BODY,
