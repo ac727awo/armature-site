@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Armature Wealth Office | A Better Way to Manage Wealth",
-    "description": "A wealth operating system for accomplished professionals with $10M–$25M+ net worth. Governance, integration, and clarity."
+    "description": "A wealth operating system for accomplished professionals with $10M\u2013$25M+ net worth. Governance, integration, and clarity."
   },
   "hero": {
     "eyebrow": "Armature Wealth Office",
     "heading": "Your wealth deserves better decisions.",
     "subheading": "For accomplished professionals whose success outpaced the systems meant to govern it.",
-    "qualifier": "For professionals with $8M–$15M net worth. If your financial life still feels simple, it may not be time yet.",
-    "cta1Text": "See How the System Works →",
+    "qualifier": "For professionals with $8M\u2013$15M net worth. If your financial life still feels simple, it may not be time yet.",
+    "cta1Text": "See How the System Works \u2192",
     "cta1Href": "/process",
     "cta2Text": "Begin with a Diagnostic Conversation",
     "cta2Href": "/contact",
@@ -16,7 +16,7 @@
   },
   "whatsMissing": {
     "heading": "What's missing is not intelligence or effort.",
-    "body1": "It’s a wealth operating system that brings everything into one clear view, so you can author capital decisions from a position of clarity. Not reaction.",
+    "body1": "It\u2019s a wealth operating system that brings everything into one clear view, so you can author capital decisions from a position of clarity. Not reaction.",
     "body2": "As complexity compounds, communication fragments, and infrastructure quietly lags behind. So do traditional advisory models. They were built for a simpler version of your financial life.",
     "body3": "If your financial life still feels simple, it may not be time yet. If it feels harder to see clearly than it should, that is the signal."
   },
@@ -82,8 +82,9 @@
       "Install authorship rules and decision architecture",
       "Stay alongside you as the system carries the load"
     ],
-    "closingLine1": "You remain the principal. You retain final authority.",
-    "closingLine2": "The system does the work."
+    "closingLine1": "You remain the principal.",
+    "closingLine2": "You retain final authority.",
+    "closingLine3": "The system does the work."
   },
   "about": {
     "eyebrow": "About Armature",
