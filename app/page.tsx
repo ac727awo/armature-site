@@ -215,6 +215,112 @@ export default function Home() {
         </div>
       </section>
 
+      {/* WHAT MAKES THIS DIFFERENT — dark green */}
+      <section
+        style={{
+          backgroundColor: "#0f2218",
+          padding: "100px 32px",
+          borderTop: "1px solid rgba(184, 145, 58, 0.15)",
+        }}
+      >
+        <div style={{ maxWidth: "880px", margin: "0 auto" }}>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "11px",
+              color: "#b8913a",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              fontWeight: "600",
+              margin: "0 0 24px 0",
+              textAlign: "center",
+            }}
+          >
+            The Family Office Function
+          </p>
+          <h2
+            style={{
+              fontFamily: HEADING,
+              fontSize: "clamp(24px, 3.5vw, 38px)",
+              fontWeight: "500",
+              color: "#f5f0eb",
+              letterSpacing: "-0.02em",
+              lineHeight: "1.25",
+              margin: "0 0 40px 0",
+              textAlign: "center",
+            }}
+          >
+            Not another advisor. A governing system that holds your entire financial life in one view.
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "32px 48px",
+              marginBottom: "48px",
+            }}
+            className="differentiator-grid"
+          >
+            {[
+              {
+                title: "Traditional advisory",
+                body: "Multiple specialists, each competent in their lane. No one owns the interaction between them. You do.",
+              },
+              {
+                title: "The Armature system",
+                body: "One governance layer across every domain. Investment, tax, estate, insurance, entity structure, and family planning held together.",
+              },
+              {
+                title: "What gets missed",
+                body: "Strategies that require coordination across advisors. Protection gaps no single advisor can see. Drift that compounds quietly over years.",
+              },
+              {
+                title: "What changes",
+                body: "Fewer decisions that require your involvement. Clearer signal on what matters. A system designed around your psychology, your goals, and how you actually want to live.",
+              },
+            ].map((item) => (
+              <div key={item.title}>
+                <h3
+                  style={{
+                    fontFamily: HEADING,
+                    fontSize: "16px",
+                    fontWeight: "500",
+                    color: "#b8913a",
+                    margin: "0 0 10px 0",
+                  }}
+                >
+                  {item.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: BODY,
+                    fontSize: "14px",
+                    color: "#8aab96",
+                    lineHeight: "1.7",
+                    margin: 0,
+                  }}
+                >
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "15px",
+              color: "#c8d8cc",
+              lineHeight: "1.7",
+              fontStyle: "italic",
+              textAlign: "center",
+              margin: 0,
+            }}
+          >
+            The family office serves the family. In all its needs, goals, risks, and the unknowns no one else is watching for.
+          </p>
+        </div>
+      </section>
+
       {/* WHY CLIENTS CHOOSE ARMATURE — alt cream */}
       <section
         style={{
