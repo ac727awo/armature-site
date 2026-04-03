@@ -15,7 +15,7 @@ export default function About() {
       {/* HERO */}
       <section
         style={{
-          backgroundColor: "#f5f0eb",
+          backgroundColor: "#ffffff",
           paddingTop: "160px",
           paddingBottom: "80px",
           paddingLeft: "32px",
@@ -54,7 +54,7 @@ export default function About() {
       </section>
 
       {/* MAIN CONTENT */}
-      <section style={{ backgroundColor: "#ede8e0", padding: "100px 32px" }}>
+      <section style={{ backgroundColor: "#f5f0eb", padding: "100px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div className="grid-2col" style={{ alignItems: "start" }}>
             <div>
@@ -100,7 +100,7 @@ export default function About() {
       </section>
 
       {/* LION SECTION */}
-      <section style={{ backgroundColor: "#f5f0eb", borderTop: "1px solid rgba(28,56,40,0.08)" }}>
+      <section style={{ backgroundColor: "#ffffff", borderTop: "1px solid rgba(28,56,40,0.08)" }}>
         <div className="lion-section">
           <div style={{ padding: "80px 60px 80px 32px", maxWidth: "600px", marginLeft: "auto" }}>
             <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 24px 0" }}>Why Armature Exists</p>
@@ -124,7 +124,7 @@ export default function About() {
       {/* WHAT WE ACTUALLY DO */}
       <section
         style={{
-          backgroundColor: "#ede8e0",
+          backgroundColor: "#f5f0eb",
           padding: "100px 32px",
           borderTop: "1px solid rgba(28, 56, 40, 0.08)",
         }}
