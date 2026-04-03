@@ -217,7 +217,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid-2col" style={{ alignItems: "start" }}>
+          <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start", marginBottom: "64px" }}>
             <div>
               <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#f5f0eb", margin: "0 0 16px 0", letterSpacing: "-0.01em" }}>
                 How we think
@@ -226,10 +226,10 @@ export default function About() {
                 There is a point where traditional &quot;wealth management&quot; stops being sufficient. At that stage:
               </p>
               {[
-                "decisions interact with each other",
-                "risk lives between domains",
-                "behavior matters as much as math",
-                "oversight becomes the hidden cost",
+                "Decisions interact with each other",
+                "Risk lives between domains",
+                "Behavior matters as much as math",
+                "Oversight becomes the hidden cost",
               ].map((item) => (
                 <p key={item} style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.65", paddingLeft: "4px", margin: "0 0 10px 0", display: "flex", alignItems: "baseline", gap: "10px" }}>
                   <span style={{ color: "#b8913a", fontSize: "14px", flexShrink: 0 }}>&#x25B8;</span>
@@ -245,31 +245,36 @@ export default function About() {
               <p style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
                 That experience shaped everything: deliberate, not reactive. Structured, not rushed. Long-horizon, not quarterly.
               </p>
-              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 40px 0" }}>
+              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
                 We believe wealth works best when every asset has a defined role, every decision fits into a broader framework, and oversight is designed. Not improvised.
               </p>
-              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#b8913a", fontStyle: "italic", lineHeight: "1.65", margin: "0 0 48px 0" }}>
+              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#b8913a", fontStyle: "italic", lineHeight: "1.65", margin: 0 }}>
                 We move deliberately. We design systems meant to hold.
               </p>
+            </div>
+          </div>
 
-              <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#f5f0eb", margin: "0 0 24px 0", letterSpacing: "-0.01em" }}>
-                What clients notice
-              </h3>
+          {/* What clients notice — full width below the two columns */}
+          <div style={{ maxWidth: "720px", margin: "0 auto" }}>
+            <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#f5f0eb", margin: "0 0 24px 0", letterSpacing: "-0.01em", textAlign: "center" }}>
+              What clients notice
+            </h3>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }} className="client-notice-grid">
               {[
                 "This feels cleaner than what I had before.",
                 "I spend less time thinking about money.",
                 "Decisions don't stack up the way they used to.",
               ].map((quote) => (
-                <div key={quote} style={{ margin: "0 0 16px 0", padding: "20px 24px", borderLeft: "2px solid #b8913a", backgroundColor: "rgba(184,145,58,0.08)" }}>
+                <div key={quote} style={{ padding: "24px", borderLeft: "2px solid #b8913a", backgroundColor: "rgba(184,145,58,0.08)" }}>
                   <p style={{ fontFamily: BODY, fontSize: "15px", color: "#c8d8cc", fontStyle: "italic", lineHeight: "1.6", margin: 0 }}>
                     &quot;{quote}&quot;
                   </p>
                 </div>
               ))}
-              <p style={{ fontFamily: BODY, fontSize: "14px", color: "#6a8a72", lineHeight: "1.65", margin: "24px 0 0 0" }}>
-                Nothing dramatic changes day one. What changes is how the system carries forward.
-              </p>
             </div>
+            <p style={{ fontFamily: BODY, fontSize: "14px", color: "#6a8a72", lineHeight: "1.65", margin: "24px 0 0 0", textAlign: "center" }}>
+              Nothing dramatic changes day one. What changes is how the system carries forward.
+            </p>
           </div>
         </div>
       </section>
