@@ -163,6 +163,10 @@
     gap: 40px !important;
   }
 
+  .client-notice-grid {
+    grid-template-columns: 1fr !important;
+  }
+
   .about-image {
     width: 100%;
     aspect-ratio: 3/4 !important;
