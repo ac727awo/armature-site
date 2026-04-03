@@ -41,29 +41,6 @@ export default function CTASection() {
           zIndex: 1,
         }}
       >
-        <p
-          style={{
-            fontFamily: BODY,
-            fontSize: "15px",
-            color: "#2a3d38",
-            lineHeight: "1.7",
-            marginBottom: "16px",
-          }}
-        >
-          A clear look at whether this kind of system belongs in your life.
-        </p>
-        <p
-          style={{
-            fontFamily: BODY,
-            fontSize: "17px",
-            color: "#2a3d38",
-            lineHeight: "1.7",
-            marginBottom: "20px",
-            fontStyle: "italic",
-          }}
-        >
-          If it&apos;s not time yet, you&apos;ll know. If it is, the next step becomes obvious.
-        </p>
         <h2
           style={{
             fontFamily: HEADING,
@@ -72,11 +49,37 @@ export default function CTASection() {
             color: "#0f1e1b",
             letterSpacing: "-0.02em",
             lineHeight: "1.2",
-            marginBottom: "44px",
+            marginBottom: "24px",
           }}
         >
-          Begin with a Conversation
+          Begin with a diagnostic discussion.
         </h2>
+        <p
+          style={{
+            fontFamily: BODY,
+            fontSize: "17px",
+            color: "#2a3d38",
+            lineHeight: "1.7",
+            marginBottom: "12px",
+          }}
+        >
+          No urgency. No commitment. Just a clear look at whether
+          <br />
+          this kind of system belongs in your life, now or later.
+        </p>
+        <p
+          style={{
+            fontFamily: BODY,
+            fontSize: "16px",
+            color: "#3a5048",
+            lineHeight: "1.7",
+            marginBottom: "44px",
+            fontStyle: "italic",
+          }}
+        >
+          If it&apos;s not time yet, you&apos;ll know. If it is, the next step
+          becomes obvious.
+        </p>
         <Link
           href="/contact"
           style={{
