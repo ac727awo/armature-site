@@ -238,7 +238,7 @@ export default function About() {
                 We believe wealth works best when every asset has a defined role, every decision fits into a broader framework, and oversight is designed. Not improvised.
               </p>
               <p style={{ fontFamily: BODY, fontSize: "15px", color: "#b8913a", fontStyle: "italic", lineHeight: "1.65", margin: "0 0 48px 0" }}>
-                We co-invest. We move carefully. We design systems meant to hold.
+                We move deliberately. We design systems meant to hold.
               </p>
 
               <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#1c3828", margin: "0 0 24px 0", letterSpacing: "-0.01em" }}>
