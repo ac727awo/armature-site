@@ -793,8 +793,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT — cream bg */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
+      {/* ABOUT — alt-cream bg */}
+      <section style={{ backgroundColor: "#ede8e0", padding: "120px 32px" }}>
         <div
           className="about-grid"
           style={{
@@ -1162,10 +1162,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CLOSING STATEMENT — lion watermark bottom-right */}
+      {/* CLOSING STATEMENT — cream bg */}
       <section
         style={{
-          backgroundColor: "#ede8e0",
+          backgroundColor: "#f5f0eb",
           padding: "120px 32px",
           borderTop: "1px solid rgba(28, 56, 40, 0.08)",
           position: "relative",
