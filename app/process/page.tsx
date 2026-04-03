@@ -45,7 +45,9 @@ export default async function Process() {
             lineHeight: "1.15",
           }}
         >
-          Designed around your life.<br />Not sold into it.
+          Designed around your life.
+          <br className="process-hero-break" />
+          Not sold into it.
         </h1>
       </section>
 
@@ -100,6 +102,9 @@ export default async function Process() {
                       fontSize: "32px",
                       color: "#b8913a",
                       fontWeight: "400",
+                      borderBottom: "2px solid #b8913a",
+                      paddingBottom: "6px",
+                      display: "inline-block",
                     }}
                   >
                     {phase.number}
