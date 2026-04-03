@@ -224,6 +224,7 @@ export default function Home() {
         }}
       >
         <div
+          className="why-clients-grid"
           style={{
             maxWidth: "1200px",
             margin: "0 auto",
@@ -234,6 +235,7 @@ export default function Home() {
           }}
         >
           <div
+            className="why-clients-image"
             style={{
               aspectRatio: "4/5",
               backgroundColor: "#c8d0c4",
@@ -662,6 +664,7 @@ export default function Home() {
       {/* ABOUT — cream bg */}
       <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
         <div
+          className="about-grid"
           style={{
             maxWidth: "1200px",
             margin: "0 auto",
@@ -753,6 +756,7 @@ export default function Home() {
             </Link>
           </div>
           <div
+            className="about-image"
             style={{
               aspectRatio: "4/5",
               backgroundColor: "#c8d0c4",
