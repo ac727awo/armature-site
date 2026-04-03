@@ -68,7 +68,7 @@ export default function Contact() {
             {/* Left — context */}
             <div>
               <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-                If you&apos;re sensing that your financial life could be simpler, quieter, or more coordinated than it currently is — this is the right first step.
+                If you&apos;re sensing that your financial life could be simpler, quieter, or more coordinated than it currently is, this is the right first step.
               </p>
               <p style={{ fontFamily: BODY, fontSize: "15px", color: "#6a8070", lineHeight: "1.75", margin: "0 0 20px 0" }}>
                 This discussion is designed to explore how your current structure is functioning, where complexity or friction may be forming, and whether a governing system is relevant for this phase of your life.
@@ -121,7 +121,7 @@ export default function Contact() {
                       What to expect
                     </p>
                     {[
-                      { step: "01", text: "A brief scheduling note from our team — no forms, no friction." },
+                      { step: "01", text: "A brief scheduling note from our team. No forms, no friction." },
                       { step: "02", text: "A 30-minute diagnostic conversation, private and confidential." },
                       { step: "03", text: "A clear picture of whether this system belongs in your life right now." },
                     ].map((item) => (
@@ -137,7 +137,7 @@ export default function Contact() {
                       While you wait
                     </p>
                     <p style={{ fontFamily: BODY, fontSize: "14px", color: "#4a6155", lineHeight: "1.65", margin: "0 0 16px 0" }}>
-                      Most of the principals we work with share a common realization: the complexity didn&apos;t come from poor decisions — it came from outgrowing the systems around them.
+                      Most of the principals we work with share a common realization: the complexity didn&apos;t come from poor decisions. It came from outgrowing the systems around them.
                     </p>
                     <a
                       href="/insights/capital-efficiency"
