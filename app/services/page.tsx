@@ -133,7 +133,7 @@ export default async function Services() {
       </section>
 
       {/* INTEGRATION */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "80px 32px" }}>
+      <section style={{ backgroundColor: "#0f2218", padding: "80px 32px" }}>
         <div
           style={{
             maxWidth: "960px",
@@ -150,7 +150,7 @@ export default async function Services() {
                 fontFamily: HEADING,
                 fontSize: "clamp(22px, 3vw, 34px)",
                 fontWeight: "400",
-                color: "#1c3828",
+                color: "#f5f0eb",
                 marginBottom: "20px",
               }}
             >
@@ -161,7 +161,7 @@ export default async function Services() {
                 fontFamily: BODY,
                 fontSize: "15px",
                 lineHeight: "1.8",
-                color: "#4a6155",
+                color: "#8aab96",
                 marginBottom: "16px",
               }}
             >
@@ -172,7 +172,7 @@ export default async function Services() {
                 fontFamily: BODY,
                 fontSize: "15px",
                 lineHeight: "1.8",
-                color: "#4a6155",
+                color: "#8aab96",
                 marginBottom: "16px",
               }}
             >
@@ -183,14 +183,14 @@ export default async function Services() {
                 fontFamily: BODY,
                 fontSize: "14px",
                 fontStyle: "italic",
-                color: "#6a8070",
+                color: "#c8d8cc",
               }}
             >
               {data.integration.closing}
             </p>
           </div>
           {data.integration.image && (
-            <div style={{ flex: 1, minWidth: "280px", aspectRatio: "4/3", overflow: "hidden", borderRadius: "8px", border: "1px solid #c8d0c4" }}>
+            <div style={{ flex: 1, minWidth: "280px", aspectRatio: "4/3", overflow: "hidden", borderRadius: "8px", border: "1px solid rgba(184, 145, 58, 0.2)" }}>
               <img
                 src={data.integration.image}
                 alt="Integration"
@@ -208,7 +208,7 @@ export default async function Services() {
       {/* COST OF INACTION */}
       <section
         style={{
-          backgroundColor: "#0f2218",
+          backgroundColor: "#f5f0eb",
           padding: "100px 32px",
         }}
       >
@@ -232,7 +232,7 @@ export default async function Services() {
               fontFamily: HEADING,
               fontSize: "clamp(22px, 3vw, 34px)",
               fontWeight: "400",
-              color: "#f5f0eb",
+              color: "#1c3828",
               textAlign: "center" as const,
               marginBottom: "48px",
               lineHeight: "1.3",
@@ -270,7 +270,7 @@ export default async function Services() {
               <div
                 key={item.label}
                 style={{
-                  borderLeft: "2px solid rgba(184, 145, 58, 0.4)",
+                  borderLeft: "2px solid rgba(184, 145, 58, 0.5)",
                   paddingLeft: "20px",
                 }}
               >
@@ -279,7 +279,7 @@ export default async function Services() {
                     fontFamily: HEADING,
                     fontSize: "16px",
                     fontWeight: "500",
-                    color: "#f5f0eb",
+                    color: "#1c3828",
                     margin: "0 0 8px 0",
                   }}
                 >
@@ -289,7 +289,7 @@ export default async function Services() {
                   style={{
                     fontFamily: BODY,
                     fontSize: "14px",
-                    color: "#8aab96",
+                    color: "#4a6155",
                     lineHeight: "1.7",
                     margin: 0,
                   }}
@@ -303,7 +303,7 @@ export default async function Services() {
             style={{
               fontFamily: BODY,
               fontSize: "15px",
-              color: "#c8d8cc",
+              color: "#2e4e3a",
               lineHeight: "1.7",
               fontStyle: "italic",
               textAlign: "center" as const,
