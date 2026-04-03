@@ -1011,12 +1011,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INSIGHTS PREVIEW — alt cream */}
+      {/* INSIGHTS PREVIEW — dark green */}
       <section
         style={{
-          backgroundColor: "#ede8e0",
+          backgroundColor: "#0f2218",
           padding: "120px 32px",
-          borderTop: "1px solid rgba(28, 56, 40, 0.08)",
         }}
       >
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -1039,7 +1038,7 @@ export default function Home() {
                 fontFamily: HEADING,
                 fontSize: "clamp(26px, 3.5vw, 42px)",
                 fontWeight: "500",
-                color: "#1c3828",
+                color: "#f5f0eb",
                 letterSpacing: "-0.02em",
                 lineHeight: "1.2",
                 margin: "0 0 28px 0",
@@ -1051,7 +1050,7 @@ export default function Home() {
               style={{
                 fontFamily: BODY,
                 fontSize: "16px",
-                color: "#4a6155",
+                color: "#8aab96",
                 lineHeight: "1.75",
                 margin: "0 0 24px 0",
               }}
@@ -1064,7 +1063,7 @@ export default function Home() {
                 style={{
                   fontFamily: BODY,
                   fontSize: "14px",
-                  color: "#4a6155",
+                  color: "#8aab96",
                   lineHeight: "1.65",
                   margin: "0 0 12px 0",
                   display: "flex",
@@ -1080,7 +1079,7 @@ export default function Home() {
               style={{
                 fontFamily: BODY,
                 fontSize: "14px",
-                color: "#6a8070",
+                color: "#c8d8cc",
                 fontStyle: "italic",
                 margin: "20px 0 0 0",
               }}
@@ -1219,8 +1218,8 @@ export default function Home() {
               style={{
                 fontFamily: BODY,
                 fontSize: "12px",
-                color: "#1c3828",
-                border: "1.5px solid #1c3828",
+                color: "#f5f0eb",
+                border: "1.5px solid rgba(245, 240, 235, 0.45)",
                 padding: "12px 32px",
                 textDecoration: "none",
                 letterSpacing: "0.1em",
