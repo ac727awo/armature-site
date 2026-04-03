@@ -98,17 +98,6 @@ export default function Footer() {
             >
               Get in Touch
             </h4>
-            <p
-              style={{
-                fontFamily: BODY,
-                fontSize: "13px",
-                color: "#8aab96",
-                marginBottom: "20px",
-                lineHeight: "1.6",
-              }}
-            >
-              Begin with a conversation.
-            </p>
             <Link
               href="/contact"
               style={{
