@@ -125,7 +125,7 @@ export default function Footer() {
                 display: "inline-block",
               }}
             >
-              Request a Consultation
+              Begin with a Conversation
             </Link>
           </div>
         </div>
@@ -203,3 +203,4 @@ export default function Footer() {
     </footer>
   );
 }
+
