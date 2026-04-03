@@ -63,9 +63,11 @@ export default function CTASection() {
             marginBottom: "12px",
           }}
         >
-          No urgency. No commitment. Just a clear look at whether
-          <br />
-          this kind of system belongs in your life, now or later.
+          No urgency. No commitment. Just a clear look
+          <br className="cta-break-mobile" />
+          {" "}at whether this kind of system
+          <br className="cta-break-mobile" />
+          {" "}belongs in your life, now or later.
         </p>
         <p
           style={{
@@ -77,8 +79,9 @@ export default function CTASection() {
             fontStyle: "italic",
           }}
         >
-          If it&apos;s not time yet, you&apos;ll know. If it is, the next step
-          becomes obvious.
+          If it&apos;s not time yet, you&apos;ll know. If it is,
+          <br className="cta-break-mobile" />
+          {" "}the next step becomes obvious.
         </p>
         <Link
           href="/contact"
