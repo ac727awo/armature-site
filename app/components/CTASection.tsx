@@ -65,9 +65,9 @@ export default function CTASection() {
         >
           No urgency. No commitment. Just a clear look
           <br className="cta-break-mobile" />
-          {" "}at whether this kind of system
+          {" "}at whether this kind of system belongs
           <br className="cta-break-mobile" />
-          {" "}belongs in your life, now or later.
+          {" "}in your life, now or later.
         </p>
         <p
           style={{
