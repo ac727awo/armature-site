@@ -222,6 +222,18 @@
     display: inline !important;
   }
 
+  .differentiator-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .inaction-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .receive-grid {
+    grid-template-columns: 1fr !important;
+  }
+
   .process-connector {
     display: none;
   }
