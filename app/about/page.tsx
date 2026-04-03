@@ -103,18 +103,18 @@ export default function About() {
       <section style={{ backgroundColor: "#f5f0eb", borderTop: "1px solid rgba(28,56,40,0.08)" }}>
         <div className="lion-section">
           <div style={{ padding: "80px 60px 80px 32px", maxWidth: "600px", marginLeft: "auto" }}>
-            <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 24px 0" }}>Armature Wealth Office</p>
+            <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 24px 0" }}>Why Armature Exists</p>
             <h2 style={{ fontFamily: HEADING, fontSize: "clamp(22px, 3vw, 36px)", fontWeight: "500", color: "#1c3828", letterSpacing: "-0.02em", lineHeight: "1.2", margin: "0 0 28px 0" }}>
-              What&apos;s missing is not intelligence or effort.
+              The coordination gap is structural. Not personal.
             </h2>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-              It&apos;s a wealth operating system that brings everything into one clear view, so you can author capital deliberately, rather than react to it.
+              Every advisor in your ecosystem is likely competent. The problem is that none of them can see what the others are doing. Decisions get made in isolation. Risk accumulates in the gaps between relationships.
             </p>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-              As complexity compounds, communication fragments, and infrastructure quietly lags behind. So do trade-offs, dependencies, and second-order effects.
+              Armature was built to close that gap. One governance layer that holds the full picture, coordinates across every advisor and entity, and gives you a single line of sight into your entire financial life.
             </p>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#2e4e3a", lineHeight: "1.75", fontStyle: "italic", margin: 0 }}>
-              If your financial life still feels simple, it may not be time yet. If it feels harder to see clearly, that&apos;s not a problem, it&apos;s a signal.
+              The system carries the complexity. You carry the authority.
             </p>
           </div>
           <div className="lion-image" />
