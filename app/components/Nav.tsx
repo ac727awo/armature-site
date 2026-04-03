@@ -112,7 +112,7 @@ export default function Nav() {
               el.style.backgroundColor = "#1c3828";
             }}
           >
-            Request a Conversation
+            Begin with a Conversation
           </Link>
         </div>
 
@@ -193,7 +193,7 @@ export default function Nav() {
               fontWeight: "500",
             }}
           >
-            Request a Conversation
+            Begin with a Conversation
           </Link>
         </div>
       )}
