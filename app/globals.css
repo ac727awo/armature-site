@@ -134,10 +134,41 @@
     grid-template-columns: 1fr;
   }
 
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .services-grid > div:last-child {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
   .process-steps {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px 8px;
+  }
+
+  .process-steps > div:nth-child(4),
+  .process-steps > div:nth-child(5) {
+    grid-row: 2;
+  }
+
+  .process-steps > div:nth-child(4) {
+    grid-column: 1 / 2;
+    margin-left: 50%;
+  }
+
+  .process-steps > div:nth-child(5) {
+    grid-column: 2 / 3;
+    margin-right: 50%;
+  }
+
+  .about-caption-overlay {
+    background-color: transparent !important;
+    border: none !important;
   }
 
   .process-connector {
@@ -183,3 +214,4 @@
     gap: 16px;
   }
 }
+
