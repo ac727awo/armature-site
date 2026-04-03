@@ -207,13 +207,13 @@ export default function About() {
               Not theory. Not inherited models. This was built from the inside.
             </h2>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-              Armature was built by a healthcare professional who lived the problem before solving it. Years in anesthesiology and high-stakes clinical environments created a framework for decisions under uncertainty, information asymmetry, and consequence.
+              Armature was built by someone who spent years running into chaos on half information. Fire rescue. Dispatched into emergencies where decisions had to be made fast, consequences were real, and nobody handed you the full picture.
             </p>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-              When that same complexity showed up in his own financial life — multiple entities, fragmented advisors, estate plans that contradicted investment structures — the clinical instinct was clear: build the system you would trust with your own family.
+              When that same instinct met his own financial complexity — multiple entities, fragmented advisors, estate plans that contradicted investment structures — the gap was obvious. Nobody was holding the system together. So he built one.
             </p>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#c8d8cc", lineHeight: "1.75", fontStyle: "italic", margin: 0 }}>
-              The same principle that governs medicine governs Armature: do no harm. Move deliberately. Never lose signal.
+              Move deliberately. Protect what matters. Never lose signal.
             </p>
           </div>
 
