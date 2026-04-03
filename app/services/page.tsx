@@ -205,6 +205,116 @@ export default async function Services() {
         </div>
       </section>
 
+      {/* COST OF INACTION */}
+      <section
+        style={{
+          backgroundColor: "#0f2218",
+          padding: "100px 32px",
+        }}
+      >
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "11px",
+              color: "#b8913a",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              fontWeight: "600",
+              margin: "0 0 24px 0",
+              textAlign: "center" as const,
+            }}
+          >
+            The Cost of Waiting
+          </p>
+          <h2
+            style={{
+              fontFamily: HEADING,
+              fontSize: "clamp(22px, 3vw, 34px)",
+              fontWeight: "400",
+              color: "#f5f0eb",
+              textAlign: "center" as const,
+              marginBottom: "48px",
+              lineHeight: "1.3",
+            }}
+          >
+            The gap between advisors is where value quietly leaves.
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "32px",
+              marginBottom: "48px",
+            }}
+            className="inaction-grid"
+          >
+            {[
+              {
+                label: "Tax and investment misalignment",
+                detail: "Strategies designed independently often work against each other. Harvesting losses in one account while triggering gains in another. Rebalancing without considering the estate plan.",
+              },
+              {
+                label: "Duplicated or conflicting coverage",
+                detail: "Insurance reviewed by one advisor, estate structured by another. Gaps and overlaps go unnoticed until they matter most.",
+              },
+              {
+                label: "Missed strategic windows",
+                detail: "Roth conversions, entity restructuring, gifting strategies, charitable planning. These have timing dependencies no single advisor tracks.",
+              },
+              {
+                label: "Drift without signal",
+                detail: "Allocations shift. Documents go stale. Beneficiary designations contradict estate plans. Without governance, these compound silently at 0.5% to 1.2% annually.",
+              },
+            ].map((item) => (
+              <div
+                key={item.label}
+                style={{
+                  borderLeft: "2px solid rgba(184, 145, 58, 0.4)",
+                  paddingLeft: "20px",
+                }}
+              >
+                <h3
+                  style={{
+                    fontFamily: HEADING,
+                    fontSize: "16px",
+                    fontWeight: "500",
+                    color: "#f5f0eb",
+                    margin: "0 0 8px 0",
+                  }}
+                >
+                  {item.label}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: BODY,
+                    fontSize: "14px",
+                    color: "#8aab96",
+                    lineHeight: "1.7",
+                    margin: 0,
+                  }}
+                >
+                  {item.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p
+            style={{
+              fontFamily: BODY,
+              fontSize: "15px",
+              color: "#c8d8cc",
+              lineHeight: "1.7",
+              fontStyle: "italic",
+              textAlign: "center" as const,
+              margin: 0,
+            }}
+          >
+            These are not hypothetical risks. They are patterns observed across every family we have assessed. Governance does not just protect value. It recovers what was already being lost.
+          </p>
+        </div>
+      </section>
+
       <CTASection />
     </main>
   );
