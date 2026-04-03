@@ -207,10 +207,10 @@ export default function About() {
               Not theory. Not inherited models. This was built from the inside.
             </h2>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-              Armature was built by someone who spent years running into chaos on half information. Fire rescue. Dispatched into emergencies where decisions had to be made fast, consequences were real, and nobody handed you the full picture.
+              Armature was built by a healthcare professional who lived the problem before solving it. Years in anesthesiology and high-stakes clinical environments created a framework for decisions under uncertainty, information asymmetry, and consequence.
             </p>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-              When that same instinct met his own financial complexity — multiple entities, fragmented advisors, estate plans that contradicted investment structures — the gap was obvious. Nobody was holding the system together. So he built one.
+              When that same discipline met his own financial complexity — multiple entities, fragmented advisors, estate plans that contradicted investment structures — the gap was obvious. Nobody was holding the system together. So he built one.
             </p>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#c8d8cc", lineHeight: "1.75", fontStyle: "italic", margin: 0 }}>
               Move deliberately. Protect what matters. Never lose signal.
