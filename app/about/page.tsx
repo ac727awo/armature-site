@@ -54,7 +54,7 @@ export default function About() {
       </section>
 
       {/* MAIN CONTENT */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "100px 32px" }}>
+      <section style={{ backgroundColor: "#ede8e0", padding: "100px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div className="grid-2col" style={{ alignItems: "start" }}>
             <div>
@@ -186,32 +186,43 @@ export default function About() {
         </div>
       </section>
 
-      {/* LIVED EXPERIENCE */}
-      <section style={{ backgroundColor: "#f5f0eb", padding: "100px 32px" }}>
+      {/* LIVED EXPERIENCE — dark green */}
+      <section style={{ backgroundColor: "#0f2218", padding: "100px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center", marginBottom: "64px" }}>
+            <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 24px 0" }}>
+              Lived Experience
+            </p>
+            <h2
+              style={{
+                fontFamily: HEADING,
+                fontSize: "clamp(22px, 3vw, 34px)",
+                fontWeight: "500",
+                color: "#f5f0eb",
+                letterSpacing: "-0.02em",
+                lineHeight: "1.25",
+                margin: "0 0 28px 0",
+              }}
+            >
+              Not theory. Not inherited models. This was built from the inside.
+            </h2>
+            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
+              Armature was built by a healthcare professional who lived the problem before solving it. Years in anesthesiology and high-stakes clinical environments created a framework for decisions under uncertainty, information asymmetry, and consequence.
+            </p>
+            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
+              When that same complexity showed up in his own financial life — multiple entities, fragmented advisors, estate plans that contradicted investment structures — the clinical instinct was clear: build the system you would trust with your own family.
+            </p>
+            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#c8d8cc", lineHeight: "1.75", fontStyle: "italic", margin: 0 }}>
+              The same principle that governs medicine governs Armature: do no harm. Move deliberately. Never lose signal.
+            </p>
+          </div>
+
           <div className="grid-2col" style={{ alignItems: "start" }}>
             <div>
-              <h2
-                style={{
-                  fontFamily: HEADING,
-                  fontSize: "clamp(22px, 3vw, 34px)",
-                  fontWeight: "500",
-                  color: "#1c3828",
-                  letterSpacing: "-0.02em",
-                  lineHeight: "1.25",
-                  margin: "0 0 28px 0",
-                }}
-              >
-                Lived experience, not theory.
-              </h2>
-              <p style={{ fontFamily: BODY, fontSize: "16px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 40px 0" }}>
-                Armature was built by a healthcare professional trained in high-stakes decision-making under uncertainty. That background shaped everything: how we assess risk, how we design structure, how we hold complexity without losing signal.
-              </p>
-
-              <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#1c3828", margin: "0 0 16px 0", letterSpacing: "-0.01em" }}>
+              <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#f5f0eb", margin: "0 0 16px 0", letterSpacing: "-0.01em" }}>
                 How we think
               </h3>
-              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
+              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
                 There is a point where traditional &quot;wealth management&quot; stops being sufficient. At that stage:
               </p>
               {[
@@ -220,7 +231,7 @@ export default function About() {
                 "behavior matters as much as math",
                 "oversight becomes the hidden cost",
               ].map((item) => (
-                <p key={item} style={{ fontFamily: BODY, fontSize: "15px", color: "#4a6155", lineHeight: "1.65", paddingLeft: "4px", margin: "0 0 10px 0", display: "flex", alignItems: "baseline", gap: "10px" }}>
+                <p key={item} style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.65", paddingLeft: "4px", margin: "0 0 10px 0", display: "flex", alignItems: "baseline", gap: "10px" }}>
                   <span style={{ color: "#b8913a", fontSize: "14px", flexShrink: 0 }}>&#x25B8;</span>
                   <span>{item}</span>
                 </p>
@@ -228,20 +239,20 @@ export default function About() {
             </div>
 
             <div>
-              <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#1c3828", margin: "0 0 16px 0", letterSpacing: "-0.01em" }}>
+              <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#f5f0eb", margin: "0 0 16px 0", letterSpacing: "-0.01em" }}>
                 How we work
               </h3>
-              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 20px 0" }}>
+              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
                 That experience shaped everything: deliberate, not reactive. Structured, not rushed. Long-horizon, not quarterly.
               </p>
-              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#4a6155", lineHeight: "1.75", margin: "0 0 40px 0" }}>
+              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 40px 0" }}>
                 We believe wealth works best when every asset has a defined role, every decision fits into a broader framework, and oversight is designed. Not improvised.
               </p>
               <p style={{ fontFamily: BODY, fontSize: "15px", color: "#b8913a", fontStyle: "italic", lineHeight: "1.65", margin: "0 0 48px 0" }}>
                 We move deliberately. We design systems meant to hold.
               </p>
 
-              <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#1c3828", margin: "0 0 24px 0", letterSpacing: "-0.01em" }}>
+              <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#f5f0eb", margin: "0 0 24px 0", letterSpacing: "-0.01em" }}>
                 What clients notice
               </h3>
               {[
@@ -249,13 +260,13 @@ export default function About() {
                 "I spend less time thinking about money.",
                 "Decisions don't stack up the way they used to.",
               ].map((quote) => (
-                <div key={quote} style={{ margin: "0 0 16px 0", padding: "20px 24px", borderLeft: "2px solid #b8913a", backgroundColor: "rgba(184,145,58,0.06)" }}>
-                  <p style={{ fontFamily: BODY, fontSize: "15px", color: "#2e4e3a", fontStyle: "italic", lineHeight: "1.6", margin: 0 }}>
+                <div key={quote} style={{ margin: "0 0 16px 0", padding: "20px 24px", borderLeft: "2px solid #b8913a", backgroundColor: "rgba(184,145,58,0.08)" }}>
+                  <p style={{ fontFamily: BODY, fontSize: "15px", color: "#c8d8cc", fontStyle: "italic", lineHeight: "1.6", margin: 0 }}>
                     &quot;{quote}&quot;
                   </p>
                 </div>
               ))}
-              <p style={{ fontFamily: BODY, fontSize: "14px", color: "#6a8070", lineHeight: "1.65", margin: "24px 0 0 0" }}>
+              <p style={{ fontFamily: BODY, fontSize: "14px", color: "#6a8a72", lineHeight: "1.65", margin: "24px 0 0 0" }}>
                 Nothing dramatic changes day one. What changes is how the system carries forward.
               </p>
             </div>
