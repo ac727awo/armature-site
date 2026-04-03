@@ -331,6 +331,7 @@ export default function Home() {
       <section style={{ backgroundColor: "#f5f0eb", padding: "120px 32px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div
+            className="services-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
@@ -762,6 +763,7 @@ export default function Home() {
             }}
           >
             <div
+              className="about-caption-overlay"
               style={{
                 position: "absolute",
                 bottom: "32px",
@@ -1099,3 +1101,4 @@ export default function Home() {
     </>
   );
 }
+
