@@ -207,10 +207,10 @@ export default function About() {
               Not theory. Not inherited models. This was built from the inside.
             </h2>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-              Armature was built by a healthcare professional who lived the problem before solving it. Years in anesthesiology and high-stakes clinical environments created a framework for decisions under uncertainty, information asymmetry, and consequence.
+              Armature was built by someone who spent years inside systems where governance failures had real consequences. Healthcare. Where poor handoffs created risk. Where missing protocols led to sentinel events. Where the people doing the work were exposed by the structures meant to support them.
             </p>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-              When that same discipline met his own financial complexity — multiple entities, fragmented advisors, estate plans that contradicted investment structures — the gap was obvious. Nobody was holding the system together. So he built one.
+              The pattern was always the same: fragmented coordination, unclear decision rights, no single point of oversight. When that same pattern appeared in his own financial life — multiple entities, disconnected advisors, estate plans that contradicted investment structures — the response was not to add another advisor. It was to build the governing layer that was missing.
             </p>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#c8d8cc", lineHeight: "1.75", fontStyle: "italic", margin: 0 }}>
               Move deliberately. Protect what matters. Never lose signal.
