@@ -204,7 +204,7 @@ export default function About() {
                 margin: "0 0 28px 0",
               }}
             >
-              Not theory. Not inherited models. This was built from the inside.
+              Not theory. Not inherited models.<br />This was built from the inside.
             </h2>
             <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
               Armature was built inside systems where governance failures had real consequences. Healthcare. Where poor handoffs created risk. Where missing protocols led to sentinel events. Where the people doing the work were exposed by the structures meant to support them.
