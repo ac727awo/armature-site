@@ -223,7 +223,7 @@ export default function About() {
                 How we think
               </h3>
               <p style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-                There is a point where traditional &quot;wealth management&quot; stops being sufficient. At that stage:
+                There is a point where traditional &quot;wealth management&quot; stops being sufficient.<br />At that stage:
               </p>
               {[
                 "Decisions interact with each other",
