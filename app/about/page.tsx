@@ -186,96 +186,120 @@ export default function About() {
         </div>
       </section>
 
-      {/* LIVED EXPERIENCE — dark green */}
-      <section style={{ backgroundColor: "#0f2218", padding: "100px 32px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ maxWidth: "720px", margin: "0 auto", textAlign: "center", marginBottom: "64px" }}>
-            <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 24px 0" }}>
-              Lived Experience
+      {/* LIVED EXPERIENCE — editorial column */}
+      <section style={{ backgroundColor: "#0f2218", padding: "120px 32px" }}>
+        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
+          <p style={{ fontFamily: BODY, fontSize: "11px", color: "#b8913a", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: "600", margin: "0 0 48px 0", textAlign: "center" }}>
+            Lived Experience
+          </p>
+
+          <h2
+            style={{
+              fontFamily: HEADING,
+              fontSize: "clamp(26px, 4vw, 40px)",
+              fontWeight: "500",
+              color: "#f5f0eb",
+              letterSpacing: "-0.02em",
+              lineHeight: "1.15",
+              margin: "0 0 20px 0",
+              textAlign: "center",
+            }}
+          >
+            Not theory. Not inherited models.
+          </h2>
+          <p
+            style={{
+              fontFamily: HEADING,
+              fontSize: "clamp(20px, 3vw, 28px)",
+              fontWeight: "500",
+              color: "#b8913a",
+              letterSpacing: "-0.01em",
+              lineHeight: "1.3",
+              fontStyle: "italic",
+              margin: "0 0 64px 0",
+              textAlign: "center",
+            }}
+          >
+            This was built from the inside.
+          </p>
+
+          <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.85", margin: "0 0 28px 0" }}>
+            Armature was built inside systems where governance failures had real consequences. Healthcare. Where poor handoffs created risk. Where missing protocols led to sentinel events. Where the people doing the work were exposed by the structures meant to support them.
+          </p>
+
+          <p
+            style={{
+              fontFamily: HEADING,
+              fontSize: "clamp(18px, 2.5vw, 24px)",
+              fontWeight: "500",
+              color: "#c8d8cc",
+              lineHeight: "1.4",
+              fontStyle: "italic",
+              margin: "0 0 28px 0",
+              padding: "20px 0",
+              borderTop: "1px solid rgba(184,145,58,0.3)",
+              borderBottom: "1px solid rgba(184,145,58,0.3)",
+            }}
+          >
+            Real failure. Real risk. Real cost.
+          </p>
+
+          <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.85", margin: "0 0 28px 0" }}>
+            The pattern was always the same: fragmented coordination, unclear decision rights, no single point of oversight. That pattern does not stay in healthcare. It follows every professional whose success has outgrown the systems meant to hold it.
+          </p>
+
+          <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.85", margin: "0 0 48px 0" }}>
+            There is a point where traditional wealth management stops being sufficient. Decisions interact with each other. Risk lives between domains. Behavior matters as much as math. Oversight becomes the hidden cost.
+          </p>
+
+          <p
+            style={{
+              fontFamily: HEADING,
+              fontSize: "clamp(18px, 2.5vw, 24px)",
+              fontWeight: "500",
+              color: "#f5f0eb",
+              lineHeight: "1.4",
+              margin: "0 0 48px 0",
+              textAlign: "center",
+            }}
+          >
+            Deliberate, not reactive.<br />Structured, not rushed.<br />Long-horizon, not quarterly.
+          </p>
+
+          <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.85", margin: "0 0 48px 0" }}>
+            Wealth works best when every asset has a defined role, every decision fits into a broader framework, and oversight is designed. Not improvised.
+          </p>
+
+          <div style={{ borderLeft: "2px solid #b8913a", paddingLeft: "24px", margin: "0 0 16px 0" }}>
+            <p style={{ fontFamily: BODY, fontSize: "15px", color: "#c8d8cc", fontStyle: "italic", lineHeight: "1.7", margin: 0 }}>
+              &quot;This feels cleaner than what I had before.&quot;
             </p>
-            <h2
-              style={{
-                fontFamily: HEADING,
-                fontSize: "clamp(22px, 3vw, 34px)",
-                fontWeight: "500",
-                color: "#f5f0eb",
-                letterSpacing: "-0.02em",
-                lineHeight: "1.25",
-                margin: "0 0 28px 0",
-              }}
-            >
-              Not theory. Not inherited models.<br />This was built from the inside.
-            </h2>
-            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-              Armature was built inside systems where governance failures had real consequences. Healthcare. Where poor handoffs created risk. Where missing protocols led to sentinel events. Where the people doing the work were exposed by the structures meant to support them.
+          </div>
+          <div style={{ borderLeft: "2px solid #b8913a", paddingLeft: "24px", margin: "0 0 16px 0" }}>
+            <p style={{ fontFamily: BODY, fontSize: "15px", color: "#c8d8cc", fontStyle: "italic", lineHeight: "1.7", margin: 0 }}>
+              &quot;I spend less time thinking about money.&quot;
             </p>
-            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-              The pattern was always the same: fragmented coordination, unclear decision rights, no single point of oversight. Real failure. Real risk. Real cost. Armature exists because that pattern does not stay in healthcare. It follows every professional whose success has outgrown the systems meant to hold it.
-            </p>
-            <p style={{ fontFamily: BODY, fontSize: "16px", color: "#c8d8cc", lineHeight: "1.75", fontStyle: "italic", margin: 0 }}>
-              Move deliberately. Protect what matters. Never lose signal.
+          </div>
+          <div style={{ borderLeft: "2px solid #b8913a", paddingLeft: "24px", margin: "0 0 48px 0" }}>
+            <p style={{ fontFamily: BODY, fontSize: "15px", color: "#c8d8cc", fontStyle: "italic", lineHeight: "1.7", margin: 0 }}>
+              &quot;Decisions don&apos;t stack up the way they used to.&quot;
             </p>
           </div>
 
-          <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start", marginBottom: "64px" }}>
-            <div>
-              <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#f5f0eb", margin: "0 0 16px 0", letterSpacing: "-0.01em" }}>
-                How we think
-              </h3>
-              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-                There is a point where traditional &quot;wealth management&quot; stops being sufficient.<br />At that stage:
-              </p>
-              {[
-                "Decisions interact with each other",
-                "Risk lives between domains",
-                "Behavior matters as much as math",
-                "Oversight becomes the hidden cost",
-              ].map((item) => (
-                <p key={item} style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.65", paddingLeft: "4px", margin: "0 0 10px 0", display: "flex", alignItems: "baseline", gap: "10px" }}>
-                  <span style={{ color: "#b8913a", fontSize: "14px", flexShrink: 0 }}>&#x25B8;</span>
-                  <span>{item}</span>
-                </p>
-              ))}
-            </div>
-
-            <div>
-              <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#f5f0eb", margin: "0 0 16px 0", letterSpacing: "-0.01em" }}>
-                How we work
-              </h3>
-              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-                That experience shaped everything: deliberate, not reactive. Structured, not rushed. Long-horizon, not quarterly.
-              </p>
-              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#8aab96", lineHeight: "1.75", margin: "0 0 20px 0" }}>
-                We believe wealth works best when every asset has a defined role, every decision fits into a broader framework, and oversight is designed. Not improvised.
-              </p>
-              <p style={{ fontFamily: BODY, fontSize: "15px", color: "#b8913a", fontStyle: "italic", lineHeight: "1.65", margin: 0 }}>
-                We move deliberately. We design systems meant to hold.
-              </p>
-            </div>
-          </div>
-
-          {/* What clients notice — full width below the two columns */}
-          <div style={{ maxWidth: "720px", margin: "0 auto" }}>
-            <h3 style={{ fontFamily: HEADING, fontSize: "18px", fontWeight: "500", color: "#f5f0eb", margin: "0 0 24px 0", letterSpacing: "-0.01em", textAlign: "center" }}>
-              What clients notice
-            </h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }} className="client-notice-grid">
-              {[
-                "This feels cleaner than what I had before.",
-                "I spend less time thinking about money.",
-                "Decisions don't stack up the way they used to.",
-              ].map((quote) => (
-                <div key={quote} style={{ padding: "24px", borderLeft: "2px solid #b8913a", backgroundColor: "rgba(184,145,58,0.08)" }}>
-                  <p style={{ fontFamily: BODY, fontSize: "15px", color: "#c8d8cc", fontStyle: "italic", lineHeight: "1.6", margin: 0 }}>
-                    &quot;{quote}&quot;
-                  </p>
-                </div>
-              ))}
-            </div>
-            <p style={{ fontFamily: BODY, fontSize: "14px", color: "#6a8a72", lineHeight: "1.65", margin: "24px 0 0 0", textAlign: "center" }}>
-              Nothing dramatic changes day one. What changes is how the system carries forward.
-            </p>
-          </div>
+          <p
+            style={{
+              fontFamily: HEADING,
+              fontSize: "clamp(16px, 2vw, 20px)",
+              fontWeight: "500",
+              color: "#b8913a",
+              lineHeight: "1.5",
+              fontStyle: "italic",
+              margin: 0,
+              textAlign: "center",
+            }}
+          >
+            Move deliberately. Protect what matters. Never lose signal.
+          </p>
         </div>
       </section>
 
